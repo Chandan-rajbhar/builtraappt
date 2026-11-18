@@ -89,110 +89,126 @@ export const toolWorkflows = {
   ]
 };
 
-export default function ToolWorkflowPath({ toolName }) {
-  const pathRef = useRef(null);
+export default function ToolWorkflowPath({ toolName, isActive }) {
+  const containerRef = useRef(null);
   const steps = toolWorkflows[toolName] || toolWorkflows["Daily Log"];
 
   useEffect(() => {
-    const ctx = gsap.context(() => {
-      // Staggered node entrance
-      gsap.fromTo(
-        '.path-node-anim',
-        { opacity: 0, y: 14, scale: 0.95 },
-        { 
-          opacity: 1, 
-          y: 0, 
-          scale: 1, 
-          duration: 0.45, 
-          stagger: 0.07, 
-          ease: 'power3.out',
-          delay: 0.15 
-        }
-      );
+    if (!containerRef.current) return;
 
-      // Pulse traveling dot along the path
-      gsap.fromTo(
-        '.path-pulse-dot',
-        { left: '4%', opacity: 0 },
-        { 
-          left: '96%', 
-          opacity: 1, 
-          duration: 2.8, 
-          repeat: -1, 
-          ease: 'power1.inOut' 
+    const ctx = gsap.context(() => {
+      const cards = containerRef.current.querySelectorAll('.step-card-anim');
+      const progressBars = containerRef.current.querySelectorAll('.step-progress-fill');
+
+      if (!isActive) {
+        gsap.set(cards, { opacity: 0, y: 20, scale: 0.92 });
+        gsap.set(progressBars, { width: '0%' });
+        return;
+      }
+
+      // Reset initial state before animation
+      gsap.set(cards, { opacity: 0, y: 24, scale: 0.9, filter: 'blur(3px)' });
+      gsap.set(progressBars, { width: '0%' });
+
+      // Sequential 1-by-1 entrance timeline (Card 1 -> Card 2 -> Card 3 -> Card 4)
+      const tl = gsap.timeline({ delay: 0.25 });
+
+      cards.forEach((card, idx) => {
+        const progressBar = card.querySelector('.step-progress-fill');
+        const badge = card.querySelector('.step-badge');
+
+        // Step card pops in
+        tl.fromTo(
+          card,
+          { opacity: 0, y: 24, scale: 0.9, filter: 'blur(3px)' },
+          { 
+            opacity: 1, 
+            y: 0, 
+            scale: 1, 
+            filter: 'blur(0px)', 
+            duration: 0.38, 
+            ease: 'back.out(1.4)' 
+          }
+        );
+
+        // Badge pops in
+        if (badge) {
+          tl.fromTo(
+            badge,
+            { scale: 0.6, opacity: 0 },
+            { scale: 1, opacity: 1, duration: 0.2, ease: 'back.out(2)' },
+            '-=0.25'
+          );
         }
-      );
-    }, pathRef);
+
+        // Progress line sweeps across the card bottom
+        if (progressBar) {
+          tl.fromTo(
+            progressBar,
+            { width: '0%' },
+            { width: '100%', duration: 0.22, ease: 'power2.out' },
+            '-=0.12'
+          );
+        }
+      });
+    }, containerRef);
 
     return () => ctx.revert();
-  }, [toolName]);
+  }, [toolName, isActive]);
 
   return (
-    <div 
-      ref={pathRef}
-      className="w-full rounded-2xl bg-white border border-[#E2E8F0] shadow-sm p-3 sm:p-3.5 space-y-2.5 text-left transition-all hover:shadow-md"
-    >
-      {/* Workflow Header Line */}
-      <div className="flex items-center justify-between text-xs pb-1 border-b border-[#E2E8F0]/70">
-        <div className="flex items-center gap-1.5 font-mono text-[11px] font-bold text-[#020817]">
-          <span className="w-2 h-2 rounded-full bg-[#EF144E] animate-ping"></span>
-          <span className="text-[#EF144E]">LIFECYCLE WORKFLOW</span>
-          <span className="text-[#94A3B8]">•</span>
-          <span className="text-[#64748B] font-normal">How {toolName} Executes on Site</span>
-        </div>
-        <span className="hidden sm:inline-block font-mono text-[10px] text-[#059669] bg-emerald-50 px-2 py-0.5 rounded-full border border-emerald-200">
-          ✓ Automated 4-Step Pipeline
-        </span>
+    <div ref={containerRef} className="w-full space-y-1.5 text-left select-none">
+      {/* Header Label - Minimal & Unboxed */}
+      <div className="flex items-center gap-2 font-mono text-[11px] font-bold text-[#020817] px-1">
+        <span className="text-[#EF144E]">LIFECYCLE WORKFLOW</span>
+        <span className="text-[#94A3B8]">•</span>
+        <span className="text-[#64748B] font-medium text-[11px]">How {toolName} Executes on Site</span>
       </div>
 
-      {/* 4-Step Animated Pipeline Path */}
-      <div className="relative pt-1 pb-0.5">
-        
-        {/* Animated Connecting SVG Path Behind Nodes (desktop row) */}
-        <div className="hidden sm:block absolute top-[18px] left-6 right-6 h-0.5 -translate-y-1/2 pointer-events-none z-0">
-          {/* Base Track */}
-          <div className="w-full h-full bg-[#E2E8F0] rounded-full"></div>
-          {/* Animated Glowing Traveling Particle */}
-          <div className="path-pulse-dot absolute -top-1 w-2.5 h-2.5 rounded-full bg-[#EF144E] shadow-[0_0_8px_#EF144E] -translate-x-1/2"></div>
-        </div>
-
-        {/* 4 Nodes */}
-        <div className="relative z-10 grid grid-cols-2 sm:grid-cols-4 gap-2.5">
-          {steps.map((st, sIdx) => {
-            const isLast = sIdx === steps.length - 1;
-            return (
-              <div 
-                key={sIdx}
-                className="path-node-anim group p-2 rounded-xl bg-white/95 border border-[#E2E8F0] hover:border-[#EF144E]/40 hover:shadow-xs transition-all duration-200 flex flex-col justify-between"
-              >
-                {/* Node Top Step Number */}
-                <div className="flex items-center justify-between mb-1">
-                  <span className={`w-5 h-5 rounded-full font-mono text-[10px] font-bold flex items-center justify-center transition-colors ${
-                    isLast 
-                      ? 'bg-emerald-50 text-emerald-700 border border-emerald-200' 
-                      : 'bg-rose-50 text-[#EF144E] border border-rose-200'
-                  }`}>
-                    {st.step}
-                  </span>
-                  <span className="text-[9px] font-mono text-[#94A3B8]">
-                    Phase {sIdx + 1}
-                  </span>
-                </div>
-
-                {/* Node Title */}
-                <div className="font-heading font-bold text-xs text-[#020817] group-hover:text-[#EF144E] transition-colors truncate leading-tight">
-                  {st.title}
-                </div>
-
-                {/* Node Description */}
-                <p className="text-[10px] text-[#64748B] leading-tight line-clamp-2 mt-0.5 m-0">
-                  {st.desc}
-                </p>
+      {/* The 4 Standalone Step Cards (No Outer Card Wrapping) */}
+      <div className="grid grid-cols-2 sm:grid-cols-4 gap-2.5">
+        {steps.map((st, sIdx) => {
+          const isLast = sIdx === steps.length - 1;
+          return (
+            <div 
+              key={sIdx}
+              className="step-card-anim group relative p-2.5 sm:p-3 rounded-xl bg-white border border-[#E2E8F0] hover:border-[#EF144E]/60 hover:shadow-md hover:-translate-y-0.5 transition-all duration-200 flex flex-col justify-between shadow-xs"
+            >
+              {/* Card Top: Step Badge & Phase Label */}
+              <div className="flex items-center justify-between mb-1.5">
+                <span className={`step-badge w-5 h-5 rounded-full font-mono text-[10px] font-bold flex items-center justify-center transition-colors ${
+                  isLast 
+                    ? 'bg-emerald-50 text-emerald-700 border border-emerald-200' 
+                    : 'bg-rose-50 text-[#EF144E] border border-rose-200'
+                }`}>
+                  {st.step}
+                </span>
+                <span className="text-[10px] font-mono text-[#94A3B8] group-hover:text-[#64748B] transition-colors">
+                  Phase {sIdx + 1}
+                </span>
               </div>
-            );
-          })}
-        </div>
 
+              {/* Card Title */}
+              <div className="font-heading font-bold text-xs text-[#020817] group-hover:text-[#EF144E] transition-colors truncate leading-tight">
+                {st.title}
+              </div>
+
+              {/* Card Description */}
+              <p className="text-[10px] text-[#64748B] leading-tight line-clamp-2 mt-1 m-0">
+                {st.desc}
+              </p>
+
+              {/* Bottom Animated Progress Line */}
+              <div className="mt-2 w-full h-[2px] bg-slate-100 rounded-full overflow-hidden">
+                <div 
+                  className={`step-progress-fill h-full rounded-full ${
+                    isLast ? 'bg-emerald-500' : 'bg-[#EF144E]'
+                  }`}
+                ></div>
+              </div>
+            </div>
+          );
+        })}
       </div>
     </div>
   );
