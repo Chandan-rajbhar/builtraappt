@@ -3,6 +3,7 @@ export const toolsList = [
     name: "Daily Log",
     tagline: "Record what happened on site, every day across 13 specialized logs",
     category: "Management",
+    screenshotImg: "/daily-logs-dashboard.jpg",
     points: [
       { title: "Manpower & Work Performed", desc: "Track crew headcount, hours, site location, and drawings reference" },
       { title: "Equipment, Materials & Weather", desc: "Capture machine runtime, material deliveries, and climate impact" },
@@ -40,6 +41,7 @@ export const toolsList = [
     name: "Schedule",
     tagline: "Manage your project timelines, 7 WBS phases and Gantt events",
     category: "Management",
+    screenshotImg: "/schedule-gantt-dashboard.png",
     points: [
       { title: "WBS 7-Phase Structure", desc: "Track from Pre-Construction & Substructure to Superstructure & Handover" },
       { title: "Primavera P6 & MS Project Sync", desc: "Upload .xer / .xml files with automated task duration & dependency calculations" },
