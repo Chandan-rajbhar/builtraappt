@@ -380,3 +380,69 @@ export const toolsList = [
     ]
   }
 ];
+
+export const twinToolPairs = [
+  {
+    slideNumber: "02",
+    category: "MANAGEMENT & SCHEDULING",
+    titlePrefix: "Daily Log",
+    titleHighlight: "& Schedule Management",
+    subtitle: "Automated site activity recording connected directly to structured project schedules and Gantt milestones.",
+    tool1Name: "Daily Log",
+    tool2Name: "Schedule"
+  },
+  {
+    slideNumber: "03",
+    category: "FIELD TASKING & DOCUMENTATION",
+    titlePrefix: "Site Tasks",
+    titleHighlight: "& Document Control",
+    subtitle: "Assign field activities with clear SLAs while keeping architectural and engineering drawings strictly versioned.",
+    tool1Name: "Tasks",
+    tool2Name: "Documents"
+  },
+  {
+    slideNumber: "04",
+    category: "ENGINEERING & QUALITY REVIEW",
+    titlePrefix: "RFIs",
+    titleHighlight: "& Submittals Review",
+    subtitle: "Resolve drawing clashes with design consultants and route material samples through multi-tier approvals.",
+    tool1Name: "RFIs",
+    tool2Name: "Submittals"
+  },
+  {
+    slideNumber: "05",
+    category: "FORMAL ISSUE & PROCUREMENT",
+    titlePrefix: "Transmittals",
+    titleHighlight: "& Material Requisitions",
+    subtitle: "Issue stamped drawing packages to external stakeholders and request site materials against BOQ budget caps.",
+    tool1Name: "Transmittals",
+    tool2Name: "Material Request"
+  },
+  {
+    slideNumber: "06",
+    category: "PLANT, MACHINERY & COST CONTROL",
+    titlePrefix: "Asset Requests",
+    titleHighlight: "& Project Cost Control",
+    subtitle: "Deploy heavy equipment to active zones and monitor CSI cost code commitments in real-time.",
+    tool1Name: "Operational Assets Request",
+    tool2Name: "Budget & Costs"
+  },
+  {
+    slideNumber: "07",
+    category: "COMMERCIAL & SITE QUALITY",
+    titlePrefix: "Contracts",
+    titleHighlight: "& Quality Observations",
+    subtitle: "Manage FIDIC subcontracts and variations alongside proactive safety & quality defect tracking.",
+    tool1Name: "Contracts",
+    tool2Name: "Observations"
+  },
+  {
+    slideNumber: "08",
+    category: "CLOSEOUT & WORKFORCE GOVERNANCE",
+    titlePrefix: "Punch List",
+    titleHighlight: "& Project Team Access",
+    subtitle: "Pin room-by-room snag list closeouts and manage unified role-based permissions across project stakeholders.",
+    tool1Name: "Punch List",
+    tool2Name: "Project Team"
+  }
+];

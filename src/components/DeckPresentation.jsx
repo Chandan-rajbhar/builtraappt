@@ -1,17 +1,17 @@
 import React, { useState, useEffect, useRef } from 'react';
 import gsap from 'gsap';
-import { toolsList } from '../data/presentationData';
+import { toolsList, twinToolPairs } from '../data/presentationData';
 import AnimatedToolsGrid from './AnimatedToolsGrid';
-import ToolScreenshotFrame from './ToolScreenshotFrame';
-import ToolWorkflowPath from './ToolWorkflowPath';
-import { ChevronLeft, ChevronRight } from 'lucide-react';
+import TwinToolSlide from './TwinToolSlide';
+import { Home, ChevronLeft, ChevronRight } from 'lucide-react';
 
 export default function DeckPresentation() {
   const deckRef = useRef(null);
   const [currentIdx, setCurrentIdx] = useState(0);
   const seenRef = useRef({});
 
-  const totalSlides = 1 + toolsList.length + 1; // 1 hero + 14 tools + 1 demo = 16 slides
+  // Total slides: 1 (Hero) + 7 (Twin Slides: 14 tools paired 2-by-2) + 1 (Demo) = 9 slides
+  const totalSlides = 1 + twinToolPairs.length + 1;
 
   const pad = (n) => String(n).padStart(2, '0');
 
@@ -140,20 +140,29 @@ export default function DeckPresentation() {
       {/* Ambient Dotted Grid from builtrappt */}
       <div className="dotted-grid fixed inset-0 pointer-events-none z-0"></div>
 
-      {/* Floating Top Header with Official Builtraa Logo */}
-      <div className="fixed top-5 left-6 md:left-12 z-40 flex items-center gap-3 select-none">
+      {/* Fixed Top Bar (HOME on Left, Builtraa Logo on Right) */}
+      <header className="fixed top-0 left-0 right-0 z-40 flex items-center justify-between px-6 md:px-12 py-3.5 pointer-events-none select-none">
+        {/* Top Left: Home Button */}
         <button 
           onClick={() => scrollToSlide(0)} 
-          className="flex items-center gap-2 group transition-transform hover:scale-105 bg-transparent border-0 p-0 cursor-pointer text-left"
-          title="Back to Start"
+          className="glass-pill pointer-events-auto px-3.5 py-1.5 text-xs font-mono font-semibold tracking-wider text-[#020817] flex items-center gap-1.5 cursor-pointer shadow-xs hover:text-[#EF144E] transition-all hover:scale-105"
+          title="Back to First Slide"
         >
+          <Home className="w-3.5 h-3.5" />
+          <span>HOME</span>
+        </button>
+
+        {/* Top Right: Official Builtraa Logo */}
+        <div className="pointer-events-auto flex items-center gap-3">
           <img 
             src="/builtraa-logo-colored.svg" 
             alt="Builtraa Logo" 
-            className="h-7 md:h-8 w-auto object-contain" 
+            className="h-7 md:h-8 w-auto object-contain cursor-pointer transition-transform hover:scale-105" 
+            onClick={() => scrollToSlide(0)}
+            title="Builtraa Project Tools"
           />
-        </button>
-      </div>
+        </div>
+      </header>
 
       {/* Scrollable Mandatory Deck */}
       <div ref={deckRef} className="deck-container relative z-10">
@@ -179,60 +188,35 @@ export default function DeckPresentation() {
             </p>
           </div>
           <div data-anim-right className="w-full">
-            <AnimatedToolsGrid onSelectTool={scrollToSlide} />
+            <AnimatedToolsGrid onSelectTool={(toolNum) => {
+              // toolNum is 1-based (1..14). Map each pair to its corresponding twin slide:
+              const targetSlide = Math.floor((toolNum - 1) / 2) + 1;
+              scrollToSlide(targetSlide);
+            }} />
           </div>
         </section>
 
-        {/* SLIDES 02 - 15: The 14 Tools */}
-        {toolsList.map((tool, i) => (
-          <section key={tool.name} className="slide-section">
-            <div data-anim-left className="flex flex-col">
-              {/* Category Tag */}
-              <div>
-                <span data-anim-child className="inline-block text-xs font-mono font-semibold border border-[#E2E8F0] rounded-full px-3 py-1 text-[#64748B] mb-4 bg-white/90 shadow-2xs">
-                  {tool.category}
-                </span>
-              </div>
+        {/* SLIDES 02 - 08: The 7 Twin Tool Slides (14 Tools paired 2-by-2) */}
+        {twinToolPairs.map((pair, pIdx) => {
+          const tool1 = toolsList.find(t => t.name === pair.tool1Name);
+          const tool2 = toolsList.find(t => t.name === pair.tool2Name);
+          return (
+            <section key={pair.slideNumber} className="slide-section slide-section-twin">
+              <TwinToolSlide
+                tool1={tool1}
+                tool2={tool2}
+                slideNumber={pair.slideNumber}
+                category={pair.category}
+                titlePrefix={pair.titlePrefix}
+                titleHighlight={pair.titleHighlight}
+                subtitle={pair.subtitle}
+                isActive={currentIdx === (pIdx + 1)}
+              />
+            </section>
+          );
+        })}
 
-              {/* Eyebrow Counter */}
-              <p data-anim-child className="text-xs font-bold uppercase tracking-[0.18em] text-[#EF144E] mb-3">
-                {pad(i + 2)} / {tool.name.toUpperCase()}
-              </p>
-
-              {/* Tool Title */}
-              <h2 data-anim-child className="font-heading font-bold text-3xl md:text-5xl lg:text-6xl tracking-tight leading-[1.08] text-[#020817]">
-                {tool.name}
-              </h2>
-
-              {/* Lead Tagline */}
-              <p data-anim-child className="text-base md:text-lg text-[#64748B] leading-relaxed mt-4 max-w-[520px]">
-                {tool.tagline}
-              </p>
-
-              {/* Key Points (Cards with Crimson Left Border) */}
-              <div className="flex flex-col gap-3 mt-7 max-w-[520px]">
-                {tool.points.map((pt, pIdx) => (
-                  <div key={pIdx} data-anim-child className="key-point-card">
-                    <h3 className="font-heading font-bold text-base text-[#020817] mb-1">
-                      {pt.title}
-                    </h3>
-                    <p className="text-sm text-[#64748B] leading-normal m-0">
-                      {pt.desc}
-                    </p>
-                  </div>
-                ))}
-              </div>
-            </div>
-
-            {/* Right Side: Respective Screenshot + Animated Lifecycle Workflow Path */}
-            <div data-anim-right className="w-full flex flex-col gap-3">
-              <ToolScreenshotFrame tool={tool} />
-              <ToolWorkflowPath toolName={tool.name} isActive={currentIdx === (i + 1)} />
-            </div>
-          </section>
-        ))}
-
-        {/* SLIDE 16: Demo Showcase (End Slide) */}
+        {/* SLIDE 09: Demo Showcase (End Slide) */}
         <section className="slide-section !grid-cols-1 justify-items-center text-center">
           <div data-anim-center className="max-w-2xl mx-auto">
             <p className="text-xs font-bold uppercase tracking-[0.18em] text-[#EF144E] mb-4">
@@ -259,15 +243,10 @@ export default function DeckPresentation() {
 
       </div>
 
-      {/* Floating Bottom Navigation Bar from builtrappt */}
-      <div className="fixed left-0 right-0 bottom-6 z-50 flex items-center justify-between px-6 md:px-12 pointer-events-none select-none">
-        {/* Left: Home Button */}
-        <button
-          onClick={() => scrollToSlide(0)}
-          className="glass-pill pointer-events-auto px-4 py-2 text-xs font-mono font-semibold tracking-wider text-[#020817] flex items-center gap-1.5 cursor-pointer shadow-sm hover:text-[#EF144E]"
-        >
-          HOME
-        </button>
+      {/* Floating Bottom Navigation Bar */}
+      <div className="fixed left-0 right-0 bottom-5 z-50 flex items-center justify-between px-6 md:px-12 pointer-events-none select-none">
+        {/* Left spacer so center stays centered */}
+        <div className="w-20 hidden md:block"></div>
 
         {/* Center: Signature Glass Pill Controls */}
         <div className="glass-pill pointer-events-auto flex items-center gap-2.5 px-3 py-1.5 shadow-lg">
