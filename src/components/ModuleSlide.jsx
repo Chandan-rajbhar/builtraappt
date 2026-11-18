@@ -8,12 +8,17 @@ import {
 } from './shared';
 import { SLIDES_DATA } from '../slidesData';
 
-export default function ModuleSlide({ slideNumber, totalSlides = 20 }) {
+export default function ModuleSlide({ slideNumber, totalSlides = 27, onNavigate }) {
   const slideData = SLIDES_DATA.find((s) => s.slideNumber === slideNumber);
 
   if (!slideData) {
     return <div>Slide {slideNumber} not found</div>;
   }
+
+  // If this is the last HR module slide (19), next points to Material Management slide (20)
+  const nextSlide = slideNumber === 19
+    ? { number: 20, title: 'Requests to Procurement', index: 19 }
+    : null;
 
   return (
     <SlideLayout
@@ -73,7 +78,11 @@ export default function ModuleSlide({ slideNumber, totalSlides = 20 }) {
       </div>
 
       {/* Bottom: "Why it helps" One-Line Strip (Max 14 words) */}
-      <WhyItHelpsStrip text={slideData.whyItHelps} />
+      <WhyItHelpsStrip
+        text={slideData.whyItHelps}
+        nextSlide={nextSlide}
+        onNavigate={onNavigate}
+      />
     </SlideLayout>
   );
 }

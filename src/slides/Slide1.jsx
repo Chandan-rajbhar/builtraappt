@@ -7,8 +7,8 @@ import { Users, CalendarDays, Clock, Wallet, FileText } from 'lucide-react';
 export default function Slide1({ onNavigate }) {
   const [hoveredTile, setHoveredTile] = useState(null);
 
-  // 17 section names from SLIDES_DATA (modules)
-  const moduleSections = SLIDES_DATA.filter((s) => s.type === 'module');
+  // 24 section names from SLIDES_DATA (both HR and Material modules)
+  const moduleSections = SLIDES_DATA.filter((s) => s.type === 'module' || s.type === 'material');
 
   // 5 floating icon tiles with distinct positions and floating animation offsets
   const iconTiles = [
@@ -351,8 +351,11 @@ export default function Slide1({ onNavigate }) {
               style={{ display: 'flex', gap: 12, flexShrink: 0 }}
             >
               {[...moduleSections, ...moduleSections].map((sec, idx) => (
-                <div
+                <motion.div
                   key={idx}
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
+                  onClick={() => onNavigate && onNavigate(sec.slideNumber - 1, 1)}
                   style={{
                     display: 'inline-flex',
                     alignItems: 'center',
@@ -366,13 +369,14 @@ export default function Slide1({ onNavigate }) {
                     color: NAVY,
                     whiteSpace: 'nowrap',
                     boxShadow: '0 2px 6px rgba(11, 31, 75, 0.03)',
+                    cursor: 'pointer',
                   }}
                 >
                   <span style={{ color: BRAND, fontWeight: 700 }}>
                     {String(sec.slideNumber).padStart(2, '0')}
                   </span>
                   <span>{sec.sectionName}</span>
-                </div>
+                </motion.div>
               ))}
             </motion.div>
           </div>

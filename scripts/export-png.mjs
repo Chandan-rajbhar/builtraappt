@@ -14,9 +14,12 @@ fs.readdirSync(PNG_DIR).forEach(f => {
   if (f.endsWith('.png')) fs.unlinkSync(path.join(PNG_DIR, f));
 });
 
-const TOTAL_SLIDES = 20;
+const TOTAL_SLIDES = 27;
 
-const browser = await chromium.launch({ headless: true });
+const browser = await chromium.launch({
+  channel: 'chrome',
+  headless: true,
+});
 const page = await browser.newPage();
 
 await page.setViewportSize({ width: 1920, height: 1080 });
@@ -34,6 +37,7 @@ await page.goto(BASE_URL, { waitUntil: 'networkidle' });
 
 // Allow initial fonts and styles to settle
 await page.waitForTimeout(2000);
+await page.click('body');
 
 // Ensure we are at slide 1 (Home)
 await page.keyboard.press('Home');

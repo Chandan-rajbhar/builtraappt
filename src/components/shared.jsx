@@ -452,7 +452,7 @@ export function HowItWorksPanel({
 }
 
 // ─── "Why it helps" One-Line Bottom Strip (Max 14 words) ──────────────────────
-export function WhyItHelpsStrip({ text }) {
+export function WhyItHelpsStrip({ text, nextSlide, onNavigate }) {
   return (
     <motion.div
       initial={{ opacity: 0, y: 10 }}
@@ -466,30 +466,57 @@ export function WhyItHelpsStrip({ text }) {
         border: '1px solid rgba(226, 232, 240, 0.9)',
         display: 'flex',
         alignItems: 'center',
-        gap: 12,
+        justifyContent: 'space-between',
         marginTop: 18,
         boxShadow: '0 2px 10px rgba(11, 31, 75, 0.03)',
       }}
     >
-      <span style={{
-        fontSize: 13,
-        fontWeight: 700,
-        color: BRAND,
-        textTransform: 'uppercase',
-        letterSpacing: '0.08em',
-        fontFamily: "'Inter', sans-serif",
-        whiteSpace: 'nowrap',
-      }}>
-        Why it helps:
-      </span>
-      <span style={{
-        fontSize: 17,
-        fontWeight: 500,
-        color: NAVY,
-        fontFamily: "'Inter', sans-serif",
-      }}>
-        {text}
-      </span>
+      <div style={{ display: 'flex', alignItems: 'center', gap: 12 }}>
+        <span style={{
+          fontSize: 13,
+          fontWeight: 700,
+          color: BRAND,
+          textTransform: 'uppercase',
+          letterSpacing: '0.08em',
+          fontFamily: "'Inter', sans-serif",
+          whiteSpace: 'nowrap',
+        }}>
+          Why it helps:
+        </span>
+        <span style={{
+          fontSize: 17,
+          fontWeight: 500,
+          color: NAVY,
+          fontFamily: "'Inter', sans-serif",
+        }}>
+          {text}
+        </span>
+      </div>
+
+      {nextSlide && (
+        <motion.span
+          whileHover={{ scale: 1.04, x: 2 }}
+          whileTap={{ scale: 0.96 }}
+          onClick={() => onNavigate && onNavigate(nextSlide.index !== undefined ? nextSlide.index : (nextSlide.number - 1), 1)}
+          style={{
+            fontSize: 14,
+            fontWeight: 700,
+            color: BRAND,
+            cursor: 'pointer',
+            fontFamily: "'Inter', sans-serif",
+            display: 'inline-flex',
+            alignItems: 'center',
+            gap: 6,
+            background: 'rgba(239, 20, 78, 0.08)',
+            padding: '4px 14px',
+            borderRadius: 999,
+            border: '1px solid rgba(239, 20, 78, 0.15)',
+            whiteSpace: 'nowrap',
+          }}
+        >
+          Next: {nextSlide.title} (Slide {String(nextSlide.number).padStart(2, '0')}) →
+        </motion.span>
+      )}
     </motion.div>
   );
 }

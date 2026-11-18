@@ -28,6 +28,13 @@ import {
   Coins,
   ShieldCheck,
   Calendar,
+  ShoppingCart,
+  Truck,
+  Layers,
+  Boxes,
+  Wrench,
+  ClipboardList,
+  Package,
 } from 'lucide-react';
 
 const ICON_MAP = {
@@ -59,6 +66,13 @@ const ICON_MAP = {
   Coins,
   ShieldCheck,
   Calendar,
+  ShoppingCart,
+  Truck,
+  Layers,
+  Boxes,
+  Wrench,
+  ClipboardList,
+  Package,
 };
 
 export const SLIDES_DATA = rawSlides.map((slide) => {
@@ -75,6 +89,13 @@ export const SLIDES_DATA = rawSlides.map((slide) => {
     }));
   }
 
+  if (item.submodules) {
+    item.submodules = item.submodules.map((sm) => ({
+      ...sm,
+      icon: typeof sm.icon === 'string' ? (ICON_MAP[sm.icon] || FileText) : sm.icon,
+    }));
+  }
+
   if (item.categories) {
     item.categories = item.categories.map((cat) => ({
       ...cat,
@@ -86,5 +107,5 @@ export const SLIDES_DATA = rawSlides.map((slide) => {
 });
 
 export const MODULE_NAMES = SLIDES_DATA
-  .filter((s) => s.type === 'module')
+  .filter((s) => s.type === 'module' || s.type === 'material')
   .map((s) => s.sectionName);

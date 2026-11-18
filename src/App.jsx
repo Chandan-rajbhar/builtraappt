@@ -20,12 +20,19 @@ import Slide17 from './slides/Slide17';
 import Slide18 from './slides/Slide18';
 import Slide19 from './slides/Slide19';
 import Slide20 from './slides/Slide20';
+import Slide21 from './slides/Slide21';
+import Slide22 from './slides/Slide22';
+import Slide23 from './slides/Slide23';
+import Slide24 from './slides/Slide24';
+import Slide25 from './slides/Slide25';
+import Slide26 from './slides/Slide26';
+import Slide27 from './slides/Slide27';
 import { SLIDES_DATA } from './slidesData';
 import './index.css';
 
 export const SLIDES = [
   Slide1,  // 01: Title Slide (One place for people, time and pay.)
-  Slide2,  // 02: What is inside (4 Group Cards, 17 Sections)
+  Slide2,  // 02: Overview (5 Group Cards, 30 Sections)
   Slide3,  // 03: HR Dashboard (Section 1)
   Slide4,  // 04: Employees (Section 2)
   Slide5,  // 05: Leave (Section 3)
@@ -43,11 +50,18 @@ export const SLIDES = [
   Slide17, // 17: Meeting Arrangements (Section 15)
   Slide18, // 18: Audit Logs (Section 16)
   Slide19, // 19: Payroll Settings (Section 17)
-  Slide20, // 20: Closing (Thank you / Questions?)
+  Slide20, // 20: Requests to Procurement (Material 1 & 2)
+  Slide21, // 21: Quotes to Purchase Orders (Material 3 & 4)
+  Slide22, // 22: Delivery & Receiving (Material 5 & 7)
+  Slide23, // 23: Material Master & Inventory (Material 6 & 8)
+  Slide24, // 24: Vendors & Payments (Material 10 & 9)
+  Slide25, // 25: Site Assets (Material 11 & 12)
+  Slide26, // 26: Operational Assets Inventory (Material 13)
+  Slide27, // 27: Closing (Thank you / Questions?)
 ];
 
 export const MODULE_NAMES = SLIDES_DATA
-  .filter((s) => s.type === 'module')
+  .filter((s) => s.type === 'module' || s.type === 'material')
   .map((s) => s.sectionName);
 
 /* ─── Compact Liquid Glass Button (36px high, 13px text) ───────────────────── */
