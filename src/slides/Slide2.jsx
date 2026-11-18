@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 import { SlideLayout, SlideTitle, BRAND, NAVY, ROYAL, GREY, easeCurve } from '../components/shared';
 import { SLIDES_DATA } from '../slidesData';
 
-export default function Slide2({ slideIndex = 2, totalSlides = 27, onNavigate }) {
+export default function Slide2({ slideIndex = 2, totalSlides = 34, onNavigate }) {
   const slideData = SLIDES_DATA.find((s) => s.slideNumber === 2);
 
   return (
@@ -17,19 +17,19 @@ export default function Slide2({ slideIndex = 2, totalSlides = 27, onNavigate })
         slideIndex={slideIndex}
       />
 
-      {/* 5 Equal-Sized Glass Group Cards */}
+      {/* 4 Equal-Sized Glass Group Cards */}
       <div style={{
         display: 'grid',
-        gridTemplateColumns: 'repeat(5, 1fr)',
-        gap: 16,
+        gridTemplateColumns: `repeat(${slideData.categories.length}, 1fr)`,
+        gap: 18,
         flex: 1,
         alignItems: 'stretch',
         minHeight: 0,
-        margin: '8px 0',
+        margin: '12px 0',
       }}>
         {slideData.categories.map((category, catIdx) => {
           const CatIcon = category.icon;
-          const isDense = category.sections.length > 6;
+          const isDense = category.sections.length > 5;
 
           return (
             <motion.div
@@ -40,7 +40,7 @@ export default function Slide2({ slideIndex = 2, totalSlides = 27, onNavigate })
               className="glass"
               style={{
                 borderRadius: 22,
-                padding: isDense ? '16px 14px' : '20px 16px',
+                padding: isDense ? '18px 16px' : '22px 18px',
                 border: '1px solid rgba(226, 232, 240, 0.9)',
                 background: 'rgba(255, 255, 255, 0.85)',
                 boxShadow: '0 8px 24px rgba(11, 31, 75, 0.05)',
@@ -52,16 +52,16 @@ export default function Slide2({ slideIndex = 2, totalSlides = 27, onNavigate })
               <div style={{
                 display: 'flex',
                 alignItems: 'center',
-                gap: 10,
-                marginBottom: isDense ? 10 : 16,
-                paddingBottom: isDense ? 8 : 12,
+                gap: 12,
+                marginBottom: isDense ? 12 : 16,
+                paddingBottom: isDense ? 10 : 14,
                 borderBottom: '1px solid rgba(226, 232, 240, 0.8)',
               }}>
                 <div style={{
-                  width: 34,
-                  height: 34,
+                  width: 36,
+                  height: 36,
                   borderRadius: 10,
-                  background: catIdx === 0 || catIdx === 1 || catIdx === 4
+                  background: catIdx % 2 === 0
                     ? 'linear-gradient(135deg, rgba(239, 20, 78, 0.1) 0%, rgba(29, 78, 216, 0.08) 100%)'
                     : 'linear-gradient(135deg, rgba(29, 78, 216, 0.1) 0%, rgba(239, 20, 78, 0.08) 100%)',
                   display: 'flex',
@@ -71,14 +71,14 @@ export default function Slide2({ slideIndex = 2, totalSlides = 27, onNavigate })
                 }}>
                   {CatIcon && (
                     <CatIcon
-                      size={18}
-                      color={catIdx === 0 || catIdx === 1 || catIdx === 4 ? BRAND : ROYAL}
+                      size={20}
+                      color={catIdx % 2 === 0 ? BRAND : ROYAL}
                       strokeWidth={2}
                     />
                   )}
                 </div>
                 <div style={{
-                  fontSize: isDense ? 15 : 17,
+                  fontSize: 18,
                   fontWeight: 700,
                   color: NAVY,
                   fontFamily: "'Inter', sans-serif",
@@ -92,7 +92,7 @@ export default function Slide2({ slideIndex = 2, totalSlides = 27, onNavigate })
               <div style={{
                 display: 'flex',
                 flexDirection: 'column',
-                gap: isDense ? 5 : 8,
+                gap: isDense ? 8 : 10,
                 flex: 1,
                 justifyContent: 'flex-start',
               }}>
@@ -109,8 +109,8 @@ export default function Slide2({ slideIndex = 2, totalSlides = 27, onNavigate })
                         display: 'flex',
                         alignItems: 'center',
                         justifyContent: 'space-between',
-                        padding: isDense ? '6px 10px' : '9px 12px',
-                        borderRadius: isDense ? 10 : 12,
+                        padding: isDense ? '8px 12px' : '10px 14px',
+                        borderRadius: 12,
                         border: '1px solid rgba(226, 232, 240, 0.85)',
                         background: 'rgba(255, 255, 255, 0.92)',
                         cursor: 'pointer',
@@ -119,7 +119,7 @@ export default function Slide2({ slideIndex = 2, totalSlides = 27, onNavigate })
                       }}
                     >
                       <span style={{
-                        fontSize: isDense ? 12 : 14,
+                        fontSize: 14,
                         fontWeight: 600,
                         color: NAVY,
                         fontFamily: "'Inter', sans-serif",
@@ -132,11 +132,11 @@ export default function Slide2({ slideIndex = 2, totalSlides = 27, onNavigate })
                         {sec.name}
                       </span>
                       <span style={{
-                        fontSize: isDense ? 11 : 12,
+                        fontSize: 12,
                         fontWeight: 700,
                         color: BRAND,
                         fontFamily: "'Inter', sans-serif",
-                        padding: isDense ? '1px 6px' : '2px 7px',
+                        padding: '2px 8px',
                         borderRadius: 999,
                         background: 'rgba(239, 20, 78, 0.08)',
                         flexShrink: 0,
@@ -157,7 +157,7 @@ export default function Slide2({ slideIndex = 2, totalSlides = 27, onNavigate })
         display: 'flex',
         justifyContent: 'space-between',
         alignItems: 'center',
-        paddingTop: 6,
+        paddingTop: 8,
         fontSize: 14,
         color: GREY,
         fontFamily: "'Inter', sans-serif",

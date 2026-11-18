@@ -14,7 +14,7 @@ fs.readdirSync(PNG_DIR).forEach(f => {
   if (f.endsWith('.png')) fs.unlinkSync(path.join(PNG_DIR, f));
 });
 
-const TOTAL_SLIDES = 27;
+const TOTAL_SLIDES = 34;
 
 const browser = await chromium.launch({
   channel: 'chrome',
@@ -37,17 +37,16 @@ await page.goto(BASE_URL, { waitUntil: 'networkidle' });
 
 // Allow initial fonts and styles to settle
 await page.waitForTimeout(2000);
-await page.click('body');
-
-// Ensure we are at slide 1 (Home)
-await page.keyboard.press('Home');
-await page.waitForTimeout(1500);
 
 for (let i = 0; i < TOTAL_SLIDES; i++) {
-  if (i > 0) {
-    await page.keyboard.press('ArrowRight');
-    await page.waitForTimeout(1600); // allow Framer Motion animation to settle
-  }
+  // Directly navigate to slide index i
+  await page.evaluate((idx) => {
+    if (window.__goToSlide) {
+      window.__goToSlide(idx);
+    }
+  }, i);
+
+  await page.waitForTimeout(1200); // allow animation to settle
 
   const outPath = path.join(PNG_DIR, `slide-${String(i + 1).padStart(2, '0')}.png`);
 

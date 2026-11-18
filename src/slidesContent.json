@@ -16,7 +16,7 @@
     "titleNavy": "What this system",
     "titleBrand": "covers",
     "titleNavyAfter": "",
-    "intro": "5 groups covering HR and Material Management operations.",
+    "intro": "17 sections, grouped by what they help you do.",
     "categories": [
       {
         "title": "People & Time",
@@ -109,67 +109,9 @@
             "slide": 16
           }
         ]
-      },
-      {
-        "title": "Material Management",
-        "icon": "Package",
-        "sections": [
-          {
-            "name": "Material Request Dashboard",
-            "slide": 20
-          },
-          {
-            "name": "Procurement Queue",
-            "slide": 20
-          },
-          {
-            "name": "RFQ / Quotations",
-            "slide": 21
-          },
-          {
-            "name": "Purchase Orders",
-            "slide": 21
-          },
-          {
-            "name": "Deliveries & Shipments",
-            "slide": 22
-          },
-          {
-            "name": "Receipts (GRN)",
-            "slide": 22
-          },
-          {
-            "name": "Material Master",
-            "slide": 23
-          },
-          {
-            "name": "Inventory & Stock",
-            "slide": 23
-          },
-          {
-            "name": "Vendors / Suppliers",
-            "slide": 24
-          },
-          {
-            "name": "Accounts & Bills",
-            "slide": 24
-          },
-          {
-            "name": "Asset List",
-            "slide": 25
-          },
-          {
-            "name": "Operational Assets Request",
-            "slide": 25
-          },
-          {
-            "name": "Operational Assets Inventory",
-            "slide": 26
-          }
-        ]
       }
     ],
-    "speakerNotes": "These 5 groups cover the full journey of HR operations and complete Material Management from requisition to inventory."
+    "speakerNotes": "These 17 sections cover the full journey of an employee, from joining to leaving."
   },
   {
     "slideNumber": 3,
@@ -836,551 +778,603 @@
   },
   {
     "slideNumber": 20,
-    "type": "material",
-    "sectionName": "Requests to Procurement",
-    "eyebrow": "20 / MATERIAL MANAGEMENT",
-    "titleNavy": "Requests to",
-    "titleBrand": "Procurement",
+    "type": "mm-overview",
+    "eyebrow": "20 / OVERVIEW",
+    "titleNavy": "What Material Management",
+    "titleBrand": "covers",
     "titleNavyAfter": "",
-    "intro": "Site teams ask for materials and buyers take it forward.",
-    "whyItHelps": "Every material need is visible from request to procurement.",
-    "speakerNotes": "Site teams raise requests for needed materials, which move to the procurement queue once approved.",
-    "submodules": [
+    "intro": "13 sections, grouped by what they help you do.",
+    "categories": [
       {
-        "number": "01",
-        "name": "Material Request Dashboard",
-        "icon": "FileText",
-        "desc": "Overview of material requests, purchasing and accounts flow.",
-        "chips": [
+        "title": "Requests & Buying",
+        "icon": "ShoppingCart",
+        "sections": [
           {
-            "label": "Pending Approval 84",
-            "dot": "amber"
+            "name": "Material Request Dashboard",
+            "slide": 21
           },
           {
-            "label": "Approved 63",
-            "dot": "green"
+            "name": "Procurement Queue",
+            "slide": 22
           },
           {
-            "label": "Rejected 0",
-            "dot": "slate"
+            "name": "RFQ / Quotations",
+            "slide": 23
+          },
+          {
+            "name": "Purchase Orders",
+            "slide": 24
           }
-        ],
-        "bullets": [
-          "Search and filter requests by status",
-          "See MR number, site, required date",
-          "Raise a New Request or Export the list"
-        ],
-        "flow": [
-          "Request raised",
-          "Pending PM approval",
-          "Approved",
-          "Moves to procurement"
-        ],
-        "image": "/assets/mm/01-dashboard.png"
+        ]
       },
       {
-        "number": "02",
-        "name": "Procurement Queue",
-        "icon": "ShoppingCart",
-        "desc": "Requisitions needing external vendor purchase after the warehouse stock check.",
-        "chips": [
+        "title": "Delivery & Stock",
+        "icon": "Truck",
+        "sections": [
           {
-            "label": "Pending Items 147",
-            "dot": "crimson"
+            "name": "Deliveries",
+            "slide": 25
           },
           {
-            "label": "Units to Procure 11,340",
-            "dot": "blue"
+            "name": "Receipts (GRN)",
+            "slide": 27
           },
           {
-            "label": "High Priority 42",
-            "dot": "amber"
+            "name": "Inventory",
+            "slide": 28
+          },
+          {
+            "name": "Material Master",
+            "slide": 26
           }
-        ],
-        "bullets": [
-          "See project, site, material and quantity needed",
-          "Filter by priority",
-          "Send an item to RFQ or Create a Global RFQ"
-        ],
-        "flow": [
-          "Stock checked",
-          "Shortfall listed",
-          "RFQ created",
-          "Vendor sourcing"
-        ],
-        "image": "/assets/mm/02-procurement-queue.png"
+        ]
+      },
+      {
+        "title": "Vendors & Payments",
+        "icon": "Wallet",
+        "sections": [
+          {
+            "name": "Vendors",
+            "slide": 30
+          },
+          {
+            "name": "Accounts & Bills",
+            "slide": 29
+          }
+        ]
+      },
+      {
+        "title": "Site Assets",
+        "icon": "Wrench",
+        "sections": [
+          {
+            "name": "Asset List",
+            "slide": 31
+          },
+          {
+            "name": "Operational Assets Request",
+            "slide": 32
+          },
+          {
+            "name": "Operational Assets Inventory",
+            "slide": 33
+          }
+        ]
       }
-    ]
+    ],
+    "speakerNotes": "Material Management organizes the entire construction supply chain across 13 specialized sections from requisition to site assets."
   },
   {
     "slideNumber": 21,
-    "type": "material",
-    "sectionName": "Quotes to Purchase Orders",
-    "eyebrow": "21 / MATERIAL MANAGEMENT",
-    "titleNavy": "Quotes to",
-    "titleBrand": "Purchase Orders",
+    "type": "module",
+    "sectionName": "Material Request Dashboard",
+    "eyebrow": "21 / DASHBOARD",
+    "titleNavy": "Material Request",
+    "titleBrand": "Dashboard",
     "titleNavyAfter": "",
-    "intro": "Create RFQs, compare vendor quotations, and issue linked purchase orders.",
-    "whyItHelps": "Quotes are compared fairly and orders are traceable.",
-    "speakerNotes": "Suppliers provide competitive quotes before approved items become official purchase orders.",
-    "submodules": [
+    "intro": "See every material request and where it stands.",
+    "moduleIcon": "LayoutDashboard",
+    "cards": [
       {
-        "number": "03",
-        "name": "RFQ / Quotations",
-        "icon": "FileSpreadsheet",
-        "desc": "Create RFQs, send to vendors and compare quotations.",
-        "chips": [
-          {
-            "label": "Requested",
-            "dot": "blue"
-          },
-          {
-            "label": "Pending",
-            "dot": "amber"
-          },
-          {
-            "label": "Approved",
-            "dot": "green"
-          },
-          {
-            "label": "Rejected",
-            "dot": "crimson"
-          },
-          {
-            "label": "On Hold",
-            "dot": "slate"
-          }
-        ],
-        "bullets": [
-          "Separate tabs for Materials and Assets",
-          "Track every RFQ by status",
-          "Search any RFQ quickly"
-        ],
-        "flow": [
-          "Create RFQ",
-          "Send to vendors",
-          "Compare quotes",
-          "Approve"
-        ],
-        "image": "/assets/mm/03-rfq-quotations.png"
+        "icon": "LayoutDashboard",
+        "number": "01",
+        "title": "Status at a glance",
+        "text": "Totals for pending approval, approved and rejected requests."
       },
       {
-        "number": "04",
-        "name": "Purchase Orders",
-        "icon": "CreditCard",
-        "desc": "Zoho Books purchase orders linked to material and asset requests.",
-        "chips": [
-          {
-            "label": "Total POs 24",
-            "dot": "blue"
-          },
-          {
-            "label": "Open/Approved 16",
-            "dot": "amber"
-          },
-          {
-            "label": "Received 0",
-            "dot": "green"
-          },
-          {
-            "label": "Billed 0",
-            "dot": "slate"
-          }
-        ],
-        "bullets": [
-          "Filter All / MR / AR purchase orders",
-          "See vendor, amount, delivery date and status",
-          "Sync Zoho POs or raise a New PO"
-        ],
-        "flow": [
-          "Draft",
-          "Approved",
-          "Received",
-          "Billed"
-        ],
-        "image": "/assets/mm/04-purchase-orders.png"
+        "icon": "FileText",
+        "number": "02",
+        "title": "Easy search",
+        "text": "Find a request by number, site or status."
+      },
+      {
+        "icon": "CheckSquare",
+        "number": "03",
+        "title": "Quick actions",
+        "text": "Raise a new request or export the list."
       }
-    ]
+    ],
+    "steps": [
+      "Raise a request",
+      "Pending PM approval",
+      "Approved",
+      "Goes to procurement"
+    ],
+    "whyItHelps": "Every material need is visible from request to approval.",
+    "speakerNotes": "This dashboard gives site managers and buyers real-time visibility into all raised material requests and their current approval stage."
   },
   {
     "slideNumber": 22,
-    "type": "material",
-    "sectionName": "Delivery & Receiving",
-    "eyebrow": "22 / MATERIAL MANAGEMENT",
-    "titleNavy": "Delivery &",
-    "titleBrand": "Receiving",
+    "type": "module",
+    "sectionName": "Procurement Queue",
+    "eyebrow": "22 / PROCUREMENT QUEUE",
+    "titleNavy": "Procurement",
+    "titleBrand": "Queue",
     "titleNavyAfter": "",
-    "intro": "Track delivery fulfilment, shipment dispatch timelines, and store receipt inspection.",
-    "whyItHelps": "Nothing arrives or ships without a record.",
-    "speakerNotes": "Shipments are monitored end-to-end so sites know when goods arrive and verify quality on delivery.",
-    "submodules": [
+    "intro": "Items that must be bought from outside vendors.",
+    "moduleIcon": "ShoppingCart",
+    "cards": [
       {
-        "number": "05",
-        "name": "Deliveries & Shipments",
-        "icon": "Truck",
-        "desc": "Track delivery fulfilment, shipments and dispatch timeline across projects.",
-        "chips": [
-          {
-            "label": "Total Shipments 84",
-            "dot": "blue"
-          },
-          {
-            "label": "Pending 42",
-            "dot": "amber"
-          },
-          {
-            "label": "In Progress 0",
-            "dot": "purple"
-          },
-          {
-            "label": "Delivered 42",
-            "dot": "green"
-          }
-        ],
-        "bullets": [
-          "Stock status per request (e.g. In Stock)",
-          "Required vs needed dates",
-          "Progress bar with stage and percentage"
-        ],
-        "flow": [
-          "Waiting approval",
-          "Dispatch",
-          "In progress",
-          "Delivered"
-        ],
-        "image": "/assets/mm/05-deliveries.png"
+        "icon": "ShoppingCart",
+        "number": "01",
+        "title": "Items to buy",
+        "text": "Requested items that are not available in warehouse stock."
       },
       {
-        "number": "07",
-        "name": "Receipts (GRN)",
-        "icon": "CheckSquare",
-        "desc": "Store keeper receives material, checks quality and inwards it to store.",
-        "chips": [
-          {
-            "label": "Pending Dispatch 24",
-            "dot": "amber"
-          },
-          {
-            "label": "Items with Issues 0",
-            "dot": "crimson"
-          },
-          {
-            "label": "Dispatch History 0",
-            "dot": "slate"
-          }
-        ],
-        "bullets": [
-          "Each PO shows QC status and store status",
-          "Spot partially received items",
-          "Sync Zoho POs"
-        ],
-        "flow": [
-          "PO arrives",
-          "QC check",
-          "Store inward",
-          "Recorded in history"
-        ],
-        "image": "/assets/mm/07-receipts-grn.png"
+        "icon": "AlertCircle",
+        "number": "02",
+        "title": "Key numbers",
+        "text": "Pending items, total units to buy and high-priority items."
+      },
+      {
+        "icon": "FileSpreadsheet",
+        "number": "03",
+        "title": "Quick RFQ",
+        "text": "Send one item to RFQ or create a global RFQ."
       }
-    ]
+    ],
+    "steps": [
+      "Stock is checked",
+      "Shortfall joins the queue",
+      "RFQ is created",
+      "Vendors are asked for quotes"
+    ],
+    "whyItHelps": "Nothing that needs buying is missed.",
+    "speakerNotes": "When warehouse stock cannot fulfill a request, items automatically enter this queue so procurement teams can act immediately."
   },
   {
     "slideNumber": 23,
-    "type": "material",
-    "sectionName": "Material Master & Inventory",
-    "eyebrow": "23 / MATERIAL MANAGEMENT",
-    "titleNavy": "Material Master &",
-    "titleBrand": "Inventory",
+    "type": "module",
+    "sectionName": "Request for Quotation",
+    "eyebrow": "23 / RFQ / QUOTATIONS",
+    "titleNavy": "Request for",
+    "titleBrand": "Quotation",
     "titleNavyAfter": "",
-    "intro": "Standard catalogued materials and multi-tier stock levels across projects.",
-    "whyItHelps": "One clean master list and live stock numbers.",
-    "speakerNotes": "Central material codes prevent duplicate items, while inventory gives real-time stock availability.",
-    "submodules": [
+    "intro": "Ask vendors for prices and compare their quotations.",
+    "moduleIcon": "FileSpreadsheet",
+    "cards": [
       {
-        "number": "06",
-        "name": "Material Master",
-        "icon": "Layers",
-        "desc": "One master list for Civil, Electrical, Mechanical and HVAC materials with cost code mapping.",
-        "chips": [
-          {
-            "label": "12 items",
-            "dot": "blue"
-          },
-          {
-            "label": "Civil / MEP / Architectural",
-            "dot": "purple"
-          }
-        ],
-        "bullets": [
-          "Filter by discipline, segment, category, UOM and class",
-          "Each material has code, specification and unit",
-          "Add Material or Export to Excel"
-        ],
-        "flow": [
-          "Add material",
-          "Set code and spec",
-          "Map cost code",
-          "Active for use"
-        ],
-        "image": "/assets/mm/06-material-master.png"
+        "icon": "FileSpreadsheet",
+        "number": "01",
+        "title": "Materials and assets",
+        "text": "Separate tabs for material RFQs and asset RFQs."
       },
       {
-        "number": "08",
-        "name": "Inventory & Stock",
-        "icon": "Boxes",
-        "desc": "Multi-tier stock tracking: on-hand, usable, reserved and on-order.",
-        "chips": [
-          {
-            "label": "Total Items 168",
-            "dot": "blue"
-          },
-          {
-            "label": "On-Hand 115,478",
-            "dot": "slate"
-          },
-          {
-            "label": "Usable 87,815",
-            "dot": "green"
-          },
-          {
-            "label": "Reserved 27,663",
-            "dot": "amber"
-          }
-        ],
-        "bullets": [
-          "See stock status and free-to-allocate quantity",
-          "Search by category or status",
-          "Add Stock (Batch) and view Activity Logs"
-        ],
-        "flow": [
-          "Stock received",
-          "Added to inventory",
-          "Reserved for requests",
-          "Issued"
-        ],
-        "image": "/assets/mm/08-inventory.png"
+        "icon": "CheckCircle2",
+        "number": "02",
+        "title": "Clear status",
+        "text": "Requested, pending, approved, rejected or on hold."
+      },
+      {
+        "icon": "FileText",
+        "number": "03",
+        "title": "Easy search",
+        "text": "Find any RFQ quickly."
       }
-    ]
+    ],
+    "steps": [
+      "Create an RFQ",
+      "Send to vendors",
+      "Compare quotations",
+      "Approve the best one"
+    ],
+    "whyItHelps": "Prices are compared fairly before anything is bought.",
+    "speakerNotes": "Procurement sends requests for quotations to multiple suppliers, compares responses side by side, and approves the best price."
   },
   {
     "slideNumber": 24,
-    "type": "material",
-    "sectionName": "Vendors & Payments",
-    "eyebrow": "24 / MATERIAL MANAGEMENT",
-    "titleNavy": "Vendors &",
-    "titleBrand": "Payments",
+    "type": "module",
+    "sectionName": "Purchase Orders",
+    "eyebrow": "24 / PURCHASE ORDERS",
+    "titleNavy": "Purchase",
+    "titleBrand": "Orders",
     "titleNavyAfter": "",
-    "intro": "Manage approved trade suppliers and track invoice settlements.",
-    "whyItHelps": "Vendors are organised and bills are settled on time.",
-    "speakerNotes": "Keep vendor directories up to date and match invoices directly against orders for seamless settlement.",
-    "submodules": [
+    "intro": "Purchase orders linked to material and asset requests.",
+    "moduleIcon": "CreditCard",
+    "cards": [
       {
-        "number": "10",
-        "name": "Vendors / Suppliers",
-        "icon": "Building2",
-        "desc": "All project vendors, contact details and trade categories in one place.",
-        "chips": [
-          {
-            "label": "Total Vendors 10",
-            "dot": "blue"
-          },
-          {
-            "label": "Active Trade Categories 10",
-            "dot": "green"
-          }
-        ],
-        "bullets": [
-          "Code, contact person, email, phone and city",
-          "Category tag per vendor (steel, paints, concrete, MEP...)",
-          "Add New Vendor or Refresh"
-        ],
-        "flow": [
-          "Add vendor",
-          "Assign category",
-          "Used in RFQ",
-          "Used in PO"
-        ],
-        "image": "/assets/mm/10-vendors.png"
+        "icon": "CreditCard",
+        "number": "01",
+        "title": "Zoho Books link",
+        "text": "Purchase orders are synced from Zoho Books."
       },
       {
-        "number": "09",
-        "name": "Accounts & Bills",
-        "icon": "Wallet",
-        "desc": "Material invoices, payment approvals and vendor settlements.",
-        "chips": [
-          {
-            "label": "Invoice Entry 0",
-            "dot": "slate"
-          },
-          {
-            "label": "Approvals 0",
-            "dot": "amber"
-          },
-          {
-            "label": "Partial / Fronting 0",
-            "dot": "purple"
-          },
-          {
-            "label": "Settled History 0",
-            "dot": "green"
-          }
-        ],
-        "bullets": [
-          "Search by MR#, LPO#, vendor or invoice",
-          "Four tabs follow the bill from entry to settlement",
-          "Sync with accounts"
-        ],
-        "flow": [
-          "Invoice entered",
-          "Approved",
-          "Paid (full or partial)",
-          "Settled"
-        ],
-        "image": "/assets/mm/09-accounts-bills.png"
+        "icon": "FileText",
+        "number": "02",
+        "title": "Track every order",
+        "text": "Vendor, amount, delivery date and status in one list."
+      },
+      {
+        "icon": "Sliders",
+        "number": "03",
+        "title": "Counts and tabs",
+        "text": "Open, received and billed totals; view all, MR or AR orders."
       }
-    ]
+    ],
+    "steps": [
+      "PO is drafted",
+      "Approved",
+      "Material received",
+      "Billed"
+    ],
+    "whyItHelps": "Every order can be traced from request to bill.",
+    "speakerNotes": "Purchase orders connect approved quotes to Zoho Books accounting, ensuring every order matches deliveries and invoices."
   },
   {
     "slideNumber": 25,
-    "type": "material",
-    "sectionName": "Site Assets",
-    "eyebrow": "25 / MATERIAL MANAGEMENT",
-    "titleNavy": "Site",
-    "titleBrand": "Assets",
+    "type": "module",
+    "sectionName": "Deliveries & Shipments",
+    "eyebrow": "25 / DELIVERIES",
+    "titleNavy": "Deliveries &",
+    "titleBrand": "Shipments",
     "titleNavyAfter": "",
-    "intro": "Request, allocate and monitor site machinery and heavy tools.",
-    "whyItHelps": "Machinery and tools are tracked with their suppliers.",
-    "speakerNotes": "Every machine and piece of equipment is inventoried and tracked across requests and returns.",
-    "submodules": [
+    "intro": "Track material delivery from approval to site.",
+    "moduleIcon": "Truck",
+    "cards": [
       {
-        "number": "11",
-        "name": "Asset List",
-        "icon": "Wrench",
-        "desc": "Machinery assets and their preferred suppliers.",
-        "chips": [
-          {
-            "label": "Total Assets 5",
-            "dot": "blue"
-          },
-          {
-            "label": "Vendor Mapped 5",
-            "dot": "green"
-          },
-          {
-            "label": "Categories 5",
-            "dot": "purple"
-          },
-          {
-            "label": "Active 5",
-            "dot": "amber"
-          }
-        ],
-        "bullets": [
-          "Asset code, specification, unit (month, shift, pour)",
-          "Preferred vendor shown per asset",
-          "Add Asset or Export"
-        ],
-        "flow": [
-          "Add asset",
-          "Set spec and unit",
-          "Map vendor",
-          "Active"
-        ],
-        "image": "/assets/mm/11-asset-list.png"
+        "icon": "Truck",
+        "number": "01",
+        "title": "Shipment counts",
+        "text": "Total, pending, in progress and delivered shipments."
       },
       {
-        "number": "12",
-        "name": "Operational Assets Request",
-        "icon": "ClipboardList",
-        "desc": "Request, track and manage site machinery, tools and equipment.",
-        "chips": [
-          {
-            "label": "Pending 0",
-            "dot": "amber"
-          },
-          {
-            "label": "Approved 0",
-            "dot": "green"
-          },
-          {
-            "label": "Issued 0",
-            "dot": "blue"
-          },
-          {
-            "label": "Returned 0",
-            "dot": "purple"
-          },
-          {
-            "label": "Rejected 0",
-            "dot": "crimson"
-          }
-        ],
-        "bullets": [
-          "Filter by status and stock status",
-          "List or grid view",
-          "Raise a New Request"
-        ],
-        "flow": [
-          "Request raised",
-          "Approved",
-          "Issued to site",
-          "Returned"
-        ],
-        "image": "/assets/mm/12-operational-assets-request.png"
+        "icon": "Package",
+        "number": "02",
+        "title": "Stock status",
+        "text": "See if the material is already in stock."
+      },
+      {
+        "icon": "TrendingUp",
+        "number": "03",
+        "title": "Progress tracking",
+        "text": "Each request shows its stage and percentage."
       }
-    ]
+    ],
+    "steps": [
+      "Waiting for approval",
+      "Dispatched",
+      "In progress",
+      "Delivered"
+    ],
+    "whyItHelps": "Teams always know what is coming and when.",
+    "speakerNotes": "Project sites track in-transit material shipments with live dispatch stages and expected delivery dates."
   },
   {
     "slideNumber": 26,
-    "type": "material",
-    "isWide": true,
-    "sectionName": "Operational Assets Inventory",
-    "eyebrow": "26 / MATERIAL MANAGEMENT",
-    "titleNavy": "Operational Assets",
-    "titleBrand": "Inventory",
+    "type": "module",
+    "sectionName": "Material Master",
+    "eyebrow": "26 / MATERIAL MASTER",
+    "titleNavy": "Material",
+    "titleBrand": "Master",
     "titleNavyAfter": "",
-    "intro": "Complete visibility of available and deployed construction tools and equipment.",
-    "whyItHelps": "Always know which assets are free and which are in use.",
-    "speakerNotes": "Site managers see which tools are on site and which are available in central storage at a glance.",
-    "submodules": [
+    "intro": "One master list of all approved materials.",
+    "moduleIcon": "Layers",
+    "cards": [
       {
-        "number": "13",
-        "name": "Operational Assets Inventory",
-        "icon": "ShieldCheck",
-        "desc": "Tools, machinery and assets inventory.",
-        "chips": [
-          {
-            "label": "Total Assets 0",
-            "dot": "blue"
-          },
-          {
-            "label": "Available 0",
-            "dot": "green"
-          },
-          {
-            "label": "In Use 0",
-            "dot": "amber"
-          }
-        ],
-        "bullets": [
-          "Asset code, name, category and quantities",
-          "See what is available vs in use",
-          "Add Stock Entry"
-        ],
-        "flow": [
-          "Add stock entry",
-          "Available",
-          "Issued (In Use)",
-          "Returned to stock"
-        ],
-        "image": "/assets/mm/13-operational-assets-inventory.png"
+        "icon": "Layers",
+        "number": "01",
+        "title": "All disciplines",
+        "text": "Civil, electrical, mechanical and HVAC materials together."
+      },
+      {
+        "icon": "FileText",
+        "number": "02",
+        "title": "Full details",
+        "text": "Code, description, size, unit and class for each material."
+      },
+      {
+        "icon": "Sliders",
+        "number": "03",
+        "title": "Filters and export",
+        "text": "Filter by discipline, category or unit; export to Excel."
       }
-    ]
+    ],
+    "steps": [
+      "Add a material",
+      "Set code and specification",
+      "Map the cost code",
+      "Material is active"
+    ],
+    "whyItHelps": "Everyone orders the same materials with the same names and codes.",
+    "speakerNotes": "A single standardized catalog eliminates duplicate entries and ensures consistent item specifications across projects."
   },
   {
     "slideNumber": 27,
+    "type": "module",
+    "sectionName": "Goods Receipt",
+    "eyebrow": "27 / RECEIPTS (GRN)",
+    "titleNavy": "Goods",
+    "titleBrand": "Receipt",
+    "titleNavyAfter": "",
+    "intro": "Receive material, check quality and add it to the store.",
+    "moduleIcon": "CheckSquare",
+    "cards": [
+      {
+        "icon": "Clock",
+        "number": "01",
+        "title": "Pending dispatch",
+        "text": "See every purchase order waiting to be received."
+      },
+      {
+        "icon": "ShieldCheck",
+        "number": "02",
+        "title": "Quality and store status",
+        "text": "Each order shows its QC status and store status."
+      },
+      {
+        "icon": "History",
+        "number": "03",
+        "title": "Issues and history",
+        "text": "Track items with issues and past dispatches."
+      }
+    ],
+    "steps": [
+      "Material arrives",
+      "Quality check",
+      "Store inward",
+      "Recorded in history"
+    ],
+    "whyItHelps": "Only checked material enters the store.",
+    "speakerNotes": "Storekeepers inspect incoming deliveries for quality and quantity before signing off and inwarding goods into stock."
+  },
+  {
+    "slideNumber": 28,
+    "type": "module",
+    "sectionName": "Inventory & Stock",
+    "eyebrow": "28 / INVENTORY",
+    "titleNavy": "Inventory &",
+    "titleBrand": "Stock",
+    "titleNavyAfter": "",
+    "intro": "Know exactly what is in stock and what is free to use.",
+    "moduleIcon": "Boxes",
+    "cards": [
+      {
+        "icon": "Boxes",
+        "number": "01",
+        "title": "Four stock levels",
+        "text": "On-hand, usable, reserved and on-order quantities."
+      },
+      {
+        "icon": "AlertCircle",
+        "number": "02",
+        "title": "Low stock watch",
+        "text": "Low and out-of-stock items are counted."
+      },
+      {
+        "icon": "History",
+        "number": "03",
+        "title": "Easy updates",
+        "text": "Add stock in a batch and view activity logs."
+      }
+    ],
+    "steps": [
+      "Stock is received",
+      "Added to inventory",
+      "Reserved for requests",
+      "Issued to site"
+    ],
+    "whyItHelps": "Stock numbers stay accurate and shortages are seen early.",
+    "speakerNotes": "Live inventory balances distinguish between on-hand stock and quantities already reserved for active construction sites."
+  },
+  {
+    "slideNumber": 29,
+    "type": "module",
+    "sectionName": "Accounts & Payments",
+    "eyebrow": "29 / ACCOUNTS & BILLS",
+    "titleNavy": "Accounts &",
+    "titleBrand": "Payments",
+    "titleNavyAfter": "",
+    "intro": "Handle material invoices and pay vendors.",
+    "moduleIcon": "Wallet",
+    "cards": [
+      {
+        "icon": "FileText",
+        "number": "01",
+        "title": "Invoice entry",
+        "text": "Record vendor invoices against each order."
+      },
+      {
+        "icon": "CheckCircle2",
+        "number": "02",
+        "title": "Approvals",
+        "text": "Payments are approved before they are made."
+      },
+      {
+        "icon": "Coins",
+        "number": "03",
+        "title": "Settlement tracking",
+        "text": "See partial payments and settled history."
+      }
+    ],
+    "steps": [
+      "Invoice is entered",
+      "Payment approved",
+      "Paid in full or part",
+      "Settled"
+    ],
+    "whyItHelps": "Vendor bills are checked and paid in an organised way.",
+    "speakerNotes": "Invoices are matched directly with purchase orders and goods receipt notes before accounts releases vendor payments."
+  },
+  {
+    "slideNumber": 30,
+    "type": "module",
+    "sectionName": "Vendor / Supplier Management",
+    "eyebrow": "30 / VENDORS",
+    "titleNavy": "Vendor / Supplier",
+    "titleBrand": "Management",
+    "titleNavyAfter": "",
+    "intro": "Keep all vendors and their contacts in one list.",
+    "moduleIcon": "Building2",
+    "cards": [
+      {
+        "icon": "Users",
+        "number": "01",
+        "title": "Vendor details",
+        "text": "Code, contact person, email, phone and city."
+      },
+      {
+        "icon": "Layers",
+        "number": "02",
+        "title": "Trade categories",
+        "text": "Steel, paints, concrete, MEP and more."
+      },
+      {
+        "icon": "UserPlus",
+        "number": "03",
+        "title": "Quick add",
+        "text": "Add a new vendor or refresh the list."
+      }
+    ],
+    "steps": [
+      "Add a vendor",
+      "Choose trade category",
+      "Used in RFQs",
+      "Used in purchase orders"
+    ],
+    "whyItHelps": "The right vendor is always easy to find.",
+    "speakerNotes": "All approved suppliers are organized by trade category with full contact details and transaction history in one directory."
+  },
+  {
+    "slideNumber": 31,
+    "type": "module",
+    "sectionName": "Asset List",
+    "eyebrow": "31 / ASSET LIST",
+    "titleNavy": "Asset",
+    "titleBrand": "List",
+    "titleNavyAfter": "",
+    "intro": "Manage machinery assets and their suppliers.",
+    "moduleIcon": "Wrench",
+    "cards": [
+      {
+        "icon": "Wrench",
+        "number": "01",
+        "title": "Asset details",
+        "text": "Code, name, size and unit such as month, shift or pour."
+      },
+      {
+        "icon": "Building2",
+        "number": "02",
+        "title": "Preferred vendors",
+        "text": "Suppliers assigned to each asset."
+      },
+      {
+        "icon": "FileSpreadsheet",
+        "number": "03",
+        "title": "Add and export",
+        "text": "Add a new asset or export the list."
+      }
+    ],
+    "steps": [
+      "Add an asset",
+      "Set size and unit",
+      "Map vendors",
+      "Asset is active"
+    ],
+    "whyItHelps": "Machinery and its suppliers are ready when needed.",
+    "speakerNotes": "All site machinery, vehicles, and heavy tools are listed with rental units and assigned preferred suppliers."
+  },
+  {
+    "slideNumber": 32,
+    "type": "module",
+    "sectionName": "Operational Assets Request",
+    "eyebrow": "32 / OPERATIONAL ASSETS REQUEST",
+    "titleNavy": "Operational Assets",
+    "titleBrand": "Request",
+    "titleNavyAfter": "",
+    "intro": "Request site machinery, tools and equipment.",
+    "moduleIcon": "ClipboardList",
+    "cards": [
+      {
+        "icon": "CheckCircle2",
+        "number": "01",
+        "title": "Clear status",
+        "text": "Pending, approved, issued, returned or rejected."
+      },
+      {
+        "icon": "Sliders",
+        "number": "02",
+        "title": "Filters and views",
+        "text": "Filter by status and stock status; list or grid view."
+      },
+      {
+        "icon": "FileText",
+        "number": "03",
+        "title": "New request",
+        "text": "Raise a request and export the list."
+      }
+    ],
+    "steps": [
+      "Request is raised",
+      "Approved",
+      "Issued to site",
+      "Returned"
+    ],
+    "whyItHelps": "Site tools are issued and returned with a proper record.",
+    "speakerNotes": "Sites request operational assets and machinery with full accountability for issue dates, project sites, and return timelines."
+  },
+  {
+    "slideNumber": 33,
+    "type": "module",
+    "sectionName": "Operational Assets Inventory",
+    "eyebrow": "33 / OPERATIONAL ASSETS INVENTORY",
+    "titleNavy": "Operational Assets",
+    "titleBrand": "Inventory",
+    "titleNavyAfter": "",
+    "intro": "Know which tools and machines are free or in use.",
+    "moduleIcon": "ShieldCheck",
+    "cards": [
+      {
+        "icon": "ShieldCheck",
+        "number": "01",
+        "title": "Asset counts",
+        "text": "Total, available and in-use assets."
+      },
+      {
+        "icon": "Boxes",
+        "number": "02",
+        "title": "Asset list",
+        "text": "Code, name, category and quantities."
+      },
+      {
+        "icon": "UserCheck",
+        "number": "03",
+        "title": "Add stock",
+        "text": "Add a new stock entry in a few clicks."
+      }
+    ],
+    "steps": [
+      "Stock entry is added",
+      "Available",
+      "Issued (in use)",
+      "Returned to stock"
+    ],
+    "whyItHelps": "Always know which assets are free and which are in use.",
+    "speakerNotes": "Site managers see which equipment is currently deployed on sites and which items are free in storage ready for use."
+  },
+  {
+    "slideNumber": 34,
     "type": "closing",
-    "eyebrow": "27 / SUMMARY",
+    "eyebrow": "34 / SUMMARY",
     "titleNavy": "Thank",
     "titleBrand": "you",
     "titleNavyAfter": "",

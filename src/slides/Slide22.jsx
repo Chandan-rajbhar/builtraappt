@@ -1,6 +1,6 @@
 import React from 'react';
-import MaterialModuleSlide from '../components/MaterialModuleSlide';
+import ModuleSlide from '../components/ModuleSlide';
 
 export default function Slide22(props) {
-  return <MaterialModuleSlide slideNumber={22} {...props} />;
+  return <ModuleSlide slideNumber={22} {...props} />;
 }

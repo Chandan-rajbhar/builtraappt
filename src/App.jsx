@@ -27,37 +27,51 @@ import Slide24 from './slides/Slide24';
 import Slide25 from './slides/Slide25';
 import Slide26 from './slides/Slide26';
 import Slide27 from './slides/Slide27';
+import Slide28 from './slides/Slide28';
+import Slide29 from './slides/Slide29';
+import Slide30 from './slides/Slide30';
+import Slide31 from './slides/Slide31';
+import Slide32 from './slides/Slide32';
+import Slide33 from './slides/Slide33';
+import Slide34 from './slides/Slide34';
 import { SLIDES_DATA } from './slidesData';
 import './index.css';
 
 export const SLIDES = [
   Slide1,  // 01: Title Slide (One place for people, time and pay.)
-  Slide2,  // 02: Overview (5 Group Cards, 30 Sections)
-  Slide3,  // 03: HR Dashboard (Section 1)
-  Slide4,  // 04: Employees (Section 2)
-  Slide5,  // 05: Leave (Section 3)
-  Slide6,  // 06: Payroll (Section 4)
-  Slide7,  // 07: Attendance (Section 5)
-  Slide8,  // 08: Loan (Section 6)
-  Slide9,  // 09: Salary Increment (Section 7)
-  Slide10, // 10: Salary Discrepancy (Section 8)
-  Slide11, // 11: Disciplinary Action (Section 9)
-  Slide12, // 12: Ticket Management (Section 10)
-  Slide13, // 13: Digital Forms (Section 11)
-  Slide14, // 14: Clearance Form (Section 12)
-  Slide15, // 15: Employee Rejoining (Section 13)
-  Slide16, // 16: Report (Section 14)
-  Slide17, // 17: Meeting Arrangements (Section 15)
-  Slide18, // 18: Audit Logs (Section 16)
-  Slide19, // 19: Payroll Settings (Section 17)
-  Slide20, // 20: Requests to Procurement (Material 1 & 2)
-  Slide21, // 21: Quotes to Purchase Orders (Material 3 & 4)
-  Slide22, // 22: Delivery & Receiving (Material 5 & 7)
-  Slide23, // 23: Material Master & Inventory (Material 6 & 8)
-  Slide24, // 24: Vendors & Payments (Material 10 & 9)
-  Slide25, // 25: Site Assets (Material 11 & 12)
-  Slide26, // 26: Operational Assets Inventory (Material 13)
-  Slide27, // 27: Closing (Thank you / Questions?)
+  Slide2,  // 02: Overview (What this system covers - 4 HR Categories)
+  Slide3,  // 03: HR Dashboard (HR 1)
+  Slide4,  // 04: Employees (HR 2)
+  Slide5,  // 05: Leave (HR 3)
+  Slide6,  // 06: Payroll (HR 4)
+  Slide7,  // 07: Attendance (HR 5)
+  Slide8,  // 08: Loan (HR 6)
+  Slide9,  // 09: Salary Increment (HR 7)
+  Slide10, // 10: Salary Discrepancy (HR 8)
+  Slide11, // 11: Disciplinary Action (HR 9)
+  Slide12, // 12: Ticket Management (HR 10)
+  Slide13, // 13: Digital Forms (HR 11)
+  Slide14, // 14: Clearance Form (HR 12)
+  Slide15, // 15: Employee Rejoining (HR 13)
+  Slide16, // 16: Report (HR 14)
+  Slide17, // 17: Meeting Arrangements (HR 15)
+  Slide18, // 18: Audit Logs (HR 16)
+  Slide19, // 19: Payroll Settings (HR 17)
+  Slide20, // 20: Material Management Overview (What Material Management covers - 4 Categories)
+  Slide21, // 21: Material Request Dashboard (MM 1)
+  Slide22, // 22: Procurement Queue (MM 2)
+  Slide23, // 23: Request for Quotation (MM 3)
+  Slide24, // 24: Purchase Orders (MM 4)
+  Slide25, // 25: Deliveries & Shipments (MM 5)
+  Slide26, // 26: Material Master (MM 6)
+  Slide27, // 27: Goods Receipt / Receipts GRN (MM 7)
+  Slide28, // 28: Inventory & Stock (MM 8)
+  Slide29, // 29: Accounts & Payments (MM 9)
+  Slide30, // 30: Vendor / Supplier Management (MM 10)
+  Slide31, // 31: Asset List (MM 11)
+  Slide32, // 32: Operational Assets Request (MM 12)
+  Slide33, // 33: Operational Assets Inventory (MM 13)
+  Slide34, // 34: Closing (Thank you / Questions?)
 ];
 
 export const MODULE_NAMES = SLIDES_DATA
@@ -216,7 +230,7 @@ function BottomNav({ current, total, onPrev, onNext }) {
         </svg>
       </motion.button>
 
-      {/* Progress & Counter (01 — 20) */}
+      {/* Progress & Counter */}
       <div style={{ display: 'flex', alignItems: 'center', gap: 10, minWidth: 150 }}>
         <span style={{
           fontSize: 13, fontWeight: 700, color: '#0B1F4B',
@@ -379,6 +393,13 @@ export default function App() {
     setCurrent(clamped);
     setTimeout(() => { isScrolling.current = false; }, 550);
   }, [current]);
+
+  useEffect(() => {
+    window.__goToSlide = (idx) => {
+      isScrolling.current = false;
+      goTo(idx, idx > current ? 1 : -1);
+    };
+  }, [goTo, current]);
 
   const goNext = useCallback(() => goTo(current + 1, 1), [current, goTo]);
   const goPrev = useCallback(() => goTo(current - 1, -1), [current, goTo]);

@@ -400,12 +400,12 @@ function buildSlide20(slideData) {
 }
 
 // ─── Build All 20 Slides ────────────────────────────────────────────────────
-console.log('Generating 20-slide PPTX deck with pure plain text, zero screenshots/images, and presenter notes...');
+console.log(`Generating ${rawSlides.length}-slide PPTX deck with pure plain text, zero screenshots/images, and presenter notes...`);
 
 for (const slideData of rawSlides) {
   if (slideData.type === 'title') {
     buildSlide1(slideData);
-  } else if (slideData.type === 'overview') {
+  } else if (slideData.type === 'overview' || slideData.type === 'mm-overview') {
     buildSlide2(slideData);
   } else if (slideData.type === 'module') {
     buildModuleSlide(slideData);

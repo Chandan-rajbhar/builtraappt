@@ -8,17 +8,31 @@ import {
 } from './shared';
 import { SLIDES_DATA } from '../slidesData';
 
-export default function ModuleSlide({ slideNumber, totalSlides = 27, onNavigate }) {
+export default function ModuleSlide({ slideNumber, totalSlides = 34, onNavigate }) {
   const slideData = SLIDES_DATA.find((s) => s.slideNumber === slideNumber);
 
   if (!slideData) {
     return <div>Slide {slideNumber} not found</div>;
   }
 
-  // If this is the last HR module slide (19), next points to Material Management slide (20)
-  const nextSlide = slideNumber === 19
-    ? { number: 20, title: 'Requests to Procurement', index: 19 }
-    : null;
+  // Automatic "Next: ..." navigation
+  let nextSlide = null;
+  if (slideNumber === 19) {
+    // The last HR slide points to Material Management overview (Slide 20)
+    nextSlide = { number: 20, title: 'Material Management', index: 19 };
+  } else if (slideNumber === 33) {
+    // The last MM module slide points to Thank You (Slide 34)
+    nextSlide = { number: 34, title: 'Summary', index: 33 };
+  } else if (slideNumber >= 21 && slideNumber < 33) {
+    const next = SLIDES_DATA.find((s) => s.slideNumber === slideNumber + 1);
+    if (next) {
+      nextSlide = {
+        number: next.slideNumber,
+        title: next.sectionName || next.titleBrand || 'Next',
+        index: next.slideNumber - 1,
+      };
+    }
+  }
 
   return (
     <SlideLayout
@@ -64,7 +78,7 @@ export default function ModuleSlide({ slideNumber, totalSlides = 27, onNavigate 
           ))}
         </div>
 
-        {/* Right Column: "How it works" Step List Panel (NO screenshots, NO images) */}
+        {/* Right Column: "How it works" Step List Panel */}
         <div style={{
           width: '55%',
           display: 'flex',
@@ -77,7 +91,7 @@ export default function ModuleSlide({ slideNumber, totalSlides = 27, onNavigate 
         </div>
       </div>
 
-      {/* Bottom: "Why it helps" One-Line Strip (Max 14 words) */}
+      {/* Bottom: "Why it helps" One-Line Strip */}
       <WhyItHelpsStrip
         text={slideData.whyItHelps}
         nextSlide={nextSlide}
