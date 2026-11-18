@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useState, useEffect, useCallback, useRef } from 'react';
 import { AnimatePresence, motion } from 'framer-motion';
 import Slide1 from './slides/Slide1';
@@ -579,6 +580,15 @@ export default function App() {
         notes={currentSlideData.speakerNotes}
         slideNum={current + 1}
       />
+=======
+import React from 'react';
+import DeckPresentation from './components/DeckPresentation';
+
+export default function App() {
+  return (
+    <div className="w-full h-full min-h-screen">
+      <DeckPresentation />
+>>>>>>> karunesh/main
     </div>
   );
 }
