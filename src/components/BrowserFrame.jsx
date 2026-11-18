@@ -30,6 +30,12 @@ export default function BrowserFrame({ activeToolName, onSelectTool }) {
         { width: (i, target) => target.getAttribute('data-w') || '100%', duration: 0.8, ease: 'power3.out', delay: 0.05 }
       );
 
+      // Animate daily log vertical bars
+      gsap.fromTo('.daily-vbar-anim',
+        { scaleY: 0 },
+        { scaleY: 1, duration: 0.85, ease: 'back.out(1.5)', transformOrigin: 'bottom center', stagger: 0.06, delay: 0.1 }
+      );
+
       // Animate cards & rows entrance
       gsap.fromTo('.frame-item-anim',
         { opacity: 0, y: 10 },
@@ -89,64 +95,144 @@ export default function BrowserFrame({ activeToolName, onSelectTool }) {
     <div ref={frameRef} className="w-full rounded-2xl bg-[var(--card)] border border-[var(--line)] shadow-md overflow-hidden text-left">
       
       {/* =========================================================================
-          1. DAILY LOG: 13-Module Dashboard
+          1. DAILY LOG: Animated Site Telemetry, Graph & Progress Metrics
          ========================================================================= */}
       {activeToolName === 'Daily Log' && (
-        <div className="p-4 sm:p-5 space-y-3.5">
+        <div className="p-4 sm:p-5 space-y-4">
           <div className="flex flex-wrap items-center justify-between gap-2 pb-3 border-b border-[var(--line)]">
             <div className="flex items-center gap-2">
               <span className="text-[var(--acc)] text-xl">📋</span>
-              <h3 className="font-heading font-bold text-base sm:text-lg text-[var(--text)]">Daily Logs</h3>
+              <div>
+                <div className="flex items-center gap-2">
+                  <h3 className="font-heading font-bold text-base sm:text-lg text-[var(--text)]">Daily Log</h3>
+                  <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" title="Site Active"></span>
+                </div>
+                <p className="text-[11px] font-mono text-[var(--muted)] m-0 leading-none">
+                  November 18th, 2026 • Shift 01 (Day Shift)
+                </p>
+              </div>
             </div>
             
-            <div className="flex items-center gap-2 text-xs">
-              <span className="px-2.5 py-1.5 rounded-lg border border-[var(--line)] bg-[var(--bg)] text-[var(--text)] font-mono text-[11px] flex items-center gap-1 shadow-2xs">
-                <span>📅</span> {activeTool.dailyLogDate}
+            <div className="flex items-center gap-1.5 text-xs">
+              <span className="px-2.5 py-1 rounded-md bg-emerald-50 text-emerald-700 font-mono font-bold text-[10px] border border-emerald-200">
+                ● 148 On-Site
               </span>
-              <span className="hidden sm:inline-flex px-2.5 py-1.5 rounded-lg border border-[var(--line)] bg-[var(--card)] text-[var(--muted)] text-[11px] font-medium shadow-2xs">
-                Logs Overview
-              </span>
-              <span className="px-3.5 py-1.5 rounded-lg bg-[var(--acc)] hover:bg-[#b01e19] text-white font-bold text-xs flex items-center gap-1 shadow-xs transition-colors cursor-pointer">
+              <span className="px-3 py-1.5 rounded-lg bg-[var(--acc)] text-white font-bold text-xs shadow-xs cursor-pointer">
                 + Create Log
               </span>
             </div>
           </div>
 
-          {renderHeaderToggle("Interactive 13-Module Architecture")}
+          {renderHeaderToggle("Daily Workforce & Activity Analytics")}
 
           {currentMode === 'live' ? (
-            <div className="max-h-[320px] overflow-y-auto pr-1 grid grid-cols-1 sm:grid-cols-2 gap-2 text-left">
-              {activeTool.subSections.map((sec) => (
-                <div 
-                  key={sec.id}
-                  className="frame-item-anim p-2.5 rounded-xl border border-[var(--line)] bg-[var(--card)] hover:border-[var(--acc)]/50 transition-all flex items-center justify-between group shadow-2xs cursor-pointer hover:bg-[var(--bg)]/50"
-                >
-                  <div className="space-y-0.5 pr-2">
-                    <div className="text-xs font-bold text-[var(--text)] group-hover:text-[var(--acc)] transition-colors">
-                      {sec.title}
-                    </div>
-                    <div className="text-[11px] text-[var(--muted)] leading-tight line-clamp-1">
-                      {sec.desc}
-                    </div>
-                  </div>
-                  <span className={`w-6 h-6 rounded-lg ${sec.badgeColor} flex items-center justify-center shrink-0`}>
-                    <ChevronRight className="w-3.5 h-3.5" />
-                  </span>
+            <div className="space-y-4">
+              {/* Minimal 4 KPI Stats */}
+              <div className="grid grid-cols-4 gap-2 text-center">
+                <div className="p-2.5 rounded-xl bg-[var(--bg)] border border-[var(--line)] shadow-2xs">
+                  <div className="text-[10px] font-mono text-[var(--muted)] uppercase">Manpower</div>
+                  <div className="text-base sm:text-lg font-heading font-bold text-[var(--text)]">148</div>
+                  <div className="text-[9px] font-mono text-emerald-600 font-semibold">98.6% Target</div>
                 </div>
-              ))}
+                <div className="p-2.5 rounded-xl bg-[var(--bg)] border border-[var(--line)] shadow-2xs">
+                  <div className="text-[10px] font-mono text-[var(--muted)] uppercase">Machines</div>
+                  <div className="text-base sm:text-lg font-heading font-bold text-[var(--text)]">12 / 12</div>
+                  <div className="text-[9px] font-mono text-slate-500">100% Runtime</div>
+                </div>
+                <div className="p-2.5 rounded-xl bg-[var(--bg)] border border-[var(--line)] shadow-2xs">
+                  <div className="text-[10px] font-mono text-[var(--muted)] uppercase">HSE Safety</div>
+                  <div className="text-base sm:text-lg font-heading font-bold text-emerald-600">0</div>
+                  <div className="text-[9px] font-mono text-emerald-600">Zero Incidents</div>
+                </div>
+                <div className="p-2.5 rounded-xl bg-[var(--bg)] border border-[var(--line)] shadow-2xs">
+                  <div className="text-[10px] font-mono text-[var(--muted)] uppercase">Weather</div>
+                  <div className="text-base sm:text-lg font-heading font-bold text-slate-800">28°C</div>
+                  <div className="text-[9px] font-mono text-amber-600">Clear Skies</div>
+                </div>
+              </div>
+
+              {/* Two Column Grid: Left is Weekly Manpower Bar Graph, Right is Trade Distribution Progress Bars */}
+              <div className="grid grid-cols-1 sm:grid-cols-12 gap-3 items-end">
+                {/* Weekly Bar Chart (5 cols) */}
+                <div className="sm:col-span-5 p-3 rounded-xl border border-[var(--line)] bg-[var(--bg)] space-y-2">
+                  <div className="flex items-center justify-between text-xs">
+                    <span className="font-heading font-bold text-[var(--text)] text-xs">Weekly Activity</span>
+                    <span className="text-[10px] font-mono text-[var(--acc)] font-bold">148 Avg</span>
+                  </div>
+
+                  {/* 6 Animated Vertical Bars */}
+                  <div className="flex items-end justify-between gap-1.5 h-24 pt-3 px-1">
+                    {[
+                      { day: 'Sat', val: 75, count: '112', active: false },
+                      { day: 'Sun', val: 88, count: '132', active: false },
+                      { day: 'Mon', val: 94, count: '141', active: false },
+                      { day: 'Tue', val: 96, count: '144', active: false },
+                      { day: 'Wed', val: 98, count: '148', active: true },
+                      { day: 'Thu', val: 92, count: '138', active: false }
+                    ].map((bar, bIdx) => (
+                      <div key={bIdx} className="flex-1 flex flex-col items-center gap-1 h-full justify-end group">
+                        <span className="text-[9px] font-mono text-slate-500 opacity-0 group-hover:opacity-100 transition-opacity">
+                          {bar.count}
+                        </span>
+                        <div className="w-full bg-slate-200/70 rounded-t-md h-full flex items-end overflow-hidden">
+                          <div 
+                            className={`daily-vbar-anim w-full rounded-t-md transition-all ${
+                              bar.active ? 'bg-[var(--acc)]' : 'bg-slate-700/80 group-hover:bg-slate-800'
+                            }`}
+                            style={{ height: `${bar.val}%` }}
+                          ></div>
+                        </div>
+                        <span className={`text-[10px] font-mono font-semibold ${bar.active ? 'text-[var(--acc)] font-bold' : 'text-slate-500'}`}>
+                          {bar.day}
+                        </span>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+
+                {/* Trade Breakdown Progress Bars (7 cols) */}
+                <div className="sm:col-span-7 p-3 rounded-xl border border-[var(--line)] bg-[var(--bg)] space-y-2.5">
+                  <div className="flex items-center justify-between text-xs">
+                    <span className="font-heading font-bold text-[var(--text)] text-xs">Workforce Breakdown</span>
+                    <span className="text-[10px] font-mono text-[var(--muted)]">4 Active Trades</span>
+                  </div>
+
+                  <div className="space-y-2">
+                    {[
+                      { trade: 'Civil & Concrete', count: 62, pct: 42, color: 'bg-rose-500' },
+                      { trade: 'MEP & Piping', count: 44, pct: 30, color: 'bg-amber-500' },
+                      { trade: 'Finishes & Drywall', count: 28, pct: 19, color: 'bg-sky-500' },
+                      { trade: 'Safety (HSE) & QA/QC', count: 14, pct: 9, color: 'bg-emerald-500' }
+                    ].map((row, rIdx) => (
+                      <div key={rIdx} className="space-y-1">
+                        <div className="flex justify-between text-[11px]">
+                          <span className="font-medium text-[var(--text)] truncate">{row.trade}</span>
+                          <span className="font-mono text-[var(--muted)] font-bold shrink-0">{row.count} ({row.pct}%)</span>
+                        </div>
+                        <div className="w-full h-1.5 rounded-full bg-slate-200/70 overflow-hidden">
+                          <div 
+                            className={`frame-bar-anim h-full rounded-full ${row.color}`} 
+                            data-w={`${row.pct * 2.2}%`}
+                          ></div>
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              </div>
             </div>
           ) : (
             renderScreenshot("/daily-logs-dashboard.jpg", "Daily Logs Dashboard")
           )}
 
-          <div className="pt-2 border-t border-[var(--line)]">
-            <div className="flex justify-between text-xs mb-1.5">
-              <span className="font-semibold text-[var(--text)] text-xs">Daily Biometric Attendance</span>
-              <span className="font-mono font-bold text-[var(--acc)] text-xs">148 / 150 (98.6%)</span>
-            </div>
-            <div className="w-full h-2 rounded-full bg-[var(--line)] overflow-hidden">
-              <div className="frame-bar-anim h-full bg-[var(--acc)] rounded-full" data-w="98.6%"></div>
-            </div>
+          <div className="pt-2 border-t border-[var(--line)] flex items-center justify-between text-xs">
+            <span className="font-semibold text-[var(--text)] flex items-center gap-1.5">
+              <span className="w-2 h-2 rounded-full bg-emerald-500"></span>
+              Site Shift Status: <strong>Day Shift Completed</strong>
+            </span>
+            <span className="font-mono font-bold text-[var(--acc)]">
+              98.6% Attendance Compliance
+            </span>
           </div>
         </div>
       )}
