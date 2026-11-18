@@ -1,23 +1,12 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { motion } from 'framer-motion';
-import { BRAND, NAVY, ROYAL, GREY, easeCurve } from '../components/shared';
+import { BRAND, NAVY, GREY, easeCurve } from '../components/shared';
 import { SLIDES_DATA } from '../slidesData';
-import { Users, CalendarDays, Clock, Wallet, FileText } from 'lucide-react';
+import builtraaMockup from '../assets/builtraa-mockup-2x.png';
 
 export default function Slide1({ onNavigate }) {
-  const [hoveredTile, setHoveredTile] = useState(null);
-
   // 24 section names from SLIDES_DATA (both HR and Material modules)
   const moduleSections = SLIDES_DATA.filter((s) => s.type === 'module' || s.type === 'material');
-
-  // 5 floating icon tiles with distinct positions and floating animation offsets
-  const iconTiles = [
-    { id: 1, icon: Users, label: 'People', size: 96, x: 60, y: 50, duration: 8, delay: 0 },
-    { id: 2, icon: CalendarDays, label: 'Leave', size: 88, x: 280, y: 20, duration: 9.5, delay: 0.8 },
-    { id: 3, icon: Clock, label: 'Time', size: 104, x: 170, y: 200, duration: 7.2, delay: 0.4 },
-    { id: 4, icon: Wallet, label: 'Money', size: 92, x: 40, y: 350, duration: 8.8, delay: 1.2 },
-    { id: 5, icon: FileText, label: 'Records', size: 86, x: 260, y: 340, duration: 10.2, delay: 0.6 },
-  ];
 
   return (
     <div
@@ -99,17 +88,17 @@ export default function Slide1({ onNavigate }) {
         justifyContent: 'space-between',
         zIndex: 10,
       }}>
-        {/* Top Split: Left Content + Right Floating Icon Cluster */}
+        {/* Top Split: Left Content + Right Product Mockup */}
         <div style={{
           display: 'flex',
           alignItems: 'center',
           justifyContent: 'space-between',
           flex: 1,
-          gap: 60,
+          gap: 40,
         }}>
-          {/* Left Column (54% width) */}
+          {/* Left Column (46% width) */}
           <div style={{
-            width: '54%',
+            width: '46%',
             display: 'flex',
             flexDirection: 'column',
             alignItems: 'flex-start',
@@ -231,96 +220,67 @@ export default function Slide1({ onNavigate }) {
             </motion.button>
           </div>
 
-          {/* Right Column (46% width): Floating Cluster of 5 Glass Tiles with Lucide Icons */}
+          {/* Right Column (54% width): Device Mockup Showcase (Laptop + Mobile) */}
           <div style={{
-            width: '44%',
-            height: 480,
+            width: '54%',
             position: 'relative',
             display: 'flex',
             alignItems: 'center',
-            justifyContent: 'center',
+            justifyContent: 'flex-end',
           }}>
-            {/* Center soft glow behind tiles */}
+            {/* Center soft radiant glow behind devices */}
             <div style={{
               position: 'absolute',
-              width: 380,
-              height: 380,
+              width: 480,
+              height: 480,
+              right: 80,
               borderRadius: '50%',
-              background: 'radial-gradient(circle, rgba(239, 20, 78, 0.12) 0%, rgba(29, 78, 216, 0.08) 50%, transparent 75%)',
-              filter: 'blur(40px)',
+              background: 'radial-gradient(circle, rgba(29, 78, 216, 0.09) 0%, rgba(239, 20, 78, 0.06) 50%, transparent 70%)',
+              filter: 'blur(50px)',
               pointerEvents: 'none',
             }} />
 
-            {/* The 5 Floating Icon Tiles */}
-            {iconTiles.map((tile) => {
-              const IconComp = tile.icon;
-              const isHovered = hoveredTile === tile.id;
-              return (
-                <motion.div
-                  key={tile.id}
-                  initial={{ opacity: 0, scale: 0.8 }}
-                  animate={{
-                    opacity: 1,
-                    scale: 1,
-                    y: [0, -14, 0, 14, 0],
-                    x: [0, 8, 0, -8, 0],
-                  }}
-                  transition={{
-                    opacity: { duration: 0.6, delay: 0.3 + tile.delay },
-                    scale: { duration: 0.6, delay: 0.3 + tile.delay },
-                    y: {
-                      duration: tile.duration,
-                      repeat: Infinity,
-                      ease: 'easeInOut',
-                    },
-                    x: {
-                      duration: tile.duration * 1.2,
-                      repeat: Infinity,
-                      ease: 'easeInOut',
-                    },
-                  }}
-                  onMouseEnter={() => setHoveredTile(tile.id)}
-                  onMouseLeave={() => setHoveredTile(null)}
-                  whileHover={{ scale: 1.12, zIndex: 30 }}
-                  className="glass"
-                  style={{
-                    position: 'absolute',
-                    left: tile.x,
-                    top: tile.y,
-                    width: tile.size,
-                    height: tile.size,
-                    borderRadius: 24,
-                    background: isHovered
-                      ? 'rgba(255, 255, 255, 0.98)'
-                      : 'rgba(255, 255, 255, 0.85)',
-                    border: isHovered
-                      ? `2px solid ${BRAND}`
-                      : '1.5px solid rgba(226, 232, 240, 0.9)',
-                    boxShadow: isHovered
-                      ? '0 16px 36px rgba(239, 20, 78, 0.18), inset 0 1px 0 #FFFFFF'
-                      : '0 10px 28px rgba(11, 31, 75, 0.08), inset 0 1px 0 #FFFFFF',
-                    display: 'flex',
-                    flexDirection: 'column',
-                    alignItems: 'center',
-                    justifyContent: 'center',
-                    cursor: 'default',
-                    zIndex: 10,
-                  }}
-                >
-                  <IconComp
-                    size={tile.size * 0.42}
-                    color={tile.id === 1 || tile.id === 4 ? BRAND : ROYAL}
-                    strokeWidth={1.8}
-                  />
-                </motion.div>
-              );
-            })}
+            {/* Device Mockup with Framer Motion Entrance & Ambient Floating */}
+            <motion.div
+              initial={{ opacity: 0, scale: 0.96, y: 16 }}
+              animate={{
+                opacity: 1,
+                scale: 1,
+                y: [0, -6, 0],
+              }}
+              transition={{
+                opacity: { duration: 0.65, delay: 0.35, ease: easeCurve },
+                scale: { duration: 0.65, delay: 0.35, ease: easeCurve },
+                y: { duration: 7, repeat: Infinity, ease: 'easeInOut' },
+              }}
+              whileHover={{ scale: 1.02 }}
+              style={{
+                position: 'relative',
+                zIndex: 10,
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+              }}
+            >
+              <img
+                src={builtraaMockup}
+                alt="Builtraa Platform Desktop and Mobile Dashboard"
+                style={{
+                  width: 940,
+                  maxWidth: '100%',
+                  height: 'auto',
+                  display: 'block',
+                  mixBlendMode: 'multiply',
+                  imageRendering: '-webkit-optimize-contrast',
+                }}
+              />
+            </motion.div>
           </div>
         </div>
 
-        {/* Bottom Strip: Slow moving row of 17 section names as chips */}
+        {/* Bottom Strip: Slow moving row of section names as chips */}
         <div style={{
-          marginTop: 24,
+          marginTop: 20,
           paddingTop: 16,
           borderTop: '1px solid rgba(226, 232, 240, 0.8)',
           overflow: 'hidden',

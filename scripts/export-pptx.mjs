@@ -122,28 +122,17 @@ function buildSlide1(slideData) {
     fontSize: 13, bold: true, color: C.navy, fontFace: 'Calibri', align: 'center',
   });
 
-  // Right Side: Floating Cluster of 5 Icon Tiles
-  const rightBoxX = 7.8;
-  const tiles = [
-    { x: rightBoxX + 0.4, y: 1.8, w: 1.5, h: 1.5, label: 'People', color: C.brand },
-    { x: rightBoxX + 2.5, y: 1.5, w: 1.4, h: 1.4, label: 'Leave', color: C.royal },
-    { x: rightBoxX + 1.6, y: 3.1, w: 1.6, h: 1.6, label: 'Time', color: C.royal },
-    { x: rightBoxX + 0.3, y: 4.4, w: 1.5, h: 1.5, label: 'Money', color: C.brand },
-    { x: rightBoxX + 2.4, y: 4.3, w: 1.4, h: 1.4, label: 'Records', color: C.royal },
-  ];
-
-  tiles.forEach((t) => {
-    slide.addShape(pptx.ShapeType.roundRect, {
-      x: t.x, y: t.y, w: t.w, h: t.h, rectRadius: 0.2,
-      fill: { color: C.white },
-      line: { color: C.border, pt: 1 },
-      shadow: { type: 'outer', blur: 8, offset: 4, angle: 90, color: '0B1F4B', opacity: 0.07 },
+  // Right Side: Builtraa Device Mockup (Laptop + Mobile)
+  const mockupPath = path.join(ROOT, 'public', 'assets', 'builtraa-mockup-2x.png');
+  if (fs.existsSync(mockupPath)) {
+    slide.addImage({
+      path: mockupPath,
+      x: 6.8,
+      y: 1.6,
+      w: 5.8,
+      h: 3.81,
     });
-    slide.addText(t.label, {
-      x: t.x, y: t.y + 0.45, w: t.w, h: 0.5,
-      fontSize: 13, bold: true, color: t.color, fontFace: 'Calibri', align: 'center',
-    });
-  });
+  }
 
   // Bottom Ticker / Marquee row representation (17 section chips)
   slide.addShape(pptx.ShapeType.line, {
