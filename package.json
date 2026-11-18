@@ -1,0 +1,37 @@
+{
+  "name": "builtraappt",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "lint": "eslint .",
+    "preview": "vite preview",
+    "export:pptx": "node scripts/export-pptx.mjs",
+    "export:png": "npm run build && npm run preview & node scripts/export-png.mjs"
+  },
+  "dependencies": {
+    "@fontsource/inter": "^5.3.0",
+    "framer-motion": "^11.18.2",
+    "lucide-react": "^0.479.0",
+    "pptxgenjs": "^3.12.0",
+    "react": "^19.3.1",
+    "react-dom": "^19.3.1"
+  },
+  "devDependencies": {
+    "@eslint/js": "^10.0.1",
+    "@types/react": "^19.3.0",
+    "@types/react-dom": "^19.3.0",
+    "@vitejs/plugin-react": "^6.1.2",
+    "autoprefixer": "^10.4.21",
+    "eslint": "^10.14.0",
+    "eslint-plugin-react-hooks": "^7.1.1",
+    "eslint-plugin-react-refresh": "^0.5.7",
+    "globals": "^17.13.0",
+    "playwright": "^1.65.1",
+    "postcss": "^8.5.3",
+    "tailwindcss": "^3.4.17",
+    "vite": "^8.3.6"
+  }
+}

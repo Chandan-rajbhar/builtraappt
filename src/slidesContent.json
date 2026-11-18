@@ -1,0 +1,738 @@
+[
+  {
+    "slideNumber": 1,
+    "type": "title",
+    "eyebrow": "HR MANAGEMENT SYSTEM",
+    "titleNavy": "One place for",
+    "titleBrand": "people, time",
+    "titleNavyAfter": "and pay.",
+    "intro": "Everything about your workforce, managed in one system.",
+    "speakerNotes": "Today I will show how this system helps HR manage employees, attendance, leave, salary and more, all in one place."
+  },
+  {
+    "slideNumber": 2,
+    "type": "overview",
+    "eyebrow": "02 / OVERVIEW",
+    "titleNavy": "What this system",
+    "titleBrand": "covers",
+    "titleNavyAfter": "",
+    "intro": "17 sections, grouped by what they help you do.",
+    "categories": [
+      {
+        "title": "People & Time",
+        "icon": "Users",
+        "sections": [
+          { "name": "HR Dashboard", "slide": 3 },
+          { "name": "Employees", "slide": 4 },
+          { "name": "Attendance", "slide": 7 },
+          { "name": "Leave", "slide": 5 }
+        ]
+      },
+      {
+        "title": "Money",
+        "icon": "Wallet",
+        "sections": [
+          { "name": "Payroll", "slide": 6 },
+          { "name": "Loan", "slide": 8 },
+          { "name": "Salary Increment", "slide": 9 },
+          { "name": "Salary Discrepancy", "slide": 10 },
+          { "name": "Payroll Settings", "slide": 19 }
+        ]
+      },
+      {
+        "title": "Rules & Records",
+        "icon": "ShieldCheck",
+        "sections": [
+          { "name": "Disciplinary Action", "slide": 11 },
+          { "name": "Digital Forms", "slide": 13 },
+          { "name": "Clearance Form", "slide": 14 },
+          { "name": "Employee Rejoining", "slide": 15 },
+          { "name": "Audit Logs", "slide": 18 }
+        ]
+      },
+      {
+        "title": "Support & Reports",
+        "icon": "BarChart3",
+        "sections": [
+          { "name": "Ticket Management", "slide": 12 },
+          { "name": "Meeting Arrangements", "slide": 17 },
+          { "name": "Report", "slide": 16 }
+        ]
+      }
+    ],
+    "speakerNotes": "These 17 sections cover the full journey of an employee, from joining to leaving."
+  },
+  {
+    "slideNumber": 3,
+    "type": "module",
+    "sectionName": "HR Dashboard",
+    "eyebrow": "03 / HR DASHBOARD",
+    "titleNavy": "Real-time",
+    "titleBrand": "HR Dashboard",
+    "titleNavyAfter": "",
+    "intro": "One screen that shows how your workforce is doing today.",
+    "moduleIcon": "LayoutDashboard",
+    "cards": [
+      {
+        "icon": "Users",
+        "number": "01",
+        "title": "Today at glance",
+        "text": "Total employees, active loans, people on leave, monthly payroll."
+      },
+      {
+        "icon": "Clock",
+        "number": "02",
+        "title": "Attendance view",
+        "text": "Who is present or absent, by employee type and project site."
+      },
+      {
+        "icon": "AlertCircle",
+        "number": "03",
+        "title": "Alerts and tasks",
+        "text": "Pending approvals, clearances, and visas or passports expiring soon."
+      }
+    ],
+    "steps": [
+      "Open the dashboard",
+      "See today's numbers",
+      "Spot what needs attention",
+      "Open that section to act"
+    ],
+    "whyItHelps": "HR spots problems early without opening every section.",
+    "speakerNotes": "Think of this as the control room. In one look, HR sees who is in, who is on leave and what needs action."
+  },
+  {
+    "slideNumber": 4,
+    "type": "module",
+    "sectionName": "Employees",
+    "eyebrow": "04 / EMPLOYEES",
+    "titleNavy": "Centralized",
+    "titleBrand": "Employees",
+    "titleNavyAfter": "",
+    "intro": "The complete list of everyone who works for the company.",
+    "moduleIcon": "Users",
+    "cards": [
+      {
+        "icon": "UserPlus",
+        "number": "01",
+        "title": "Employee profiles",
+        "text": "Personal, job, department and ID details kept in one record."
+      },
+      {
+        "icon": "Briefcase",
+        "number": "02",
+        "title": "Staff and labour",
+        "text": "Separate lists for staff, labour and unfinished entries."
+      },
+      {
+        "icon": "CheckCircle2",
+        "number": "03",
+        "title": "Status at glance",
+        "text": "Active status, passport, visa and labour-authority fee details."
+      }
+    ],
+    "steps": [
+      "Add a new employee",
+      "Fill in their details",
+      "They appear in the list",
+      "Search, filter or update any time"
+    ],
+    "whyItHelps": "All employee information is in one place, easy to find.",
+    "speakerNotes": "Every other section uses this list, so details are entered once and used everywhere."
+  },
+  {
+    "slideNumber": 5,
+    "type": "module",
+    "sectionName": "Leave",
+    "eyebrow": "05 / LEAVE",
+    "titleNavy": "Leave",
+    "titleBrand": "Management",
+    "titleNavyAfter": "",
+    "intro": "Employees apply for leave and managers approve it step by step.",
+    "moduleIcon": "CalendarDays",
+    "cards": [
+      {
+        "icon": "CheckSquare",
+        "number": "01",
+        "title": "Approval steps",
+        "text": "Requests go to Project Director, Director, then Managing Director."
+      },
+      {
+        "icon": "Calendar",
+        "number": "02",
+        "title": "Leave overview",
+        "text": "See leave by type and by department."
+      },
+      {
+        "icon": "FileText",
+        "number": "03",
+        "title": "Related requests",
+        "text": "Leave salary, comp-off, announcements and attendance corrections."
+      }
+    ],
+    "steps": [
+      "Employee applies",
+      "Project Director reviews",
+      "Director reviews",
+      "Managing Director gives final approval"
+    ],
+    "whyItHelps": "Everyone knows where a request is and who must act next.",
+    "speakerNotes": "No more paper forms or chasing. Each approver sees the request and the employee sees the status."
+  },
+  {
+    "slideNumber": 6,
+    "type": "module",
+    "sectionName": "Payroll",
+    "eyebrow": "06 / PAYROLL",
+    "titleNavy": "Payroll",
+    "titleBrand": "Processing",
+    "titleNavyAfter": "",
+    "intro": "Prepare, approve and pay salaries each month.",
+    "moduleIcon": "CreditCard",
+    "cards": [
+      {
+        "icon": "Users",
+        "number": "01",
+        "title": "Staff and labour",
+        "text": "Separate payroll for staff and for labour workers."
+      },
+      {
+        "icon": "CalendarDays",
+        "number": "02",
+        "title": "Monthly or custom",
+        "text": "Run the monthly closing, or an extra run when needed."
+      },
+      {
+        "icon": "CheckCircle2",
+        "number": "03",
+        "title": "Clear status",
+        "text": "Each run shows approval status, totals and a locked mark."
+      }
+    ],
+    "steps": [
+      "Run payroll",
+      "Approved, ready for payment",
+      "Paid",
+      "Locked"
+    ],
+    "whyItHelps": "Salaries are processed in an organised and traceable way.",
+    "speakerNotes": "Each month HR runs payroll, management approves it, salaries are paid and the record is locked."
+  },
+  {
+    "slideNumber": 7,
+    "type": "module",
+    "sectionName": "Attendance",
+    "eyebrow": "07 / ATTENDANCE",
+    "titleNavy": "Daily",
+    "titleBrand": "Attendance",
+    "titleNavyAfter": "",
+    "intro": "Daily attendance of every employee, recorded and checked.",
+    "moduleIcon": "Clock",
+    "cards": [
+      {
+        "icon": "Clock",
+        "number": "01",
+        "title": "Daily record",
+        "text": "Check-in, lunch, check-out, hours worked and late arrivals."
+      },
+      {
+        "icon": "CheckCircle2",
+        "number": "02",
+        "title": "Marked automatically",
+        "text": "No punch by 10:30 AM means Absent; punch makes them Present."
+      },
+      {
+        "icon": "FileSpreadsheet",
+        "number": "03",
+        "title": "Easy corrections",
+        "text": "Add or edit records, set shifts and holidays, export to Excel."
+      }
+    ],
+    "steps": [
+      "Employee punches at the attendance machine",
+      "Status updates automatically",
+      "HR checks and corrects if needed",
+      "Export the report"
+    ],
+    "whyItHelps": "Accurate attendance, which also feeds salary and leave.",
+    "speakerNotes": "Employees punch at site or office. The system marks attendance for HR, and HR can fix exceptions."
+  },
+  {
+    "slideNumber": 8,
+    "type": "module",
+    "sectionName": "Loan",
+    "eyebrow": "08 / LOAN",
+    "titleNavy": "Loan",
+    "titleBrand": "Management",
+    "titleNavyAfter": "",
+    "intro": "Give employee loans and track every repayment.",
+    "moduleIcon": "Wallet",
+    "cards": [
+      {
+        "icon": "Coins",
+        "number": "01",
+        "title": "Issue a loan",
+        "text": "Record the loan type, amount, start month and end month."
+      },
+      {
+        "icon": "TrendingUp",
+        "number": "02",
+        "title": "Track repayment",
+        "text": "See active loans, amount outstanding and monthly deduction."
+      },
+      {
+        "icon": "CheckCircle2",
+        "number": "03",
+        "title": "Clear next step",
+        "text": "Each loan shows its status and who needs to act next."
+      }
+    ],
+    "steps": [
+      "Issue a new loan",
+      "Approval steps are followed",
+      "Loan becomes active",
+      "Monthly deduction until the end month"
+    ],
+    "whyItHelps": "No loan is forgotten, and repayments stay accurate.",
+    "speakerNotes": "HR can see every loan, how much is left and what the next step is. A flowchart shows how a loan is paid out."
+  },
+  {
+    "slideNumber": 9,
+    "type": "module",
+    "sectionName": "Salary Increment",
+    "eyebrow": "09 / SALARY INCREMENT",
+    "titleNavy": "Salary",
+    "titleBrand": "Increment",
+    "titleNavyAfter": "",
+    "intro": "Request, approve and apply salary increases.",
+    "moduleIcon": "TrendingUp",
+    "cards": [
+      {
+        "icon": "TrendingUp",
+        "number": "01",
+        "title": "Request tracking",
+        "text": "See requests waiting, approved, applied to payroll, and total."
+      },
+      {
+        "icon": "Users",
+        "number": "02",
+        "title": "Easy search",
+        "text": "Find any request by employee name or code."
+      },
+      {
+        "icon": "FileSpreadsheet",
+        "number": "03",
+        "title": "Create and export",
+        "text": "Raise a new increment and export the list."
+      }
+    ],
+    "steps": [
+      "New increment requested",
+      "Waiting for approval",
+      "Approved",
+      "Applied to payroll"
+    ],
+    "whyItHelps": "Approved raises reach the salary correctly and on time.",
+    "speakerNotes": "A raise is not just promised. It is approved here and then applied to payroll."
+  },
+  {
+    "slideNumber": 10,
+    "type": "module",
+    "sectionName": "Salary Discrepancy",
+    "eyebrow": "10 / SALARY DISCREPANCY",
+    "titleNavy": "Salary",
+    "titleBrand": "Discrepancy",
+    "titleNavyAfter": "",
+    "intro": "Employees can report salary mistakes and get them corrected.",
+    "moduleIcon": "Scale",
+    "cards": [
+      {
+        "icon": "FileText",
+        "number": "01",
+        "title": "Raise a claim",
+        "text": "A salary issue is recorded with month, category and amount."
+      },
+      {
+        "icon": "CheckSquare",
+        "number": "02",
+        "title": "Two approvals",
+        "text": "First HR reviews, then the Managing Director approves."
+      },
+      {
+        "icon": "CheckCircle2",
+        "number": "03",
+        "title": "Clear outcome",
+        "text": "Totals of approved corrections and rejected claims."
+      }
+    ],
+    "steps": [
+      "Claim raised",
+      "HR reviews",
+      "Managing Director decides",
+      "Approved or rejected"
+    ],
+    "whyItHelps": "Salary mistakes are fixed fairly, with a proper record.",
+    "speakerNotes": "If an employee believes their salary was wrong, the claim goes through a clear review and the result is recorded."
+  },
+  {
+    "slideNumber": 11,
+    "type": "module",
+    "sectionName": "Disciplinary Action",
+    "eyebrow": "11 / DISCIPLINARY ACTION",
+    "titleNavy": "Disciplinary",
+    "titleBrand": "Action",
+    "titleNavyAfter": "",
+    "intro": "Handle warnings and disciplinary cases in a fair, recorded way.",
+    "moduleIcon": "ShieldAlert",
+    "cards": [
+      {
+        "icon": "ShieldAlert",
+        "number": "01",
+        "title": "Cases and severity",
+        "text": "Each case has a reference, a violation and a severity."
+      },
+      {
+        "icon": "Clock",
+        "number": "02",
+        "title": "Automatic or manual",
+        "text": "Late-arrival cases are raised automatically; HR can also start one."
+      },
+      {
+        "icon": "CheckSquare",
+        "number": "03",
+        "title": "Clear status",
+        "text": "Pending HR, pending management, issued, acknowledged, meeting requested, rejected."
+      }
+    ],
+    "steps": [
+      "Case is raised",
+      "HR and management review",
+      "Warning is issued",
+      "Employee acknowledges or asks for a meeting"
+    ],
+    "whyItHelps": "Every action is consistent, fair and recorded.",
+    "speakerNotes": "Nothing is verbal. Each warning has a reference, a reviewer and the employee's response."
+  },
+  {
+    "slideNumber": 12,
+    "type": "module",
+    "sectionName": "Ticket Management",
+    "eyebrow": "12 / TICKET MANAGEMENT",
+    "titleNavy": "Ticket",
+    "titleBrand": "Management",
+    "titleNavyAfter": "",
+    "intro": "Manage travel tickets and ticket allowances.",
+    "moduleIcon": "Plane",
+    "cards": [
+      {
+        "icon": "CheckCircle2",
+        "number": "01",
+        "title": "Eligibility",
+        "text": "See who is eligible for a ticket under their policy."
+      },
+      {
+        "icon": "Plane",
+        "number": "02",
+        "title": "Ticket or cash",
+        "text": "Company books the ticket, or a cash allowance is given."
+      },
+      {
+        "icon": "Coins",
+        "number": "03",
+        "title": "Cost tracking",
+        "text": "Cancelled tickets and total ticket cost are tracked."
+      }
+    ],
+    "steps": [
+      "Employee becomes eligible",
+      "Ticket booked or cash allowance chosen",
+      "Status updated",
+      "Total cost recorded"
+    ],
+    "whyItHelps": "Travel benefits are fair and the cost is under control.",
+    "speakerNotes": "HR knows who has a ticket benefit, how it was given and what it cost."
+  },
+  {
+    "slideNumber": 13,
+    "type": "module",
+    "sectionName": "Digital Forms",
+    "eyebrow": "13 / DIGITAL FORMS",
+    "titleNavy": "Digital",
+    "titleBrand": "Forms",
+    "titleNavyAfter": "",
+    "intro": "Paperless forms for hiring requests and performance reviews.",
+    "moduleIcon": "FileText",
+    "cards": [
+      {
+        "icon": "FileText",
+        "number": "01",
+        "title": "Two form types",
+        "text": "Department staffing requests and employee performance appraisals."
+      },
+      {
+        "icon": "CheckSquare",
+        "number": "02",
+        "title": "Track each form",
+        "text": "Who submitted it, for whom, priority and status."
+      },
+      {
+        "icon": "CheckCircle2",
+        "number": "03",
+        "title": "Quick start",
+        "text": "Create a new form in a few clicks."
+      }
+    ],
+    "steps": [
+      "Create a new form",
+      "Submit it",
+      "Reviewer sees priority and status",
+      "Form is completed"
+    ],
+    "whyItHelps": "Less paperwork and every form is easy to find.",
+    "speakerNotes": "Instead of printed forms and emails, everything is submitted and followed up here."
+  },
+  {
+    "slideNumber": 14,
+    "type": "module",
+    "sectionName": "Clearance Form",
+    "eyebrow": "14 / CLEARANCE FORM",
+    "titleNavy": "Clearance",
+    "titleBrand": "Form",
+    "titleNavyAfter": "",
+    "intro": "A clear checklist when an employee leaves the company.",
+    "moduleIcon": "CheckSquare",
+    "cards": [
+      {
+        "icon": "UserCheck",
+        "number": "01",
+        "title": "Exit requests",
+        "text": "Records the exit type and the last working day."
+      },
+      {
+        "icon": "Building2",
+        "number": "02",
+        "title": "Department sign-off",
+        "text": "Each department confirms its part, including returned company assets."
+      },
+      {
+        "icon": "CheckCircle2",
+        "number": "03",
+        "title": "Current stage",
+        "text": "See where each clearance is stuck or complete."
+      }
+    ],
+    "steps": [
+      "Exit is requested",
+      "Departments approve one by one",
+      "Assets are handed over",
+      "Clearance is completed"
+    ],
+    "whyItHelps": "Nothing is missed before final settlement.",
+    "speakerNotes": "Before someone leaves, every department confirms they have no pending issue and all assets are returned."
+  },
+  {
+    "slideNumber": 15,
+    "type": "module",
+    "sectionName": "Employee Rejoining",
+    "eyebrow": "15 / EMPLOYEE REJOINING",
+    "titleNavy": "Employee",
+    "titleBrand": "Rejoining",
+    "titleNavyAfter": "",
+    "intro": "Bring back employees returning from leave or re-employment.",
+    "moduleIcon": "UserCheck",
+    "cards": [
+      {
+        "icon": "UserCheck",
+        "number": "01",
+        "title": "Rejoining record",
+        "text": "Employee, type of rejoining and rejoining date."
+      },
+      {
+        "icon": "CheckSquare",
+        "number": "02",
+        "title": "Status",
+        "text": "See if it is complete and who processed it."
+      },
+      {
+        "icon": "CheckCircle2",
+        "number": "03",
+        "title": "Quick start",
+        "text": "Add a new rejoining in a few clicks."
+      }
+    ],
+    "steps": [
+      "Start a new rejoining",
+      "Choose the type and date",
+      "HR processes it",
+      "Employee is active again"
+    ],
+    "whyItHelps": "Returning employees are re-started properly with a record.",
+    "speakerNotes": "When someone comes back, HR records it here so their status is updated correctly."
+  },
+  {
+    "slideNumber": 16,
+    "type": "module",
+    "sectionName": "Report",
+    "eyebrow": "16 / REPORT",
+    "titleNavy": "HR",
+    "titleBrand": "Reports",
+    "titleNavyAfter": "",
+    "intro": "Ready-made reports for HR and management.",
+    "moduleIcon": "BarChart3",
+    "cards": [
+      {
+        "icon": "Coins",
+        "number": "01",
+        "title": "Salary and money",
+        "text": "Monthly salary, leave salary, payroll, allowances, GOSI, end-of-service, loans."
+      },
+      {
+        "icon": "Users",
+        "number": "02",
+        "title": "People attendance",
+        "text": "All employees, attendance summary, leave report, site-wise report."
+      },
+      {
+        "icon": "FileText",
+        "number": "03",
+        "title": "Documents rules",
+        "text": "Expiring documents, passports, visas, clearances, vehicles."
+      }
+    ],
+    "steps": [
+      "Choose a report",
+      "Pick the period or filters",
+      "View it on screen",
+      "Export it"
+    ],
+    "whyItHelps": "Management gets answers quickly, without manual counting.",
+    "speakerNotes": "Whatever management asks for, there is usually a ready report. Just pick it and export."
+  },
+  {
+    "slideNumber": 17,
+    "type": "module",
+    "sectionName": "Meeting Arrangements",
+    "eyebrow": "17 / MEETING ARRANGEMENTS",
+    "titleNavy": "Meeting",
+    "titleBrand": "Arrangements",
+    "titleNavyAfter": "",
+    "intro": "Plan company meetings and keep a record of them.",
+    "moduleIcon": "CalendarCheck",
+    "cards": [
+      {
+        "icon": "CalendarCheck",
+        "number": "01",
+        "title": "Schedule",
+        "text": "Set the title, host, organizer, place or link, and participants."
+      },
+      {
+        "icon": "Users",
+        "number": "02",
+        "title": "Who attends",
+        "text": "Choose the target audience for each meeting."
+      },
+      {
+        "icon": "CheckCircle2",
+        "number": "03",
+        "title": "Meeting status",
+        "text": "See total, upcoming and completed meetings."
+      }
+    ],
+    "steps": [
+      "Schedule a meeting",
+      "Participants are chosen",
+      "Meeting happens",
+      "It is recorded as ended"
+    ],
+    "whyItHelps": "Meetings are organised and nothing is forgotten.",
+    "speakerNotes": "HR can arrange meetings with the right people and keep a simple history."
+  },
+  {
+    "slideNumber": 18,
+    "type": "module",
+    "sectionName": "Audit Logs",
+    "eyebrow": "18 / AUDIT LOGS",
+    "titleNavy": "Audit",
+    "titleBrand": "Logs",
+    "titleNavyAfter": "",
+    "intro": "A record of every payroll action, for trust and checking.",
+    "moduleIcon": "History",
+    "cards": [
+      {
+        "icon": "CheckCircle2",
+        "number": "01",
+        "title": "Success or failure",
+        "text": "See how many actions succeeded, failed or were rejected."
+      },
+      {
+        "icon": "Sliders",
+        "number": "02",
+        "title": "Easy filters",
+        "text": "Filter by type of action, status and date."
+      },
+      {
+        "icon": "History",
+        "number": "03",
+        "title": "Full details",
+        "text": "Time, action, who did it, status and reason."
+      }
+    ],
+    "steps": [
+      "A payroll action is done",
+      "It is recorded",
+      "Filter and review",
+      "Export to Excel"
+    ],
+    "whyItHelps": "Everything done on payroll can be checked later.",
+    "speakerNotes": "If anyone asks who did what on payroll and when, the answer is here."
+  },
+  {
+    "slideNumber": 19,
+    "type": "module",
+    "sectionName": "Payroll Settings",
+    "eyebrow": "19 / PAYROLL SETTINGS",
+    "titleNavy": "Payroll",
+    "titleBrand": "Settings",
+    "titleNavyAfter": "",
+    "intro": "Set the salary rules once, and payroll follows them.",
+    "moduleIcon": "Sliders",
+    "cards": [
+      {
+        "icon": "ShieldCheck",
+        "number": "01",
+        "title": "GOSI insurance",
+        "text": "Set company and employee shares for Bahraini and expatriate staff."
+      },
+      {
+        "icon": "Coins",
+        "number": "02",
+        "title": "End-of-service",
+        "text": "Two rates, depending on years of service."
+      },
+      {
+        "icon": "Building2",
+        "number": "03",
+        "title": "LMRA fee",
+        "text": "A monthly labour-authority fee for expatriate employees."
+      }
+    ],
+    "steps": [
+      "Open settings",
+      "Change a rule",
+      "Save",
+      "Applies to future payroll only"
+    ],
+    "whyItHelps": "Rules are set in one place and old payrolls stay unchanged.",
+    "speakerNotes": "These are the rules behind every salary. When a rule changes, HR updates it once and only future payrolls are affected."
+  },
+  {
+    "slideNumber": 20,
+    "type": "closing",
+    "eyebrow": "20 / SUMMARY",
+    "titleNavy": "Thank",
+    "titleBrand": "you",
+    "titleNavyAfter": "",
+    "intro": "Questions?",
+    "speakerNotes": "Thank you for your time. I am happy to answer any questions about any of the sections we walked through."
+  }
+]

@@ -1,0 +1,203 @@
+<USER_REQUEST>
+PROMPT — Client-friendly HR Management deck (NO screenshots, plain language)
+1. WHAT TO BUILD / UPDATE
+
+Create (or update the existing) React slide deck for Builtraa HR Management, to be shown to a client who does not know the system. 20 slides, exported to PPTX as well. The goal: the client understands what each module is, how it works, and why it helps, in simple words.
+
+2. MOST IMPORTANT RULES
+Do NOT use any screenshot or product image anywhere. Delete every screenshot file and every <img> / screenshot frame from the app and the PPTX export. Do not recreate screenshots as mock-ups either. Do not open or scrape the live website. Everything you need is written in this prompt.
+Do NOT show any data from the system. No employee names, employee IDs, counts (like number of employees, cases, loans), money amounts or dates. Only explain what the module does.
+No technical words. The client is not technical. Forbidden words: API, database, sync, telemetry, KPI, workflow, pipeline, module, backend, automation, biometric, ledger, immutable, dashboard widgets. Use the plain words given below.
+Short and simple. Card title max 3 words. Card text max 12 words. One idea per card. No paragraphs.
+Do not invent features. Use only what is written in this prompt.
+Each slide must be easy to explain in about 1 minute. Add the presenter script as speaker notes (PPTX notes and presenter view).
+Plain-word replacements
+Instead of	Say
+biometric punch	punch at the attendance machine
+automatic sync / automation	happens automatically
+workflow	steps
+module	section
+approval pipeline	approval steps
+GOSI	GOSI (social insurance)
+LMRA	LMRA (labour authority fee)
+indemnity	end-of-service benefit
+ball in court	who needs to act next
+3. SLIDE TEMPLATE (modules, slides 3 to 19)
+
+Every module slide has the same layout:
+
+Eyebrow: NN / MODULE NAME (real slide number, brand colour)
+Title: module name (one key word in brand colour)
+One line: what this section is (grey)
+Left: 3 feature cards (icon chip, title, one short line)
+Right: "How it works" panel: a vertical step list of 3–4 steps with numbered circles and connecting line (glass panel). No screenshot. Put one large soft line-icon of the module at the top of the panel.
+Bottom: "Why it helps" one-line strip (max 14 words)
+Speaker notes: "Say it like this" script (2–3 simple sentences)
+4. DESIGN (keep it modern; if my earlier design prompt is already applied, keep that design and only change content)
+Pure white background, Inter font (800 titles, tight spacing), brand colour = extracted from the Builtraa logo (use for eyebrow, one title word, active step), navy 
+#0B1F4B and royal blue as main colours.
+Glass cards (translucent white, 16px blur, thin white border, soft shadow), radius 24px, equal card sizes, card height max 170px, padding 24px.
+Fixed 1920×1080 stage scaled to the screen. Keep HOME button, SKIP button, logo and navigation pill inside their reserved top/bottom bars (110px each) so they never cover text. One slide counter only. No footer text.
+Lucide line icons only. No emojis.
+Animations (smooth, no bounce): title word-by-word with one soft shine sweep, cards appear one by one, steps appear top to bottom with the line drawing, fade between slides. Respect reduced-motion. In PPTX keep Fade/Appear only.
+Min text size 16px. Content between y = 130 and y = 970.
+5. SLIDES
+Slide 1 — Title
+
+Eyebrow HR MANAGEMENT SYSTEM. Title: "One place for people, time and pay." Line: "Everything about your workforce, managed in one system." Glass button "Start →". Right side (instead of screenshots): a floating cluster of 5 glass tiles with Lucide icons only (Users, CalendarDays, Clock, Wallet, FileText), slowly floating, with soft glowing background. No text numbers. Bottom: slow moving row of the 17 section names as chips. Notes: "Today I will show how this system helps HR manage employees, attendance, leave, salary and more, all in one place."
+
+Slide 2 — What is inside
+
+Title: "What this system covers". Line: "17 sections, grouped by what they help you do." Four glass group cards (equal size) with chips inside:
+
+People & Time: HR Dashboard, Employees, Attendance, Leave
+Money: Payroll, Loan, Salary Increment, Salary Discrepancy, Payroll Settings
+Rules & Records: Disciplinary Action, Digital Forms, Clearance Form, Employee Rejoining, Audit Logs
+Support & Reports: Ticket Management, Meeting Arrangements, Report Each chip shows its slide number. Clicking a chip goes to that slide. Notes: "These 17 sections cover the full journey of an employee, from joining to leaving."
+Slide 3 — HR Dashboard
+
+Line: "One screen that shows how your workforce is doing today." Cards:
+
+Today at a glance — Total employees, active loans, people on leave, monthly payroll.
+Attendance view — Who is present or absent, by employee type and project site.
+Alerts & pending work — Pending approvals, clearances, and visas or passports expiring soon. How it works: 1 Open the dashboard → 2 See today's numbers → 3 Spot what needs attention → 4 Open that section to act. Why it helps: "HR spots problems early without opening every section." Notes: "Think of this as the control room. In one look, HR sees who is in, who is on leave and what needs action."
+Slide 4 — Employees
+
+Line: "The complete list of everyone who works for the company." Cards:
+
+Employee profiles — Personal, job, department and ID details kept in one record.
+Staff and labour — Separate lists for staff, labour and unfinished entries.
+Status at a glance — Active status, passport, visa and labour-authority fee details. How it works: 1 Add a new employee → 2 Fill in their details → 3 They appear in the list → 4 Search, filter or update any time. Why it helps: "All employee information is in one place, easy to find." Notes: "Every other section uses this list, so details are entered once and used everywhere."
+Slide 5 — Leave
+
+Line: "Employees apply for leave and managers approve it step by step." Cards:
+
+Approval steps — Requests go to Project Director, Director, then Managing Director.
+Leave overview — See leave by type and by department.
+Related requests — Leave salary, comp-off, announcements and attendance corrections. How it works: 1 Employee applies → 2 Project Director reviews → 3 Director reviews → 4 Managing Director gives final approval. Why it helps: "Everyone knows where a request is and who must act next." Notes: "No more paper forms or chasing. Each approver sees the request and the employee sees the status."
+Slide 6 — Payroll
+
+Line: "Prepare, approve and pay salaries each month." Cards:
+
+Staff and labour — Separate payroll for staff and for labour workers.
+Monthly or on demand — Run the monthly closing, or an extra run when needed.
+Clear status — Each run shows approval status, totals and a locked mark. How it works: 1 Run payroll → 2 Approved, ready for payment → 3 Paid → 4 Locked. Why it helps: "Salaries are processed in an organised and traceable way." Notes: "Each month HR runs payroll, management approves it, salaries are paid and the record is locked."
+Slide 7 — Attendance
+
+Line: "Daily attendance of every employee, recorded and checked." Cards:
+
+Daily record — Check-in, lunch, check-out, hours worked and late arrivals.
+Marked automatically — No punch by 10:30 AM means Absent; a punch makes them Present.
+Easy corrections — Add or edit records, set shifts and holidays, export to Excel. How it works: 1 Employee punches at the attendance machine → 2 Status updates automatically → 3 HR checks and corrects if needed → 4 Export the report. Why it helps: "Accurate attendance, which also feeds salary and leave." Notes: "Employees punch at site or office. The system marks attendance for HR, and HR can fix exceptions."
+Slide 8 — Loan
+
+Line: "Give employee loans and track every repayment." Cards:
+
+Issue a loan — Record the loan type, amount, start month and end month.
+Track repayment — See active loans, amount outstanding and monthly deduction.
+Clear next step — Each loan shows its status and who needs to act next. How it works: 1 Issue a new loan → 2 Approval steps are followed → 3 Loan becomes active → 4 Monthly deduction until the end month. Why it helps: "No loan is forgotten, and repayments stay accurate." Notes: "HR can see every loan, how much is left and what the next step is. A flowchart shows how a loan is paid out."
+Slide 9 — Salary Increment
+
+Line: "Request, approve and apply salary increases." Cards:
+
+Request tracking — See requests waiting, approved, applied to payroll, and total.
+Easy search — Find any request by employee name or code.
+Create and export — Raise a new increment and export the list. How it works: 1 New increment requested → 2 Waiting for approval → 3 Approved → 4 Applied to payroll. Why it helps: "Approved raises reach the salary correctly and on time." Notes: "A raise is not just promised. It is approved here and then applied to payroll."
+Slide 10 — Salary Discrepancy
+
+Line: "Employees can report salary mistakes and get them corrected." Cards:
+
+Raise a claim — A salary issue is recorded with month, category and amount.
+Two approvals — First HR reviews, then the Managing Director approves.
+Clear outcome — Totals of approved corrections and rejected claims. How it works: 1 Claim raised → 2 HR reviews → 3 Managing Director decides → 4 Approved or rejected. Why it helps: "Salary mistakes are fixed fairly, with a proper record." Notes: "If an employee believes their salary was wrong, the claim goes through a clear review and the result is recorded."
+Slide 11 — Disciplinary Action
+
+Line: "Handle warnings and disciplinary cases in a fair, recorded way." Cards:
+
+Cases and severity — Each case has a reference, a violation and a severity.
+Automatic or manual — Late-arrival cases are raised automatically; HR can also start one.
+Clear status — Pending HR, pending management, issued, acknowledged, meeting requested, rejected. How it works: 1 Case is raised → 2 HR and management review → 3 Warning is issued → 4 Employee acknowledges or asks for a meeting. Why it helps: "Every action is consistent, fair and recorded." Notes: "Nothing is verbal. Each warning has a reference, a reviewer and the employee's response."
+Slide 12 — Ticket Management
+
+Line: "Manage travel tickets and ticket allowances." Cards:
+
+Eligibility — See who is eligible for a ticket under their policy.
+Ticket or cash — Company books the ticket, or a cash allowance is given.
+Cost tracking — Cancelled tickets and total ticket cost are tracked. How it works: 1 Employee becomes eligible → 2 Ticket booked or cash allowance chosen → 3 Status updated → 4 Total cost recorded. Why it helps: "Travel benefits are fair and the cost is under control." Notes: "HR knows who has a ticket benefit, how it was given and what it cost."
+Slide 13 — Digital Forms
+
+Line: "Paperless forms for hiring requests and performance reviews." Cards:
+
+Two kinds of forms — Department staffing requests and employee performance appraisals.
+Track each form — Who submitted it, for whom, priority and status.
+Quick start — Create a new form in a few clicks. How it works: 1 Create a new form → 2 Submit it → 3 Reviewer sees priority and status → 4 Form is completed. Why it helps: "Less paperwork and every form is easy to find." Notes: "Instead of printed forms and emails, everything is submitted and followed up here."
+Slide 14 — Clearance Form
+
+Line: "A clear checklist when an employee leaves the company." Cards:
+
+Exit requests — Records the exit type and the last working day.
+Department sign-off — Each department confirms its part, including returned company assets.
+Current stage — See where each clearance is stuck or complete. How it works: 1 Exit is requested → 2 Departments approve one by one → 3 Assets are handed over → 4 Clearance is completed. Why it helps: "Nothing is missed before final settlement." Notes: "Before someone leaves, every department confirms they have no pending issue and all assets are returned."
+Slide 15 — Employee Rejoining
+
+Line: "Bring back employees returning from leave or re-employment." Cards:
+
+Rejoining record — Employee, type of rejoining and rejoining date.
+Status — See if it is complete and who processed it.
+Quick start — Add a new rejoining in a few clicks. How it works: 1 Start a new rejoining → 2 Choose the type and date → 3 HR processes it → 4 Employee is active again. Why it helps: "Returning employees are re-started properly with a record." Notes: "When someone comes back, HR records it here so their status is updated correctly."
+Slide 16 — Report
+
+Line: "Ready-made reports for HR and management." Cards:
+
+Salary & money — Monthly salary, leave salary, payroll, allowances, GOSI, end-of-service, loans.
+People & attendance — All employees, attendance summary, leave report, site-wise report.
+Documents & rules — Expiring documents, passports, visas, clearances, vehicles. How it works: 1 Choose a report → 2 Pick the period or filters → 3 View it on screen → 4 Export it. Why it helps: "Management gets answers quickly, without manual counting." Notes: "Whatever management asks for, there is usually a ready report. Just pick it and export."
+Slide 17 — Meeting Arrangements
+
+Line: "Plan company meetings and keep a record of them." Cards:
+
+Schedule — Set the title, host, organizer, place or link, and participants.
+Who attends — Choose the target audience for each meeting.
+Meeting status — See total, upcoming and completed meetings. How it works: 1 Schedule a meeting → 2 Participants are chosen → 3 Meeting happens → 4 It is recorded as ended. Why it helps: "Meetings are organised and nothing is forgotten." Notes: "HR can arrange meetings with the right people and keep a simple history."
+Slide 18 — Audit Logs
+
+Line: "A record of every payroll action, for trust and checking." Cards:
+
+Success or failure — See how many actions succeeded, failed or were rejected.
+Easy filters — Filter by type of action, status and date.
+Full details — Time, action, who did it, status and reason. How it works: 1 A payroll action is done → 2 It is recorded → 3 Filter and review → 4 Export to Excel. Why it helps: "Everything done on payroll can be checked later." Notes: "If anyone asks who did what on payroll and when, the answer is here."
+Slide 19 — Payroll Settings
+
+Line: "Set the salary rules once, and payroll follows them." Cards:
+
+GOSI (social insurance) — Set company and employee shares for Bahraini and expatriate staff.
+End-of-service benefit — Two rates, depending on years of service.
+LMRA fee — A monthly labour-authority fee for expatriate employees. How it works: 1 Open settings → 2 Change a rule → 3 Save → 4 Applies to future payroll only. Why it helps: "Rules are set in one place and old payrolls stay unchanged." Note: do NOT show any percentage or amount values. Notes: "These are the rules behind every salary. When a rule changes, HR updates it once and only future payrolls are affected."
+Slide 20 — Closing
+
+Title "Thank you". Line "Questions?" Same style, brand glow, nothing else.
+
+6. TEST BEFORE FINISHING
+[ ] No screenshot, product image or mock-up of the system anywhere in the app or the PPTX
+[ ] No names, IDs, counts, amounts, percentages or dates from the system
+[ ] None of the forbidden technical words appear
+[ ] Every module slide has: 3 cards, a "How it works" step panel, a "Why it helps" line, speaker notes
+[ ] Nothing overlaps HOME, SKIP, logo or the navigation pill in fullscreen
+[ ] 20 slides, correct slide numbers in eyebrows, PPTX opens without repair
+7. WHAT I WANT BACK
+
+The updated app and PPTX, plus a short list of what changed. If anything in this prompt was unclear, list it at the end instead of guessing.
+</USER_REQUEST>
+<ADDITIONAL_METADATA>
+The current local time is: 2026-11-18T13:27:37+05:30.
+
+The user's current state is as follows:
+Active Document: c:\Users\user\Desktop\BuiltraaPPT\README.md (LANGUAGE_UNSPECIFIED)
+Cursor is on line: 95
+Other open documents:
+- c:\Users\user\Desktop\BuiltraaPPT\src\slides\Slide9.jsx (LANGUAGE_UNSPECIFIED)
+- c:\Users\user\Desktop\BuiltraaPPT\src\slides\Slide10.jsx (LANGUAGE_UNSPECIFIED)
+- c:\Users\user\Desktop\BuiltraaPPT\src\slides\Slide11.jsx (LANGUAGE_UNSPECIFIED)
+- c:\Users\user\Desktop\BuiltraaPPT\src\slides\Slide12.jsx (LANGUAGE_UNSPECIFIED)
+- c:\Users\user\Desktop\BuiltraaPPT\src\slides\Slide13.jsx (LANGUAGE_UNSPECIFIED)
+</ADDITIONAL_METADATA>
