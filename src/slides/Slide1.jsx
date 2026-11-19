@@ -66,44 +66,6 @@ export default function Slide1({ onNavigate }) {
         }}
       />
 
-      {/* Soft Ambient Background Glows */}
-      <div style={{
-        position: 'absolute',
-        top: '10%',
-        right: '8%',
-        width: 580,
-        height: 580,
-        borderRadius: '50%',
-        background: 'rgba(29, 78, 216, 0.07)',
-        filter: 'blur(130px)',
-        pointerEvents: 'none',
-        zIndex: 1,
-      }} />
-      <div style={{
-        position: 'absolute',
-        bottom: '10%',
-        left: '8%',
-        width: 520,
-        height: 520,
-        borderRadius: '50%',
-        background: 'rgba(239, 20, 78, 0.06)',
-        filter: 'blur(140px)',
-        pointerEvents: 'none',
-        zIndex: 1,
-      }} />
-      <div style={{
-        position: 'absolute',
-        top: '36%',
-        left: '44%',
-        width: 440,
-        height: 440,
-        borderRadius: '50%',
-        background: 'rgba(219, 234, 254, 0.35)',
-        filter: 'blur(140px)',
-        pointerEvents: 'none',
-        zIndex: 1,
-      }} />
-
       {/* Main Content Area (Strict Safe Zone: y = 130 to y = 920) */}
       <div style={{
         position: 'absolute',

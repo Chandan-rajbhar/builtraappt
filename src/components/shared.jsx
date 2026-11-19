@@ -52,26 +52,6 @@ export function SlideLayout({
         />
       </div>
 
-      {/* 2–3 Soft Ambient Background Glows (Calm, subtle, 6–10% opacity, ~400px blur) */}
-      <div style={{
-        position: 'absolute', top: '8%', right: '6%',
-        width: 520, height: 520, borderRadius: '50%',
-        background: 'rgba(29, 78, 216, 0.06)',
-        filter: 'blur(120px)', pointerEvents: 'none', zIndex: 0,
-      }} />
-      <div style={{
-        position: 'absolute', bottom: '10%', left: '8%',
-        width: 480, height: 480, borderRadius: '50%',
-        background: 'rgba(239, 20, 78, 0.05)',
-        filter: 'blur(130px)', pointerEvents: 'none', zIndex: 0,
-      }} />
-      <div style={{
-        position: 'absolute', top: '35%', left: '42%',
-        width: 440, height: 440, borderRadius: '50%',
-        background: 'rgba(219, 234, 254, 0.35)',
-        filter: 'blur(140px)', pointerEvents: 'none', zIndex: 0,
-      }} />
-
       {/* Main Content Area (Strict Safe Zone: y = 130px to y = 970px, Height = 840px, Margins = 96px) */}
       <div style={{
         position: 'absolute',
