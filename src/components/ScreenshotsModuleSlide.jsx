@@ -176,14 +176,47 @@ export default function ScreenshotsModuleSlide({
           ))}
         </div>
 
-        {/* Right Column: Two High-Resolution Screenshot Cards */}
-        <div className="shot-cards-container">
+        {/* Right Column: Two Full-Bleed High-Resolution Screenshot Cards */}
+        <div style={{
+          width: '55%',
+          display: 'flex',
+          flexDirection: 'column',
+          gap: 16,
+          justifyContent: 'space-between',
+          height: '100%',
+        }}>
           {shots.map((shot, idx) => (
-            <div key={idx} className="shot-card">
+            <div
+              key={idx}
+              style={{
+                position: 'relative',
+                flex: 1,
+                width: '100%',
+                minHeight: 0,
+                borderRadius: 20,
+                padding: 0,
+                border: '1px solid rgba(15, 23, 42, 0.08)',
+                background: '#FFFFFF',
+                boxShadow: '0 6px 24px rgba(11, 31, 75, 0.04)',
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+                overflow: 'hidden',
+                boxSizing: 'border-box',
+              }}
+            >
               <img
                 src={shot.src}
                 alt={shot.alt}
-                className="shot-card__img"
+                style={{
+                  width: '100%',
+                  height: '100%',
+                  objectFit: 'cover',
+                  objectPosition: 'top left',
+                  display: 'block',
+                  borderRadius: 19,
+                  imageRendering: 'auto',
+                }}
                 loading="eager"
               />
             </div>
