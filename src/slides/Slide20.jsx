@@ -29,17 +29,6 @@ export default function Slide20({ slideIndex = 20, totalSlides = 20, onNavigate 
         textAlign: 'center',
         position: 'relative',
       }}>
-        {/* Large Central Brand Glow */}
-        <div style={{
-          position: 'absolute',
-          width: 540,
-          height: 540,
-          borderRadius: '50%',
-          background: 'radial-gradient(circle, rgba(239, 20, 78, 0.12) 0%, rgba(29, 78, 216, 0.08) 50%, transparent 75%)',
-          filter: 'blur(60px)',
-          pointerEvents: 'none',
-        }} />
-
         {/* Eyebrow */}
         <motion.div
           initial={{ opacity: 0, y: -8 }}
