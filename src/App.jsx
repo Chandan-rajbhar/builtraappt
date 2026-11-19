@@ -99,7 +99,7 @@ function GlassButton({ children, onClick, disabled, style = {}, title }) {
   );
 }
 
-/* ─── Brand Logo Bar (Top Right safe zone) ─────────────────────────────────── */
+/* ─── Brand Logo Bar (Top Left safe zone) ──────────────────────────────────── */
 function LogoBar() {
   return (
     <motion.div
@@ -109,43 +109,40 @@ function LogoBar() {
       style={{
         position: 'fixed',
         top: 36,
-        right: 48,
+        left: 48,
         height: 36,
         display: 'flex',
         alignItems: 'center',
         zIndex: 200,
-        background: 'rgba(255, 255, 255, 0.88)',
-        backdropFilter: 'blur(16px)',
-        WebkitBackdropFilter: 'blur(16px)',
-        border: '1px solid #E2E8F0',
-        borderRadius: 999,
-        padding: '0 14px',
-        boxShadow: '0 3px 12px rgba(11, 31, 75, 0.04), inset 0 1px 0 #FFFFFF',
+        background: 'transparent',
+        border: 'none',
+        boxShadow: 'none',
+        padding: 0,
       }}
     >
       <img
         src="/assets/logo.png"
         alt="Builtraa"
-        style={{ height: 22, objectFit: 'contain', objectPosition: 'left' }}
+        style={{ height: 33, objectFit: 'contain', objectPosition: 'left' }}
       />
       <div style={{
-        width: 1, height: 16, background: '#CBD5E1',
-        margin: '0 10px',
+        width: 1, height: 24, background: '#CBD5E1',
+        margin: '0 14px',
         flexShrink: 0,
       }} />
       <img
         src="/assets/uxdlab-logo.png"
         alt="uxdlab"
-        style={{ height: 17, objectFit: 'contain' }}
+        style={{ height: 26, objectFit: 'contain' }}
       />
     </motion.div>
   );
 }
 
-/* ─── Top Left Home Button ─────────────────────────────────────────────────── */
+/* ─── Top Right Home Button ────────────────────────────────────────────────── */
 function HomeButton({ onClick }) {
   return (
-    <div style={{ position: 'fixed', top: 36, left: 48, zIndex: 200 }}>
+    <div style={{ position: 'fixed', top: 36, right: 48, zIndex: 200 }}>
       <GlassButton onClick={onClick} title="Go to Welcome slide">
         <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
           <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" />
@@ -519,17 +516,8 @@ export default function App() {
       position: 'relative',
       background: '#FFFFFF',
     }}>
-      {/* Top Bar Safe Zone: HOME (left), PROJECT TOOLS DECK, Logos (right) */}
+      {/* Top Bar Safe Zone: HOME (left), Logos (right) */}
       <HomeButton onClick={() => goTo(0, -1)} />
-      <div style={{ position: 'fixed', top: 36, left: 160, zIndex: 200 }}>
-        <GlassButton onClick={() => setActiveDeck('tools')} title="Open Project Tools Deck">
-          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
-            <rect x="3" y="3" width="18" height="18" rx="2" ry="2" />
-            <line x1="9" y1="3" x2="9" y2="21" />
-          </svg>
-          Project Tools Deck
-        </GlassButton>
-      </div>
       <LogoBar />
 
       {/* Fixed 1920×1080 Stage Centred with CSS transform: scale() */}
