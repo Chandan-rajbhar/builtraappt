@@ -174,6 +174,7 @@ export default function Slide4({ slideNumber = 4, totalSlides = 20, onNavigate }
               src="/assets/slide4/leave-management.png"
               alt="Builtraa Leave Management Dashboard"
               className="shot-card__img"
+              style={{ objectFit: 'cover', objectPosition: 'top center' }}
               loading="eager"
             />
           </div>
@@ -184,6 +185,7 @@ export default function Slide4({ slideNumber = 4, totalSlides = 20, onNavigate }
               src="/assets/slide4/attendance-records.png"
               alt="Builtraa Attendance Records Dashboard"
               className="shot-card__img"
+              style={{ objectFit: 'cover', objectPosition: 'top center' }}
               loading="eager"
             />
           </div>
