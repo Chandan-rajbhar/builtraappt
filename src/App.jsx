@@ -1,6 +1,6 @@
-<<<<<<< HEAD
 import React, { useState, useEffect, useCallback, useRef } from 'react';
 import { AnimatePresence, motion } from 'framer-motion';
+import DeckPresentation from './components/DeckPresentation';
 import Slide1 from './slides/Slide1';
 import Slide2 from './slides/Slide2';
 import Slide3 from './slides/Slide3';
@@ -367,6 +367,14 @@ function SpeakerNotesDrawer({ isOpen, onClose, notes, slideNum }) {
 
 /* ─── Main Deck Orchestrator ─────────────────────────────────────────────────── */
 export default function App() {
+  const [activeDeck, setActiveDeck] = useState(() => {
+    if (typeof window !== 'undefined') {
+      const p = new URLSearchParams(window.location.search).get('deck');
+      if (p === 'tools' || p === 'project') return 'tools';
+    }
+    return 'hr';
+  });
+
   const [current, setCurrent] = useState(0);
   const [dir, setDir] = useState(1);
   const [showNotes, setShowNotes] = useState(false);
@@ -478,6 +486,22 @@ export default function App() {
     }),
   };
 
+  if (activeDeck === 'tools') {
+    return (
+      <div className="w-full h-screen bg-[#fafafa] overflow-hidden relative">
+        <div style={{ position: 'fixed', top: 20, left: 24, zIndex: 9999 }}>
+          <button
+            onClick={() => setActiveDeck('hr')}
+            className="flex items-center gap-2 px-4 py-2 rounded-full bg-white/95 backdrop-blur shadow-md border border-slate-200 text-xs font-semibold text-slate-800 hover:bg-white hover:shadow-lg transition-all"
+          >
+            ← Back to HR & Material Deck
+          </button>
+        </div>
+        <DeckPresentation />
+      </div>
+    );
+  }
+
   return (
     <div style={{
       width: '100vw',
@@ -488,6 +512,15 @@ export default function App() {
     }}>
       {/* Top Bar Safe Zone: HOME (left) & Logos (right) */}
       <HomeButton onClick={() => goTo(0, -1)} />
+      <div style={{ position: 'fixed', top: 36, left: 160, zIndex: 200 }}>
+        <GlassButton onClick={() => setActiveDeck('tools')}>
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
+            <rect x="3" y="3" width="18" height="18" rx="2" ry="2" />
+            <line x1="9" y1="3" x2="9" y2="21" />
+          </svg>
+          Project Tools Deck
+        </GlassButton>
+      </div>
       <LogoBar />
 
       {/* Fixed 1920×1080 Stage Centred with CSS transform: scale() */}
@@ -580,15 +613,6 @@ export default function App() {
         notes={currentSlideData.speakerNotes}
         slideNum={current + 1}
       />
-=======
-import React from 'react';
-import DeckPresentation from './components/DeckPresentation';
-
-export default function App() {
-  return (
-    <div className="w-full h-full min-h-screen">
-      <DeckPresentation />
->>>>>>> karunesh/main
     </div>
   );
 }

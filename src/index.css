@@ -3,26 +3,16 @@
 @tailwind utilities;
 
 :root {
-<<<<<<< HEAD
   --brand: #EF144E;
+  --primary: #EF144E;
+  --primary-foreground: #FFFFFF;
   --navy: #0B1F4B;
+  --foreground: #020817;
   --royal: #1D4ED8;
   --grey: #64748B;
+  --muted-foreground: #64748B;
   --border: #E2E8F0;
-}
-
-*, *::before, *::after {
-=======
-  --brand: #ef144e;
-  --primary: #ef144e;
-  --primary-foreground: #ffffff;
-  --navy: #020817;
-  --foreground: #020817;
-  --royal: #1d4ed8;
-  --grey: #64748b;
-  --muted-foreground: #64748b;
-  --border: #e2e8f0;
-  --input: #e2e8f0;
+  --input: #E2E8F0;
 
   --bg: #FFFFFF;
   --card: #FFFFFF;
@@ -38,21 +28,17 @@
   --sidebar-foreground: #fafafa;
   --sidebar-primary: #ef144e;
   --sidebar-border: #4a383d;
-  box-sizing: border-box;
 }
 
-* {
->>>>>>> karunesh/main
+*, *::before, *::after {
   box-sizing: border-box;
 }
 
 html, body, #root {
-<<<<<<< HEAD
   margin: 0;
   padding: 0;
   width: 100%;
   height: 100%;
-  overflow: hidden;
   font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -108,87 +94,8 @@ html, body, #root {
 }
 
 @keyframes sweep {
-  from { background-position: 120% 0; }
-  to { background-position: -20% 0; }
-=======
-  height: 100%;
-  width: 100%;
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
-  background-color: #FFFFFF;
-  color: var(--text);
-  font-family: 'Manrope', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-  letter-spacing: -0.012em;
-  user-select: none;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-.font-heading {
-  font-family: 'Manrope', -apple-system, BlinkMacSystemFont, sans-serif;
-  letter-spacing: -0.025em;
-  font-weight: 700;
-}
-
-/* Builtraa Ambient Dotted Grid */
-.dotted-grid {
-  background-image: radial-gradient(rgba(2, 8, 23, 0.08) 1.2px, transparent 1.2px);
-  background-size: 24px 24px;
-  -webkit-mask-image: radial-gradient(ellipse at center, #000 50%, transparent 100%);
-  mask-image: radial-gradient(ellipse at center, #000 50%, transparent 100%);
-}
-
-/* Glassmorphism Styles from builtrappt */
-.glass {
-  -webkit-backdrop-filter: blur(16px) saturate(160%);
-  backdrop-filter: blur(16px) saturate(160%);
-  background: rgba(255, 255, 255, 0.88);
-  border: 1px solid rgba(226, 232, 240, 0.8);
-  border-radius: 24px;
-  box-shadow: 0 8px 32px rgba(11, 31, 75, 0.06), inset 0 1px 0 rgba(255, 255, 255, 0.95);
-}
-
-.glass-pill {
-  -webkit-backdrop-filter: blur(16px) saturate(160%);
-  backdrop-filter: blur(16px) saturate(160%);
-  background: rgba(255, 255, 255, 0.92);
-  border: 1.5px solid rgba(226, 232, 240, 0.85);
-  border-radius: 999px;
-  box-shadow: 0 4px 20px rgba(11, 31, 75, 0.06), inset 0 1px 0 #FFFFFF;
-  transition: all 0.2s cubic-bezier(0.22, 1, 0.36, 1);
-}
-.glass-pill:hover {
-  background: #FFFFFF;
-  border-color: rgba(239, 20, 78, 0.4);
-  box-shadow: 0 6px 24px rgba(239, 20, 78, 0.12), inset 0 1px 0 #FFFFFF;
-  transform: translateY(-1px);
-}
-
-/* Interactive Card Hover Shimmer from builtrappt */
-.card-interactive {
-  transition: transform 0.3s cubic-bezier(0.22, 1, 0.36, 1), box-shadow 0.3s ease, border-color 0.2s ease;
-  position: relative;
-  overflow: hidden;
-}
-.card-interactive:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 14px 36px rgba(11, 31, 75, 0.1), inset 0 1px 0 rgba(255, 255, 255, 0.95);
-}
-
-.shine-brand {
-  background: linear-gradient(110deg, var(--brand) 30%, #ffa8c5 50%, var(--brand) 70%);
-  color: transparent;
-  background-size: 250% 100%;
-  -webkit-background-clip: text;
-  background-clip: text;
-  animation: 1.8s ease-out 0.6s forwards sweep, 8s ease-in-out 3s infinite pulseSweep;
-}
-
-@keyframes sweep {
   0% { background-position: 120% 0; }
   100% { background-position: -20% 0; }
->>>>>>> karunesh/main
 }
 
 @keyframes pulseSweep {
@@ -196,7 +103,6 @@ html, body, #root {
   100% { background-position: -20% 0; }
 }
 
-<<<<<<< HEAD
 /* Card hover animation */
 .card-interactive {
   transition: transform 0.3s cubic-bezier(0.22, 1, 0.36, 1), box-shadow 0.3s ease;
@@ -267,7 +173,7 @@ html, body, #root {
 /* Scrollbars hidden */
 ::-webkit-scrollbar { display: none; }
 * { scrollbar-width: none; }
-=======
+
 /* Horizontal Scroll Deck Container */
 .deck-container {
   width: 100vw;
@@ -349,11 +255,3 @@ html, body, #root {
   transform: translateY(-2px);
   box-shadow: 0 10px 28px rgba(239, 20, 78, 0.45);
 }
-
-::-webkit-scrollbar {
-  display: none;
-}
-* {
-  scrollbar-width: none;
-}
->>>>>>> karunesh/main
