@@ -103,6 +103,13 @@ export const SLIDES_DATA = rawSlides.map((slide) => {
     }));
   }
 
+  if (item.ecosystems) {
+    item.ecosystems = item.ecosystems.map((eco) => ({
+      ...eco,
+      icon: typeof eco.icon === 'string' ? (ICON_MAP[eco.icon] || Users) : eco.icon,
+    }));
+  }
+
   return item;
 });
 

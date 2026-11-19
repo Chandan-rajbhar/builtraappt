@@ -210,13 +210,16 @@ export function SlideTitle({
   );
 }
 
-// ─── Client Feature Card (3 Cards on Left) ────────────────────────────────────
-// Rule: Card title max 3 words. Card text max 12 words. Max height 170px.
+// ─── Client Feature Card (Left Column) ────────────────────────────────────────
 export function ClientFeatureCard({
   icon: Icon,
   number = '01',
+  moduleLabel,
   title,
   text,
+  compact = false,
+  linkChip,
+  onNavigate,
   delay = 0,
 }) {
   return (
@@ -228,19 +231,20 @@ export function ClientFeatureCard({
       className="glass card-interactive"
       style={{
         position: 'relative',
-        borderRadius: 24,
-        padding: '22px 24px',
+        borderRadius: compact ? 18 : 24,
+        padding: compact ? '12px 18px' : '20px 22px',
         border: '1px solid rgba(226, 232, 240, 0.9)',
-        background: 'rgba(255, 255, 255, 0.75)',
+        background: 'rgba(255, 255, 255, 0.80)',
         display: 'flex',
         flexDirection: 'column',
-        justifyContent: 'space-between',
-        maxHeight: 170,
+        justifyContent: 'center',
+        flex: 1,
+        minHeight: 0,
         boxShadow: '0 6px 24px rgba(11, 31, 75, 0.05)',
         overflow: 'hidden',
       }}
     >
-      {/* 3px brand-colour line on the left edge that grows top to bottom */}
+      {/* 3.5px brand-colour line on the left edge */}
       <motion.div
         initial={{ scaleY: 0 }}
         animate={{ scaleY: 1 }}
@@ -256,26 +260,46 @@ export function ClientFeatureCard({
         }}
       />
 
-      {/* Card Header: Icon chip (left) + Number (right) */}
-      <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: 8 }}>
-        {Icon && (
-          <div style={{
-            width: 40,
-            height: 40,
-            borderRadius: 12,
-            background: 'linear-gradient(135deg, rgba(239, 20, 78, 0.08) 0%, rgba(29, 78, 216, 0.08) 100%)',
-            border: '1px solid rgba(226, 232, 240, 0.8)',
-            display: 'flex',
-            alignItems: 'center',
-            justifyContent: 'center',
-            flexShrink: 0,
-          }}>
-            <Icon size={20} color={ROYAL} strokeWidth={1.75} />
-          </div>
-        )}
+      {/* Card Header: Icon chip + Module Label (left) + Number (right) */}
+      <div style={{
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'space-between',
+        marginBottom: compact ? 5 : 8,
+      }}>
+        <div style={{ display: 'flex', alignItems: 'center', gap: 10 }}>
+          {Icon && (
+            <div style={{
+              width: compact ? 30 : 38,
+              height: compact ? 30 : 38,
+              borderRadius: compact ? 9 : 11,
+              background: 'linear-gradient(135deg, rgba(239, 20, 78, 0.08) 0%, rgba(29, 78, 216, 0.08) 100%)',
+              border: '1px solid rgba(226, 232, 240, 0.8)',
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'center',
+              flexShrink: 0,
+            }}>
+              <Icon size={compact ? 16 : 19} color={ROYAL} strokeWidth={1.8} />
+            </div>
+          )}
+
+          {moduleLabel && (
+            <span style={{
+              fontSize: compact ? 11 : 12,
+              fontWeight: 700,
+              color: BRAND,
+              textTransform: 'uppercase',
+              letterSpacing: '0.08em',
+              fontFamily: "'Inter', sans-serif",
+            }}>
+              {moduleLabel}
+            </span>
+          )}
+        </div>
 
         <span style={{
-          fontSize: 13,
+          fontSize: compact ? 12 : 13,
           fontWeight: 700,
           color: '#94A3B8',
           fontFamily: "'Inter', sans-serif",
@@ -285,28 +309,55 @@ export function ClientFeatureCard({
         </span>
       </div>
 
-      {/* Card Title (Max 3 words, 20px bold navy) */}
+      {/* Card Title */}
       <div style={{
-        fontSize: 20,
+        fontSize: compact ? 16.5 : 19.5,
         fontWeight: 700,
         color: NAVY,
         lineHeight: 1.25,
-        marginBottom: 4,
+        marginBottom: compact ? 3 : 5,
         fontFamily: "'Inter', sans-serif",
       }}>
         {title}
       </div>
 
-      {/* Card Text (Max 12 words, 16px grey) */}
+      {/* Card Text */}
       <div style={{
-        fontSize: 16,
+        fontSize: compact ? 13 : 15,
         fontWeight: 400,
         color: GREY,
-        lineHeight: 1.45,
+        lineHeight: 1.35,
         fontFamily: "'Inter', sans-serif",
       }}>
         {text}
       </div>
+
+      {/* Optional Link Chip */}
+      {linkChip && (
+        <div style={{ marginTop: 8 }}>
+          <motion.button
+            whileHover={{ scale: 1.03 }}
+            whileTap={{ scale: 0.97 }}
+            onClick={() => onNavigate && onNavigate(linkChip.targetSlide - 1, 1)}
+            style={{
+              display: 'inline-flex',
+              alignItems: 'center',
+              gap: 6,
+              padding: '4px 12px',
+              borderRadius: 999,
+              background: 'rgba(239, 20, 78, 0.08)',
+              border: '1px solid rgba(239, 20, 78, 0.25)',
+              color: BRAND,
+              fontSize: 12,
+              fontWeight: 700,
+              cursor: 'pointer',
+              fontFamily: "'Inter', sans-serif",
+            }}
+          >
+            {linkChip.label}
+          </motion.button>
+        </div>
+      )}
     </motion.div>
   );
 }

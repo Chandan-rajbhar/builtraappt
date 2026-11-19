@@ -403,13 +403,13 @@ function buildSlide20(slideData) {
 console.log(`Generating ${rawSlides.length}-slide PPTX deck with pure plain text, zero screenshots/images, and presenter notes...`);
 
 for (const slideData of rawSlides) {
-  if (slideData.type === 'title') {
+  if (slideData.type === 'title' || slideData.type === 'welcome') {
     buildSlide1(slideData);
   } else if (slideData.type === 'overview' || slideData.type === 'mm-overview') {
     buildSlide2(slideData);
   } else if (slideData.type === 'module') {
     buildModuleSlide(slideData);
-  } else if (slideData.type === 'closing') {
+  } else if (slideData.type === 'closing' || slideData.type === 'thankyou') {
     buildSlide20(slideData);
   }
 }

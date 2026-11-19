@@ -1,146 +1,74 @@
 [
   {
     "slideNumber": 1,
-    "type": "title",
-    "eyebrow": "HR MANAGEMENT SYSTEM",
-    "titleNavy": "One place for",
-    "titleBrand": "people, time",
-    "titleNavyAfter": "and pay.",
-    "intro": "Everything about your workforce, managed in one system.",
-    "speakerNotes": "Today I will show how this system helps HR manage employees, attendance, leave, salary and more, all in one place."
+    "type": "welcome",
+    "ecosystem": "ENTERPRISE PLATFORM",
+    "eyebrow": "ENTERPRISE MANAGEMENT SYSTEM",
+    "titleNavy": "BUILT",
+    "titleBrand": "RAA",
+    "titleNavyAfter": "",
+    "subtitle": "Enterprise Management System",
+    "intro": "One Platform. Three Powerful Management Ecosystems.",
+    "ecosystems": [
+      {
+        "id": "hr",
+        "name": "HR Management",
+        "slideRange": "Slides 02–07",
+        "targetSlide": 2,
+        "icon": "Users",
+        "descriptor": "People, attendance, payroll and operations"
+      },
+      {
+        "id": "mm",
+        "name": "Material Management",
+        "slideRange": "Slides 08–12",
+        "targetSlide": 8,
+        "icon": "ShoppingCart",
+        "descriptor": "Requisitions, procurement, inventory and site assets"
+      },
+      {
+        "id": "pt",
+        "name": "Project Tools",
+        "slideRange": "Slides 13–19",
+        "targetSlide": 13,
+        "icon": "Briefcase",
+        "descriptor": "Planning, documentation, finance and site execution"
+      }
+    ],
+    "speakerNotes": "Builtraa connects your workforce, supply chain and project execution in one unified enterprise platform."
   },
   {
     "slideNumber": 2,
-    "type": "overview",
-    "eyebrow": "02 / OVERVIEW",
-    "titleNavy": "What this system",
-    "titleBrand": "covers",
-    "titleNavyAfter": "",
-    "intro": "17 sections, grouped by what they help you do.",
-    "categories": [
-      {
-        "title": "People & Time",
-        "icon": "Users",
-        "sections": [
-          {
-            "name": "HR Dashboard",
-            "slide": 3
-          },
-          {
-            "name": "Employees",
-            "slide": 4
-          },
-          {
-            "name": "Attendance",
-            "slide": 7
-          },
-          {
-            "name": "Leave",
-            "slide": 5
-          }
-        ]
-      },
-      {
-        "title": "Money",
-        "icon": "Wallet",
-        "sections": [
-          {
-            "name": "Payroll",
-            "slide": 6
-          },
-          {
-            "name": "Loan",
-            "slide": 8
-          },
-          {
-            "name": "Salary Increment",
-            "slide": 9
-          },
-          {
-            "name": "Salary Discrepancy",
-            "slide": 10
-          },
-          {
-            "name": "Payroll Settings",
-            "slide": 19
-          }
-        ]
-      },
-      {
-        "title": "Rules & Records",
-        "icon": "ShieldCheck",
-        "sections": [
-          {
-            "name": "Disciplinary Action",
-            "slide": 11
-          },
-          {
-            "name": "Digital Forms",
-            "slide": 13
-          },
-          {
-            "name": "Clearance Form",
-            "slide": 14
-          },
-          {
-            "name": "Employee Rejoining",
-            "slide": 15
-          },
-          {
-            "name": "Audit Logs",
-            "slide": 18
-          }
-        ]
-      },
-      {
-        "title": "Support & Reports",
-        "icon": "BarChart3",
-        "sections": [
-          {
-            "name": "Ticket Management",
-            "slide": 12
-          },
-          {
-            "name": "Meeting Arrangements",
-            "slide": 17
-          },
-          {
-            "name": "Report",
-            "slide": 16
-          }
-        ]
-      }
-    ],
-    "speakerNotes": "These 17 sections cover the full journey of an employee, from joining to leaving."
-  },
-  {
-    "slideNumber": 3,
     "type": "module",
-    "sectionName": "HR Dashboard",
-    "eyebrow": "03 / HR DASHBOARD",
-    "titleNavy": "Real-time",
-    "titleBrand": "HR Dashboard",
+    "ecosystem": "HR MANAGEMENT",
+    "eyebrow": "02 / HR MANAGEMENT",
+    "sectionName": "HR Management Overview",
+    "titleNavy": "Real-time HR",
+    "titleBrand": "Overview",
     "titleNavyAfter": "",
     "intro": "One screen that shows how your workforce is doing today.",
     "moduleIcon": "LayoutDashboard",
     "cards": [
       {
-        "icon": "Users",
+        "icon": "LayoutDashboard",
         "number": "01",
-        "title": "Today at glance",
+        "moduleLabel": "HR Dashboard",
+        "title": "Today at a glance",
         "text": "Total employees, active loans, people on leave, monthly payroll."
       },
       {
-        "icon": "Clock",
+        "icon": "Users",
         "number": "02",
-        "title": "Attendance view",
-        "text": "Who is present or absent, by employee type and project site."
+        "moduleLabel": "Employee Overview",
+        "title": "Workforce status",
+        "text": "Staff, labour and active status in one view."
       },
       {
-        "icon": "AlertCircle",
+        "icon": "BarChart3",
         "number": "03",
-        "title": "Alerts and tasks",
-        "text": "Pending approvals, clearances, and visas or passports expiring soon."
+        "moduleLabel": "HR Statistics",
+        "title": "Attendance and alerts",
+        "text": "Present or absent by type and site; pending approvals, clearances and expiring visas or passports."
       }
     ],
     "steps": [
@@ -150,1235 +78,763 @@
       "Open that section to act"
     ],
     "whyItHelps": "HR spots problems early without opening every section.",
-    "speakerNotes": "Think of this as the control room. In one look, HR sees who is in, who is on leave and what needs action."
+    "speakerNotes": "The HR overview gives leadership immediate visibility into staffing, daily attendance, payroll status, and urgent compliance alerts."
   },
   {
-    "slideNumber": 4,
+    "slideNumber": 3,
     "type": "module",
-    "sectionName": "Employees",
-    "eyebrow": "04 / EMPLOYEES",
-    "titleNavy": "Centralized",
-    "titleBrand": "Employees",
-    "titleNavyAfter": "",
-    "intro": "The complete list of everyone who works for the company.",
-    "moduleIcon": "Users",
-    "cards": [
-      {
-        "icon": "UserPlus",
-        "number": "01",
-        "title": "Employee profiles",
-        "text": "Personal, job, department and ID details kept in one record."
-      },
-      {
-        "icon": "Briefcase",
-        "number": "02",
-        "title": "Staff and labour",
-        "text": "Separate lists for staff, labour and unfinished entries."
-      },
-      {
-        "icon": "CheckCircle2",
-        "number": "03",
-        "title": "Status at glance",
-        "text": "Active status, passport, visa and labour-authority fee details."
-      }
-    ],
-    "steps": [
-      "Add a new employee",
-      "Fill in their details",
-      "They appear in the list",
-      "Search, filter or update any time"
-    ],
-    "whyItHelps": "All employee information is in one place, easy to find.",
-    "speakerNotes": "Every other section uses this list, so details are entered once and used everywhere."
-  },
-  {
-    "slideNumber": 5,
-    "type": "module",
-    "sectionName": "Leave",
-    "eyebrow": "05 / LEAVE",
-    "titleNavy": "Leave",
+    "ecosystem": "HR MANAGEMENT",
+    "compact": true,
+    "eyebrow": "03 / HR MANAGEMENT",
+    "sectionName": "Employee Management",
+    "titleNavy": "Employee",
     "titleBrand": "Management",
     "titleNavyAfter": "",
-    "intro": "Employees apply for leave and managers approve it step by step.",
-    "moduleIcon": "CalendarDays",
-    "cards": [
-      {
-        "icon": "CheckSquare",
-        "number": "01",
-        "title": "Approval steps",
-        "text": "Requests go to Project Director, Director, then Managing Director."
-      },
-      {
-        "icon": "Calendar",
-        "number": "02",
-        "title": "Leave overview",
-        "text": "See leave by type and by department."
-      },
-      {
-        "icon": "FileText",
-        "number": "03",
-        "title": "Related requests",
-        "text": "Leave salary, comp-off, announcements and attendance corrections."
-      }
-    ],
-    "steps": [
-      "Employee applies",
-      "Project Director reviews",
-      "Director reviews",
-      "Managing Director gives final approval"
-    ],
-    "whyItHelps": "Everyone knows where a request is and who must act next.",
-    "speakerNotes": "No more paper forms or chasing. Each approver sees the request and the employee sees the status."
-  },
-  {
-    "slideNumber": 6,
-    "type": "module",
-    "sectionName": "Payroll",
-    "eyebrow": "06 / PAYROLL",
-    "titleNavy": "Payroll",
-    "titleBrand": "Processing",
-    "titleNavyAfter": "",
-    "intro": "Prepare, approve and pay salaries each month.",
-    "moduleIcon": "CreditCard",
+    "intro": "From joining to leaving, every employee record in one place.",
+    "moduleIcon": "Users",
     "cards": [
       {
         "icon": "Users",
         "number": "01",
-        "title": "Staff and labour",
-        "text": "Separate payroll for staff and for labour workers."
+        "moduleLabel": "Employees",
+        "title": "Complete employee list",
+        "text": "Personal, job, department and ID details in one record; staff and labour lists."
       },
       {
-        "icon": "CalendarDays",
+        "icon": "UserCheck",
         "number": "02",
-        "title": "Monthly or custom",
-        "text": "Run the monthly closing, or an extra run when needed."
+        "moduleLabel": "Employee Rejoining",
+        "title": "Return to work",
+        "text": "Re-start employees returning from leave or re-employment with a record."
       },
       {
-        "icon": "CheckCircle2",
+        "icon": "FileText",
         "number": "03",
-        "title": "Clear status",
-        "text": "Each run shows approval status, totals and a locked mark."
+        "moduleLabel": "Digital Forms",
+        "title": "Paperless forms",
+        "text": "Staffing requests and performance appraisals with priority and status."
+      },
+      {
+        "icon": "CheckSquare",
+        "number": "04",
+        "moduleLabel": "Clearance Form",
+        "title": "Exit checklist",
+        "text": "Departments sign off and company assets are handed over."
       }
     ],
     "steps": [
-      "Run payroll",
-      "Approved, ready for payment",
-      "Paid",
-      "Locked"
+      "Add and maintain the employee",
+      "Use forms for hiring and reviews",
+      "Rejoining restarts returning staff",
+      "Clearance completes the exit"
     ],
-    "whyItHelps": "Salaries are processed in an organised and traceable way.",
-    "speakerNotes": "Each month HR runs payroll, management approves it, salaries are paid and the record is locked."
+    "whyItHelps": "Every stage of an employee's journey is recorded and easy to find.",
+    "speakerNotes": "From onboarding to exit clearance, all employee records, appraisals, and rejoining events remain centralized and searchable."
   },
   {
-    "slideNumber": 7,
+    "slideNumber": 4,
     "type": "module",
-    "sectionName": "Attendance",
-    "eyebrow": "07 / ATTENDANCE",
-    "titleNavy": "Daily",
+    "ecosystem": "HR MANAGEMENT",
+    "eyebrow": "04 / HR MANAGEMENT",
+    "sectionName": "Leave & Attendance Management",
+    "titleNavy": "Leave &",
     "titleBrand": "Attendance",
     "titleNavyAfter": "",
-    "intro": "Daily attendance of every employee, recorded and checked.",
-    "moduleIcon": "Clock",
+    "intro": "Attendance is recorded automatically and leave is approved step by step.",
+    "moduleIcon": "CalendarDays",
     "cards": [
       {
         "icon": "Clock",
         "number": "01",
+        "moduleLabel": "Attendance",
         "title": "Daily record",
         "text": "Check-in, lunch, check-out, hours worked and late arrivals."
       },
       {
-        "icon": "CheckCircle2",
+        "icon": "CalendarCheck",
         "number": "02",
+        "moduleLabel": "Attendance",
         "title": "Marked automatically",
-        "text": "No punch by 10:30 AM means Absent; punch makes them Present."
+        "text": "No punch by 10:30 AM means Absent; a punch makes them Present."
       },
       {
-        "icon": "FileSpreadsheet",
+        "icon": "CalendarDays",
         "number": "03",
-        "title": "Easy corrections",
-        "text": "Add or edit records, set shifts and holidays, export to Excel."
+        "moduleLabel": "Leave",
+        "title": "Step-by-step approval",
+        "text": "Requests go to Project Director, Director, then Managing Director."
       }
     ],
     "steps": [
       "Employee punches at the attendance machine",
       "Status updates automatically",
-      "HR checks and corrects if needed",
-      "Export the report"
+      "Leave goes through three approvals",
+      "HR checks, corrects and exports"
     ],
-    "whyItHelps": "Accurate attendance, which also feeds salary and leave.",
-    "speakerNotes": "Employees punch at site or office. The system marks attendance for HR, and HR can fix exceptions."
+    "whyItHelps": "Accurate attendance and leave, which also feed salary.",
+    "speakerNotes": "Automatic biometric punches eliminate manual attendance sheets, feeding verified work hours directly into leave and payroll."
   },
   {
-    "slideNumber": 8,
+    "slideNumber": 5,
     "type": "module",
-    "sectionName": "Loan",
-    "eyebrow": "08 / LOAN",
-    "titleNavy": "Loan",
-    "titleBrand": "Management",
+    "ecosystem": "HR MANAGEMENT",
+    "eyebrow": "05 / HR MANAGEMENT",
+    "sectionName": "Payroll Management & Settings",
+    "titleNavy": "Payroll &",
+    "titleBrand": "Settings",
     "titleNavyAfter": "",
-    "intro": "Give employee loans and track every repayment.",
+    "intro": "Set the salary rules once, then prepare, approve and pay each month.",
+    "moduleIcon": "CreditCard",
+    "cards": [
+      {
+        "icon": "Sliders",
+        "number": "01",
+        "moduleLabel": "Payroll Settings",
+        "title": "Rules in one place",
+        "text": "GOSI shares, end-of-service rates and the LMRA fee."
+      },
+      {
+        "icon": "CreditCard",
+        "number": "02",
+        "moduleLabel": "Payroll",
+        "title": "Staff and labour",
+        "text": "Separate payroll runs, monthly or custom."
+      },
+      {
+        "icon": "ShieldCheck",
+        "number": "03",
+        "moduleLabel": "Payroll",
+        "title": "Clear status",
+        "text": "Each run shows approval status, totals and a locked mark."
+      }
+    ],
+    "steps": [
+      "Set the rules",
+      "Run payroll",
+      "Approved and paid",
+      "Locked (rule changes apply to future payroll only)"
+    ],
+    "whyItHelps": "Salaries are processed in an organised and traceable way.",
+    "speakerNotes": "Company contributions and statutory fees are defined once, so monthly disbursements run smoothly and lock permanently once paid."
+  },
+  {
+    "slideNumber": 6,
+    "type": "module",
+    "ecosystem": "HR MANAGEMENT",
+    "eyebrow": "06 / HR MANAGEMENT",
+    "sectionName": "Salary & Employee Benefits",
+    "titleNavy": "Salary &",
+    "titleBrand": "Benefits",
+    "titleNavyAfter": "",
+    "intro": "Loans, raises and salary corrections with clear approvals.",
     "moduleIcon": "Wallet",
     "cards": [
       {
-        "icon": "Coins",
+        "icon": "Wallet",
         "number": "01",
-        "title": "Issue a loan",
-        "text": "Record the loan type, amount, start month and end month."
+        "moduleLabel": "Loan",
+        "title": "Issue and track",
+        "text": "Loan type, amount, start and end month with monthly deduction."
       },
       {
         "icon": "TrendingUp",
         "number": "02",
-        "title": "Track repayment",
-        "text": "See active loans, amount outstanding and monthly deduction."
+        "moduleLabel": "Salary Increment",
+        "title": "Request to payroll",
+        "text": "Requests move from waiting to approved to applied."
       },
       {
-        "icon": "CheckCircle2",
+        "icon": "Scale",
         "number": "03",
-        "title": "Clear next step",
-        "text": "Each loan shows its status and who needs to act next."
+        "moduleLabel": "Salary Discrepancy",
+        "title": "Fix salary mistakes",
+        "text": "HR reviews, then the Managing Director decides."
       }
     ],
     "steps": [
-      "Issue a new loan",
-      "Approval steps are followed",
-      "Loan becomes active",
-      "Monthly deduction until the end month"
+      "A request or claim is raised",
+      "Reviewed and approved",
+      "Applied to payroll or deducted monthly",
+      "Recorded for later checks"
     ],
-    "whyItHelps": "No loan is forgotten, and repayments stay accurate.",
-    "speakerNotes": "HR can see every loan, how much is left and what the next step is. A flowchart shows how a loan is paid out."
+    "whyItHelps": "Money matters are fair, approved and properly recorded.",
+    "speakerNotes": "Deductions for employee advances and adjustments are scheduled directly into payroll with full approval history."
   },
   {
-    "slideNumber": 9,
+    "slideNumber": 7,
     "type": "module",
-    "sectionName": "Salary Increment",
-    "eyebrow": "09 / SALARY INCREMENT",
-    "titleNavy": "Salary",
-    "titleBrand": "Increment",
+    "ecosystem": "HR MANAGEMENT",
+    "compact": true,
+    "eyebrow": "07 / HR MANAGEMENT",
+    "sectionName": "HR Operations & Compliance",
+    "titleNavy": "HR Operations &",
+    "titleBrand": "Compliance",
     "titleNavyAfter": "",
-    "intro": "Request, approve and apply salary increases.",
-    "moduleIcon": "TrendingUp",
-    "cards": [
-      {
-        "icon": "TrendingUp",
-        "number": "01",
-        "title": "Request tracking",
-        "text": "See requests waiting, approved, applied to payroll, and total."
-      },
-      {
-        "icon": "Users",
-        "number": "02",
-        "title": "Easy search",
-        "text": "Find any request by employee name or code."
-      },
-      {
-        "icon": "FileSpreadsheet",
-        "number": "03",
-        "title": "Create and export",
-        "text": "Raise a new increment and export the list."
-      }
-    ],
-    "steps": [
-      "New increment requested",
-      "Waiting for approval",
-      "Approved",
-      "Applied to payroll"
-    ],
-    "whyItHelps": "Approved raises reach the salary correctly and on time.",
-    "speakerNotes": "A raise is not just promised. It is approved here and then applied to payroll."
-  },
-  {
-    "slideNumber": 10,
-    "type": "module",
-    "sectionName": "Salary Discrepancy",
-    "eyebrow": "10 / SALARY DISCREPANCY",
-    "titleNavy": "Salary",
-    "titleBrand": "Discrepancy",
-    "titleNavyAfter": "",
-    "intro": "Employees can report salary mistakes and get them corrected.",
-    "moduleIcon": "Scale",
-    "cards": [
-      {
-        "icon": "FileText",
-        "number": "01",
-        "title": "Raise a claim",
-        "text": "A salary issue is recorded with month, category and amount."
-      },
-      {
-        "icon": "CheckSquare",
-        "number": "02",
-        "title": "Two approvals",
-        "text": "First HR reviews, then the Managing Director approves."
-      },
-      {
-        "icon": "CheckCircle2",
-        "number": "03",
-        "title": "Clear outcome",
-        "text": "Totals of approved corrections and rejected claims."
-      }
-    ],
-    "steps": [
-      "Claim raised",
-      "HR reviews",
-      "Managing Director decides",
-      "Approved or rejected"
-    ],
-    "whyItHelps": "Salary mistakes are fixed fairly, with a proper record.",
-    "speakerNotes": "If an employee believes their salary was wrong, the claim goes through a clear review and the result is recorded."
-  },
-  {
-    "slideNumber": 11,
-    "type": "module",
-    "sectionName": "Disciplinary Action",
-    "eyebrow": "11 / DISCIPLINARY ACTION",
-    "titleNavy": "Disciplinary",
-    "titleBrand": "Action",
-    "titleNavyAfter": "",
-    "intro": "Handle warnings and disciplinary cases in a fair, recorded way.",
+    "intro": "Discipline, travel, reports, meetings and a full audit trail.",
     "moduleIcon": "ShieldAlert",
     "cards": [
       {
         "icon": "ShieldAlert",
         "number": "01",
-        "title": "Cases and severity",
-        "text": "Each case has a reference, a violation and a severity."
-      },
-      {
-        "icon": "Clock",
-        "number": "02",
-        "title": "Automatic or manual",
-        "text": "Late-arrival cases are raised automatically; HR can also start one."
-      },
-      {
-        "icon": "CheckSquare",
-        "number": "03",
-        "title": "Clear status",
-        "text": "Pending HR, pending management, issued, acknowledged, meeting requested, rejected."
-      }
-    ],
-    "steps": [
-      "Case is raised",
-      "HR and management review",
-      "Warning is issued",
-      "Employee acknowledges or asks for a meeting"
-    ],
-    "whyItHelps": "Every action is consistent, fair and recorded.",
-    "speakerNotes": "Nothing is verbal. Each warning has a reference, a reviewer and the employee's response."
-  },
-  {
-    "slideNumber": 12,
-    "type": "module",
-    "sectionName": "Ticket Management",
-    "eyebrow": "12 / TICKET MANAGEMENT",
-    "titleNavy": "Ticket",
-    "titleBrand": "Management",
-    "titleNavyAfter": "",
-    "intro": "Manage travel tickets and ticket allowances.",
-    "moduleIcon": "Plane",
-    "cards": [
-      {
-        "icon": "CheckCircle2",
-        "number": "01",
-        "title": "Eligibility",
-        "text": "See who is eligible for a ticket under their policy."
+        "moduleLabel": "Disciplinary Action",
+        "title": "Fair, recorded cases",
+        "text": "Late-arrival cases are automatic; HR can also raise one."
       },
       {
         "icon": "Plane",
         "number": "02",
-        "title": "Ticket or cash",
-        "text": "Company books the ticket, or a cash allowance is given."
+        "moduleLabel": "Ticket Management",
+        "title": "Travel benefits",
+        "text": "Eligibility, ticket or cash allowance and cost tracking."
       },
       {
-        "icon": "Coins",
+        "icon": "BarChart3",
         "number": "03",
-        "title": "Cost tracking",
-        "text": "Cancelled tickets and total ticket cost are tracked."
-      }
-    ],
-    "steps": [
-      "Employee becomes eligible",
-      "Ticket booked or cash allowance chosen",
-      "Status updated",
-      "Total cost recorded"
-    ],
-    "whyItHelps": "Travel benefits are fair and the cost is under control.",
-    "speakerNotes": "HR knows who has a ticket benefit, how it was given and what it cost."
-  },
-  {
-    "slideNumber": 13,
-    "type": "module",
-    "sectionName": "Digital Forms",
-    "eyebrow": "13 / DIGITAL FORMS",
-    "titleNavy": "Digital",
-    "titleBrand": "Forms",
-    "titleNavyAfter": "",
-    "intro": "Paperless forms for hiring requests and performance reviews.",
-    "moduleIcon": "FileText",
-    "cards": [
-      {
-        "icon": "FileText",
-        "number": "01",
-        "title": "Two form types",
-        "text": "Department staffing requests and employee performance appraisals."
-      },
-      {
-        "icon": "CheckSquare",
-        "number": "02",
-        "title": "Track each form",
-        "text": "Who submitted it, for whom, priority and status."
-      },
-      {
-        "icon": "CheckCircle2",
-        "number": "03",
-        "title": "Quick start",
-        "text": "Create a new form in a few clicks."
-      }
-    ],
-    "steps": [
-      "Create a new form",
-      "Submit it",
-      "Reviewer sees priority and status",
-      "Form is completed"
-    ],
-    "whyItHelps": "Less paperwork and every form is easy to find.",
-    "speakerNotes": "Instead of printed forms and emails, everything is submitted and followed up here."
-  },
-  {
-    "slideNumber": 14,
-    "type": "module",
-    "sectionName": "Clearance Form",
-    "eyebrow": "14 / CLEARANCE FORM",
-    "titleNavy": "Clearance",
-    "titleBrand": "Form",
-    "titleNavyAfter": "",
-    "intro": "A clear checklist when an employee leaves the company.",
-    "moduleIcon": "CheckSquare",
-    "cards": [
-      {
-        "icon": "UserCheck",
-        "number": "01",
-        "title": "Exit requests",
-        "text": "Records the exit type and the last working day."
-      },
-      {
-        "icon": "Building2",
-        "number": "02",
-        "title": "Department sign-off",
-        "text": "Each department confirms its part, including returned company assets."
-      },
-      {
-        "icon": "CheckCircle2",
-        "number": "03",
-        "title": "Current stage",
-        "text": "See where each clearance is stuck or complete."
-      }
-    ],
-    "steps": [
-      "Exit is requested",
-      "Departments approve one by one",
-      "Assets are handed over",
-      "Clearance is completed"
-    ],
-    "whyItHelps": "Nothing is missed before final settlement.",
-    "speakerNotes": "Before someone leaves, every department confirms they have no pending issue and all assets are returned."
-  },
-  {
-    "slideNumber": 15,
-    "type": "module",
-    "sectionName": "Employee Rejoining",
-    "eyebrow": "15 / EMPLOYEE REJOINING",
-    "titleNavy": "Employee",
-    "titleBrand": "Rejoining",
-    "titleNavyAfter": "",
-    "intro": "Bring back employees returning from leave or re-employment.",
-    "moduleIcon": "UserCheck",
-    "cards": [
-      {
-        "icon": "UserCheck",
-        "number": "01",
-        "title": "Rejoining record",
-        "text": "Employee, type of rejoining and rejoining date."
-      },
-      {
-        "icon": "CheckSquare",
-        "number": "02",
-        "title": "Status",
-        "text": "See if it is complete and who processed it."
-      },
-      {
-        "icon": "CheckCircle2",
-        "number": "03",
-        "title": "Quick start",
-        "text": "Add a new rejoining in a few clicks."
-      }
-    ],
-    "steps": [
-      "Start a new rejoining",
-      "Choose the type and date",
-      "HR processes it",
-      "Employee is active again"
-    ],
-    "whyItHelps": "Returning employees are re-started properly with a record.",
-    "speakerNotes": "When someone comes back, HR records it here so their status is updated correctly."
-  },
-  {
-    "slideNumber": 16,
-    "type": "module",
-    "sectionName": "Report",
-    "eyebrow": "16 / REPORT",
-    "titleNavy": "HR",
-    "titleBrand": "Reports",
-    "titleNavyAfter": "",
-    "intro": "Ready-made reports for HR and management.",
-    "moduleIcon": "BarChart3",
-    "cards": [
-      {
-        "icon": "Coins",
-        "number": "01",
-        "title": "Salary and money",
-        "text": "Monthly salary, leave salary, payroll, allowances, GOSI, end-of-service, loans."
+        "moduleLabel": "Report",
+        "title": "Ready-made reports",
+        "text": "Salary, attendance, leave and expiring documents with export."
       },
       {
         "icon": "Users",
-        "number": "02",
-        "title": "People attendance",
-        "text": "All employees, attendance summary, leave report, site-wise report."
-      },
-      {
-        "icon": "FileText",
-        "number": "03",
-        "title": "Documents rules",
-        "text": "Expiring documents, passports, visas, clearances, vehicles."
-      }
-    ],
-    "steps": [
-      "Choose a report",
-      "Pick the period or filters",
-      "View it on screen",
-      "Export it"
-    ],
-    "whyItHelps": "Management gets answers quickly, without manual counting.",
-    "speakerNotes": "Whatever management asks for, there is usually a ready report. Just pick it and export."
-  },
-  {
-    "slideNumber": 17,
-    "type": "module",
-    "sectionName": "Meeting Arrangements",
-    "eyebrow": "17 / MEETING ARRANGEMENTS",
-    "titleNavy": "Meeting",
-    "titleBrand": "Arrangements",
-    "titleNavyAfter": "",
-    "intro": "Plan company meetings and keep a record of them.",
-    "moduleIcon": "CalendarCheck",
-    "cards": [
-      {
-        "icon": "CalendarCheck",
-        "number": "01",
-        "title": "Schedule",
-        "text": "Set the title, host, organizer, place or link, and participants."
-      },
-      {
-        "icon": "Users",
-        "number": "02",
-        "title": "Who attends",
-        "text": "Choose the target audience for each meeting."
-      },
-      {
-        "icon": "CheckCircle2",
-        "number": "03",
-        "title": "Meeting status",
-        "text": "See total, upcoming and completed meetings."
-      }
-    ],
-    "steps": [
-      "Schedule a meeting",
-      "Participants are chosen",
-      "Meeting happens",
-      "It is recorded as ended"
-    ],
-    "whyItHelps": "Meetings are organised and nothing is forgotten.",
-    "speakerNotes": "HR can arrange meetings with the right people and keep a simple history."
-  },
-  {
-    "slideNumber": 18,
-    "type": "module",
-    "sectionName": "Audit Logs",
-    "eyebrow": "18 / AUDIT LOGS",
-    "titleNavy": "Audit",
-    "titleBrand": "Logs",
-    "titleNavyAfter": "",
-    "intro": "A record of every payroll action, for trust and checking.",
-    "moduleIcon": "History",
-    "cards": [
-      {
-        "icon": "CheckCircle2",
-        "number": "01",
-        "title": "Success or failure",
-        "text": "See how many actions succeeded, failed or were rejected."
-      },
-      {
-        "icon": "Sliders",
-        "number": "02",
-        "title": "Easy filters",
-        "text": "Filter by type of action, status and date."
+        "number": "04",
+        "moduleLabel": "Meeting Arrangements",
+        "title": "Plan and record",
+        "text": "Schedule meetings, choose participants, see status."
       },
       {
         "icon": "History",
-        "number": "03",
-        "title": "Full details",
-        "text": "Time, action, who did it, status and reason."
+        "number": "05",
+        "moduleLabel": "Audit Logs",
+        "title": "Every payroll action",
+        "text": "Success, failure, filters and export to Excel."
       }
     ],
     "steps": [
-      "A payroll action is done",
+      "An event happens",
       "It is recorded",
-      "Filter and review",
-      "Export to Excel"
+      "HR and management review it",
+      "Reports and audit logs prove it later"
     ],
-    "whyItHelps": "Everything done on payroll can be checked later.",
-    "speakerNotes": "If anyone asks who did what on payroll and when, the answer is here."
+    "whyItHelps": "Every action is consistent, fair and can be checked later.",
+    "speakerNotes": "Compliance workflows and complete audit trails guarantee total accountability across HR policies and governance."
   },
   {
-    "slideNumber": 19,
+    "slideNumber": 8,
     "type": "module",
-    "sectionName": "Payroll Settings",
-    "eyebrow": "19 / PAYROLL SETTINGS",
-    "titleNavy": "Payroll",
-    "titleBrand": "Settings",
+    "ecosystem": "MATERIAL MANAGEMENT",
+    "eyebrow": "08 / MATERIAL MANAGEMENT",
+    "sectionName": "Material Management Overview",
+    "titleNavy": "Material Management",
+    "titleBrand": "Overview",
     "titleNavyAfter": "",
-    "intro": "Set the salary rules once, and payroll follows them.",
-    "moduleIcon": "Sliders",
-    "cards": [
-      {
-        "icon": "ShieldCheck",
-        "number": "01",
-        "title": "GOSI insurance",
-        "text": "Set company and employee shares for Bahraini and expatriate staff."
-      },
-      {
-        "icon": "Coins",
-        "number": "02",
-        "title": "End-of-service",
-        "text": "Two rates, depending on years of service."
-      },
-      {
-        "icon": "Building2",
-        "number": "03",
-        "title": "LMRA fee",
-        "text": "A monthly labour-authority fee for expatriate employees."
-      }
-    ],
-    "steps": [
-      "Open settings",
-      "Change a rule",
-      "Save",
-      "Applies to future payroll only"
-    ],
-    "whyItHelps": "Rules are set in one place and old payrolls stay unchanged.",
-    "speakerNotes": "These are the rules behind every salary. When a rule changes, HR updates it once and only future payrolls are affected."
-  },
-  {
-    "slideNumber": 20,
-    "type": "mm-overview",
-    "eyebrow": "20 / OVERVIEW",
-    "titleNavy": "What Material Management",
-    "titleBrand": "covers",
-    "titleNavyAfter": "",
-    "intro": "13 sections, grouped by what they help you do.",
-    "categories": [
-      {
-        "title": "Requests & Buying",
-        "icon": "ShoppingCart",
-        "sections": [
-          {
-            "name": "Material Request Dashboard",
-            "slide": 21
-          },
-          {
-            "name": "Procurement Queue",
-            "slide": 22
-          },
-          {
-            "name": "RFQ / Quotations",
-            "slide": 23
-          },
-          {
-            "name": "Purchase Orders",
-            "slide": 24
-          }
-        ]
-      },
-      {
-        "title": "Delivery & Stock",
-        "icon": "Truck",
-        "sections": [
-          {
-            "name": "Deliveries",
-            "slide": 25
-          },
-          {
-            "name": "Receipts (GRN)",
-            "slide": 27
-          },
-          {
-            "name": "Inventory",
-            "slide": 28
-          },
-          {
-            "name": "Material Master",
-            "slide": 26
-          }
-        ]
-      },
-      {
-        "title": "Vendors & Payments",
-        "icon": "Wallet",
-        "sections": [
-          {
-            "name": "Vendors",
-            "slide": 30
-          },
-          {
-            "name": "Accounts & Bills",
-            "slide": 29
-          }
-        ]
-      },
-      {
-        "title": "Site Assets",
-        "icon": "Wrench",
-        "sections": [
-          {
-            "name": "Asset List",
-            "slide": 31
-          },
-          {
-            "name": "Operational Assets Request",
-            "slide": 32
-          },
-          {
-            "name": "Operational Assets Inventory",
-            "slide": 33
-          }
-        ]
-      }
-    ],
-    "speakerNotes": "Material Management organizes the entire construction supply chain across 13 specialized sections from requisition to site assets."
-  },
-  {
-    "slideNumber": 21,
-    "type": "module",
-    "sectionName": "Material Request Dashboard",
-    "eyebrow": "21 / DASHBOARD",
-    "titleNavy": "Material Request",
-    "titleBrand": "Dashboard",
-    "titleNavyAfter": "",
-    "intro": "See every material request and where it stands.",
-    "moduleIcon": "LayoutDashboard",
+    "intro": "Every material request and approved material in one system.",
+    "moduleIcon": "Layers",
     "cards": [
       {
         "icon": "LayoutDashboard",
         "number": "01",
-        "title": "Status at a glance",
-        "text": "Totals for pending approval, approved and rejected requests."
-      },
-      {
-        "icon": "FileText",
-        "number": "02",
-        "title": "Easy search",
-        "text": "Find a request by number, site or status."
+        "moduleLabel": "Dashboard",
+        "title": "Request overview",
+        "text": "All material requests with pending, approved and rejected counts."
       },
       {
         "icon": "CheckSquare",
-        "number": "03",
+        "number": "02",
+        "moduleLabel": "Dashboard",
         "title": "Quick actions",
-        "text": "Raise a new request or export the list."
+        "text": "Search by request or status, raise a new request, export."
+      },
+      {
+        "icon": "Layers",
+        "number": "03",
+        "moduleLabel": "Material Master",
+        "title": "One master list",
+        "text": "Civil, electrical, mechanical and HVAC materials with code, size, unit and cost code mapping; filter and export to Excel."
       }
     ],
     "steps": [
-      "Raise a request",
-      "Pending PM approval",
-      "Approved",
-      "Goes to procurement"
+      "Add materials to the master",
+      "Raise a material request",
+      "Pending approval",
+      "Approved and sent to procurement"
     ],
-    "whyItHelps": "Every material need is visible from request to approval.",
-    "speakerNotes": "This dashboard gives site managers and buyers real-time visibility into all raised material requests and their current approval stage."
+    "whyItHelps": "Everyone orders the same materials, and every request is visible.",
+    "speakerNotes": "A single standardized materials catalog prevents duplicate codes and ensures project requisitions are tracked clearly."
   },
   {
-    "slideNumber": 22,
+    "slideNumber": 9,
     "type": "module",
-    "sectionName": "Procurement Queue",
-    "eyebrow": "22 / PROCUREMENT QUEUE",
+    "ecosystem": "MATERIAL MANAGEMENT",
+    "eyebrow": "09 / MATERIAL MANAGEMENT",
+    "sectionName": "Procurement Management",
     "titleNavy": "Procurement",
-    "titleBrand": "Queue",
+    "titleBrand": "Management",
     "titleNavyAfter": "",
-    "intro": "Items that must be bought from outside vendors.",
+    "intro": "Buy what the warehouse does not have, at the best quotation.",
     "moduleIcon": "ShoppingCart",
     "cards": [
       {
         "icon": "ShoppingCart",
         "number": "01",
+        "moduleLabel": "Procurement Queue",
         "title": "Items to buy",
-        "text": "Requested items that are not available in warehouse stock."
+        "text": "Requested items not available after the warehouse stock check."
       },
       {
         "icon": "AlertCircle",
         "number": "02",
+        "moduleLabel": "Procurement Queue",
         "title": "Key numbers",
-        "text": "Pending items, total units to buy and high-priority items."
+        "text": "Pending items, units to buy, high-priority items; create a global RFQ."
       },
       {
         "icon": "FileSpreadsheet",
         "number": "03",
-        "title": "Quick RFQ",
-        "text": "Send one item to RFQ or create a global RFQ."
+        "moduleLabel": "RFQ / Quotations",
+        "title": "Compare quotations",
+        "text": "Material and asset RFQs by status: requested, pending, approved, rejected, on hold."
       }
     ],
     "steps": [
       "Stock is checked",
       "Shortfall joins the queue",
-      "RFQ is created",
-      "Vendors are asked for quotes"
+      "RFQ is sent to vendors",
+      "Quotations are compared and approved"
     ],
-    "whyItHelps": "Nothing that needs buying is missed.",
-    "speakerNotes": "When warehouse stock cannot fulfill a request, items automatically enter this queue so procurement teams can act immediately."
+    "whyItHelps": "Nothing that needs buying is missed, and prices are compared fairly.",
+    "speakerNotes": "Shortfalls detected during site stock checks enter procurement queues automatically for quotation comparison."
   },
   {
-    "slideNumber": 23,
+    "slideNumber": 10,
     "type": "module",
-    "sectionName": "Request for Quotation",
-    "eyebrow": "23 / RFQ / QUOTATIONS",
-    "titleNavy": "Request for",
-    "titleBrand": "Quotation",
+    "ecosystem": "MATERIAL MANAGEMENT",
+    "eyebrow": "10 / MATERIAL MANAGEMENT",
+    "sectionName": "Purchase Orders & Vendor Mgmt",
+    "titleNavy": "Purchase Orders &",
+    "titleBrand": "Vendors",
     "titleNavyAfter": "",
-    "intro": "Ask vendors for prices and compare their quotations.",
-    "moduleIcon": "FileSpreadsheet",
-    "cards": [
-      {
-        "icon": "FileSpreadsheet",
-        "number": "01",
-        "title": "Materials and assets",
-        "text": "Separate tabs for material RFQs and asset RFQs."
-      },
-      {
-        "icon": "CheckCircle2",
-        "number": "02",
-        "title": "Clear status",
-        "text": "Requested, pending, approved, rejected or on hold."
-      },
-      {
-        "icon": "FileText",
-        "number": "03",
-        "title": "Easy search",
-        "text": "Find any RFQ quickly."
-      }
-    ],
-    "steps": [
-      "Create an RFQ",
-      "Send to vendors",
-      "Compare quotations",
-      "Approve the best one"
-    ],
-    "whyItHelps": "Prices are compared fairly before anything is bought.",
-    "speakerNotes": "Procurement sends requests for quotations to multiple suppliers, compares responses side by side, and approves the best price."
-  },
-  {
-    "slideNumber": 24,
-    "type": "module",
-    "sectionName": "Purchase Orders",
-    "eyebrow": "24 / PURCHASE ORDERS",
-    "titleNavy": "Purchase",
-    "titleBrand": "Orders",
-    "titleNavyAfter": "",
-    "intro": "Purchase orders linked to material and asset requests.",
-    "moduleIcon": "CreditCard",
+    "intro": "Order from the right vendor and settle the bill.",
+    "moduleIcon": "Building2",
     "cards": [
       {
         "icon": "CreditCard",
         "number": "01",
-        "title": "Zoho Books link",
-        "text": "Purchase orders are synced from Zoho Books."
+        "moduleLabel": "Purchase Orders",
+        "title": "Orders linked to requests",
+        "text": "Synced from Zoho Books; open, received and billed totals; MR and AR tabs."
       },
       {
-        "icon": "FileText",
+        "icon": "Building2",
         "number": "02",
-        "title": "Track every order",
-        "text": "Vendor, amount, delivery date and status in one list."
+        "moduleLabel": "Vendors",
+        "title": "Vendor directory",
+        "text": "Code, contact, email, phone, city and trade category."
       },
       {
-        "icon": "Sliders",
+        "icon": "Wallet",
         "number": "03",
-        "title": "Counts and tabs",
-        "text": "Open, received and billed totals; view all, MR or AR orders."
+        "moduleLabel": "Accounts & Bills",
+        "title": "Invoices and payments",
+        "text": "Invoice entry, approvals, partial payments and settled history."
       }
     ],
     "steps": [
-      "PO is drafted",
-      "Approved",
-      "Material received",
-      "Billed"
+      "Choose the vendor",
+      "Purchase order is issued",
+      "Invoice is entered",
+      "Payment is approved and settled"
     ],
-    "whyItHelps": "Every order can be traced from request to bill.",
-    "speakerNotes": "Purchase orders connect approved quotes to Zoho Books accounting, ensuring every order matches deliveries and invoices."
+    "whyItHelps": "Every order can be traced from vendor to payment.",
+    "speakerNotes": "Approved supplier directories link directly to Zoho Books purchase orders and subsequent payment disbursements."
   },
   {
-    "slideNumber": 25,
+    "slideNumber": 11,
     "type": "module",
-    "sectionName": "Deliveries & Shipments",
-    "eyebrow": "25 / DELIVERIES",
-    "titleNavy": "Deliveries &",
-    "titleBrand": "Shipments",
+    "ecosystem": "MATERIAL MANAGEMENT",
+    "eyebrow": "11 / MATERIAL MANAGEMENT",
+    "sectionName": "Material Receiving & Delivery",
+    "titleNavy": "Receiving &",
+    "titleBrand": "Delivery",
     "titleNavyAfter": "",
-    "intro": "Track material delivery from approval to site.",
+    "intro": "Know what is on the way and what has arrived.",
     "moduleIcon": "Truck",
     "cards": [
       {
         "icon": "Truck",
         "number": "01",
-        "title": "Shipment counts",
-        "text": "Total, pending, in progress and delivered shipments."
+        "moduleLabel": "Deliveries",
+        "title": "Shipment tracking",
+        "text": "Total, pending, in-progress and delivered shipments with stage and percentage."
       },
       {
         "icon": "Package",
         "number": "02",
+        "moduleLabel": "Deliveries",
         "title": "Stock status",
-        "text": "See if the material is already in stock."
+        "text": "See whether each requested item is already in stock."
       },
       {
-        "icon": "TrendingUp",
+        "icon": "CheckSquare",
         "number": "03",
-        "title": "Progress tracking",
-        "text": "Each request shows its stage and percentage."
+        "moduleLabel": "Receipts (GRN)",
+        "title": "Receive and check",
+        "text": "Pending dispatch, QC status, store status, items with issues, history."
       }
     ],
     "steps": [
-      "Waiting for approval",
-      "Dispatched",
-      "In progress",
-      "Delivered"
+      "Order is approved and dispatched",
+      "Delivery is tracked",
+      "Goods arrive and pass the quality check",
+      "Store inward is recorded"
     ],
-    "whyItHelps": "Teams always know what is coming and when.",
-    "speakerNotes": "Project sites track in-transit material shipments with live dispatch stages and expected delivery dates."
+    "whyItHelps": "Only checked material enters the store, with a full record.",
+    "speakerNotes": "Dispatched site shipments are monitored live, followed by mandatory quality inspections before store sign-off."
   },
   {
-    "slideNumber": 26,
+    "slideNumber": 12,
     "type": "module",
-    "sectionName": "Material Master",
-    "eyebrow": "26 / MATERIAL MASTER",
-    "titleNavy": "Material",
-    "titleBrand": "Master",
-    "titleNavyAfter": "",
-    "intro": "One master list of all approved materials.",
-    "moduleIcon": "Layers",
-    "cards": [
-      {
-        "icon": "Layers",
-        "number": "01",
-        "title": "All disciplines",
-        "text": "Civil, electrical, mechanical and HVAC materials together."
-      },
-      {
-        "icon": "FileText",
-        "number": "02",
-        "title": "Full details",
-        "text": "Code, description, size, unit and class for each material."
-      },
-      {
-        "icon": "Sliders",
-        "number": "03",
-        "title": "Filters and export",
-        "text": "Filter by discipline, category or unit; export to Excel."
-      }
-    ],
-    "steps": [
-      "Add a material",
-      "Set code and specification",
-      "Map the cost code",
-      "Material is active"
-    ],
-    "whyItHelps": "Everyone orders the same materials with the same names and codes.",
-    "speakerNotes": "A single standardized catalog eliminates duplicate entries and ensures consistent item specifications across projects."
-  },
-  {
-    "slideNumber": 27,
-    "type": "module",
-    "sectionName": "Goods Receipt",
-    "eyebrow": "27 / RECEIPTS (GRN)",
-    "titleNavy": "Goods",
-    "titleBrand": "Receipt",
-    "titleNavyAfter": "",
-    "intro": "Receive material, check quality and add it to the store.",
-    "moduleIcon": "CheckSquare",
-    "cards": [
-      {
-        "icon": "Clock",
-        "number": "01",
-        "title": "Pending dispatch",
-        "text": "See every purchase order waiting to be received."
-      },
-      {
-        "icon": "ShieldCheck",
-        "number": "02",
-        "title": "Quality and store status",
-        "text": "Each order shows its QC status and store status."
-      },
-      {
-        "icon": "History",
-        "number": "03",
-        "title": "Issues and history",
-        "text": "Track items with issues and past dispatches."
-      }
-    ],
-    "steps": [
-      "Material arrives",
-      "Quality check",
-      "Store inward",
-      "Recorded in history"
-    ],
-    "whyItHelps": "Only checked material enters the store.",
-    "speakerNotes": "Storekeepers inspect incoming deliveries for quality and quantity before signing off and inwarding goods into stock."
-  },
-  {
-    "slideNumber": 28,
-    "type": "module",
-    "sectionName": "Inventory & Stock",
-    "eyebrow": "28 / INVENTORY",
+    "ecosystem": "MATERIAL MANAGEMENT",
+    "compact": true,
+    "eyebrow": "12 / MATERIAL MANAGEMENT",
+    "sectionName": "Inventory & Asset Management",
     "titleNavy": "Inventory &",
-    "titleBrand": "Stock",
+    "titleBrand": "Asset Management",
     "titleNavyAfter": "",
-    "intro": "Know exactly what is in stock and what is free to use.",
+    "intro": "Stock for materials, and tools and machinery for the site.",
     "moduleIcon": "Boxes",
     "cards": [
       {
         "icon": "Boxes",
         "number": "01",
+        "moduleLabel": "Inventory",
         "title": "Four stock levels",
-        "text": "On-hand, usable, reserved and on-order quantities."
+        "text": "On-hand, usable, reserved and on-order; low-stock watch; batch add and activity logs."
       },
       {
-        "icon": "AlertCircle",
+        "icon": "Wrench",
         "number": "02",
-        "title": "Low stock watch",
-        "text": "Low and out-of-stock items are counted."
+        "moduleLabel": "Asset List",
+        "title": "Machinery list",
+        "text": "Code, size, unit and preferred vendor."
       },
       {
-        "icon": "History",
+        "icon": "ClipboardList",
         "number": "03",
-        "title": "Easy updates",
-        "text": "Add stock in a batch and view activity logs."
+        "moduleLabel": "Operational Assets Request",
+        "title": "Request equipment",
+        "text": "Pending, approved, issued, returned or rejected."
+      },
+      {
+        "icon": "ShieldCheck",
+        "number": "04",
+        "moduleLabel": "Operational Assets Inventory",
+        "title": "Free or in use",
+        "text": "Total, available and in-use assets; add stock entry."
       }
     ],
     "steps": [
-      "Stock is received",
-      "Added to inventory",
-      "Reserved for requests",
-      "Issued to site"
+      "Add stock or assets",
+      "Reserve or request",
+      "Issue to site",
+      "Return and update stock"
     ],
-    "whyItHelps": "Stock numbers stay accurate and shortages are seen early.",
-    "speakerNotes": "Live inventory balances distinguish between on-hand stock and quantities already reserved for active construction sites."
+    "whyItHelps": "Stock and equipment are always accurate and accounted for.",
+    "speakerNotes": "Warehouse inventory levels and heavy site machinery are tracked with accurate availability and issue records."
   },
   {
-    "slideNumber": 29,
+    "slideNumber": 13,
     "type": "module",
-    "sectionName": "Accounts & Payments",
-    "eyebrow": "29 / ACCOUNTS & BILLS",
-    "titleNavy": "Accounts &",
-    "titleBrand": "Payments",
+    "ecosystem": "PROJECT TOOLS",
+    "eyebrow": "13 / PROJECT TOOLS",
+    "sectionName": "Project Management Overview",
+    "titleNavy": "Project Management",
+    "titleBrand": "Overview",
     "titleNavyAfter": "",
-    "intro": "Handle material invoices and pay vendors.",
-    "moduleIcon": "Wallet",
+    "intro": "See what is happening on every project today.",
+    "moduleIcon": "LayoutDashboard",
+    "cards": [
+      {
+        "icon": "FileClock",
+        "number": "01",
+        "moduleLabel": "Daily Log",
+        "title": "Site diary",
+        "text": "Record the day's work and events on the project."
+      },
+      {
+        "icon": "LayoutDashboard",
+        "number": "02",
+        "moduleLabel": "Project Overview",
+        "title": "Project summary",
+        "text": "Key project details in one place."
+      },
+      {
+        "icon": "BarChart3",
+        "number": "03",
+        "moduleLabel": "Project KPIs and Progress",
+        "title": "Progress at a glance",
+        "text": "KPIs and completion status."
+      }
+    ],
+    "steps": [
+      "Open the project",
+      "Review overview and KPIs",
+      "Check the daily log",
+      "Act on what needs attention"
+    ],
+    "whyItHelps": "Project managers see progress without chasing reports.",
+    "speakerNotes": "Project managers gain instant visibility into daily on-site work logs, milestone KPIs, and active site issues."
+  },
+  {
+    "slideNumber": 14,
+    "type": "module",
+    "ecosystem": "PROJECT TOOLS",
+    "eyebrow": "14 / PROJECT TOOLS",
+    "sectionName": "Project Planning & Task Mgmt",
+    "titleNavy": "Planning &",
+    "titleBrand": "Task Management",
+    "titleNavyAfter": "",
+    "intro": "Plan the work and track who does what.",
+    "moduleIcon": "CalendarDays",
+    "cards": [
+      {
+        "icon": "CalendarDays",
+        "number": "01",
+        "moduleLabel": "Schedule",
+        "title": "Project schedule",
+        "text": "Plan activities and dates."
+      },
+      {
+        "icon": "CheckSquare",
+        "number": "02",
+        "moduleLabel": "Tasks",
+        "title": "Task tracking",
+        "text": "Assign tasks and follow their status."
+      }
+    ],
+    "steps": [
+      "Build the schedule",
+      "Create and assign tasks",
+      "Update progress",
+      "Review completion"
+    ],
+    "whyItHelps": "Everyone knows the plan, the owner and the deadline.",
+    "speakerNotes": "Master work breakdown schedules and distributed team tasks keep site execution on target."
+  },
+  {
+    "slideNumber": 15,
+    "type": "module",
+    "ecosystem": "PROJECT TOOLS",
+    "eyebrow": "15 / PROJECT TOOLS",
+    "sectionName": "Project Documentation",
+    "titleNavy": "Project",
+    "titleBrand": "Documentation",
+    "titleNavyAfter": "",
+    "intro": "Every project document, query and transfer in one place.",
+    "moduleIcon": "FileText",
     "cards": [
       {
         "icon": "FileText",
         "number": "01",
-        "title": "Invoice entry",
-        "text": "Record vendor invoices against each order."
+        "moduleLabel": "Documents",
+        "title": "Document library",
+        "text": "Central drawings, specs and project files."
       },
       {
-        "icon": "CheckCircle2",
+        "icon": "HelpCircle",
         "number": "02",
-        "title": "Approvals",
-        "text": "Payments are approved before they are made."
+        "moduleLabel": "RFIs",
+        "title": "Requests for information",
+        "text": "Formal technical queries with routing and answers."
       },
       {
-        "icon": "Coins",
+        "icon": "Plane",
         "number": "03",
-        "title": "Settlement tracking",
-        "text": "See partial payments and settled history."
+        "moduleLabel": "Transmittals",
+        "title": "Document transfers",
+        "text": "Formal document transfers and distribution records."
       }
     ],
     "steps": [
-      "Invoice is entered",
-      "Payment approved",
-      "Paid in full or part",
-      "Settled"
+      "Upload or raise",
+      "Route to the right person",
+      "Response or acknowledgement",
+      "Recorded for reference"
     ],
-    "whyItHelps": "Vendor bills are checked and paid in an organised way.",
-    "speakerNotes": "Invoices are matched directly with purchase orders and goods receipt notes before accounts releases vendor payments."
+    "whyItHelps": "Project communication is formal, traceable and easy to find.",
+    "speakerNotes": "Centralized drawing revisions, formal RFIs, and transmittal logs ensure all consultants and contractors stay aligned."
   },
   {
-    "slideNumber": 30,
+    "slideNumber": 16,
     "type": "module",
-    "sectionName": "Vendor / Supplier Management",
-    "eyebrow": "30 / VENDORS",
-    "titleNavy": "Vendor / Supplier",
-    "titleBrand": "Management",
+    "ecosystem": "PROJECT TOOLS",
+    "eyebrow": "16 / PROJECT TOOLS",
+    "sectionName": "Submittals & Material Requests",
+    "titleNavy": "Submittals &",
+    "titleBrand": "Material Requests",
     "titleNavyAfter": "",
-    "intro": "Keep all vendors and their contacts in one list.",
-    "moduleIcon": "Building2",
-    "cards": [
-      {
-        "icon": "Users",
-        "number": "01",
-        "title": "Vendor details",
-        "text": "Code, contact person, email, phone and city."
-      },
-      {
-        "icon": "Layers",
-        "number": "02",
-        "title": "Trade categories",
-        "text": "Steel, paints, concrete, MEP and more."
-      },
-      {
-        "icon": "UserPlus",
-        "number": "03",
-        "title": "Quick add",
-        "text": "Add a new vendor or refresh the list."
-      }
-    ],
-    "steps": [
-      "Add a vendor",
-      "Choose trade category",
-      "Used in RFQs",
-      "Used in purchase orders"
-    ],
-    "whyItHelps": "The right vendor is always easy to find.",
-    "speakerNotes": "All approved suppliers are organized by trade category with full contact details and transaction history in one directory."
-  },
-  {
-    "slideNumber": 31,
-    "type": "module",
-    "sectionName": "Asset List",
-    "eyebrow": "31 / ASSET LIST",
-    "titleNavy": "Asset",
-    "titleBrand": "List",
-    "titleNavyAfter": "",
-    "intro": "Manage machinery assets and their suppliers.",
-    "moduleIcon": "Wrench",
-    "cards": [
-      {
-        "icon": "Wrench",
-        "number": "01",
-        "title": "Asset details",
-        "text": "Code, name, size and unit such as month, shift or pour."
-      },
-      {
-        "icon": "Building2",
-        "number": "02",
-        "title": "Preferred vendors",
-        "text": "Suppliers assigned to each asset."
-      },
-      {
-        "icon": "FileSpreadsheet",
-        "number": "03",
-        "title": "Add and export",
-        "text": "Add a new asset or export the list."
-      }
-    ],
-    "steps": [
-      "Add an asset",
-      "Set size and unit",
-      "Map vendors",
-      "Asset is active"
-    ],
-    "whyItHelps": "Machinery and its suppliers are ready when needed.",
-    "speakerNotes": "All site machinery, vehicles, and heavy tools are listed with rental units and assigned preferred suppliers."
-  },
-  {
-    "slideNumber": 32,
-    "type": "module",
-    "sectionName": "Operational Assets Request",
-    "eyebrow": "32 / OPERATIONAL ASSETS REQUEST",
-    "titleNavy": "Operational Assets",
-    "titleBrand": "Request",
-    "titleNavyAfter": "",
-    "intro": "Request site machinery, tools and equipment.",
+    "intro": "Get materials approved and requested from the project.",
     "moduleIcon": "ClipboardList",
     "cards": [
       {
         "icon": "CheckCircle2",
         "number": "01",
-        "title": "Clear status",
-        "text": "Pending, approved, issued, returned or rejected."
+        "moduleLabel": "Submittals",
+        "title": "Approval of materials",
+        "text": "Technical data and samples approved before site delivery."
       },
       {
-        "icon": "Sliders",
+        "icon": "ShoppingCart",
         "number": "02",
-        "title": "Filters and views",
-        "text": "Filter by status and stock status; list or grid view."
+        "moduleLabel": "Material Request",
+        "title": "Request materials",
+        "text": "Project needs flow straight into Material Management (Slide 08/09)."
       },
       {
-        "icon": "FileText",
+        "icon": "Wrench",
         "number": "03",
-        "title": "New request",
-        "text": "Raise a request and export the list."
+        "moduleLabel": "Operational Assets Request",
+        "title": "Request site equipment",
+        "text": "Raise machinery and tool requests for site execution.",
+        "linkChip": {
+          "label": "Managed in Material Management → Slide 12",
+          "targetSlide": 12
+        }
       }
     ],
     "steps": [
-      "Request is raised",
+      "Submit for approval",
       "Approved",
-      "Issued to site",
-      "Returned"
+      "Material or equipment request raised",
+      "Handled in Material Management"
     ],
-    "whyItHelps": "Site tools are issued and returned with a proper record.",
-    "speakerNotes": "Sites request operational assets and machinery with full accountability for issue dates, project sites, and return timelines."
+    "whyItHelps": "Project needs flow straight to purchasing without re-entry.",
+    "speakerNotes": "Approved project specifications immediately trigger material requisitions without manual re-entry into procurement."
   },
   {
-    "slideNumber": 33,
+    "slideNumber": 17,
     "type": "module",
-    "sectionName": "Operational Assets Inventory",
-    "eyebrow": "33 / OPERATIONAL ASSETS INVENTORY",
-    "titleNavy": "Operational Assets",
-    "titleBrand": "Inventory",
+    "ecosystem": "PROJECT TOOLS",
+    "eyebrow": "17 / PROJECT TOOLS",
+    "sectionName": "Project Financial Management",
+    "titleNavy": "Project",
+    "titleBrand": "Financial Management",
     "titleNavyAfter": "",
-    "intro": "Know which tools and machines are free or in use.",
+    "intro": "Keep project money and agreements under control.",
+    "moduleIcon": "Wallet",
+    "cards": [
+      {
+        "icon": "Wallet",
+        "number": "01",
+        "moduleLabel": "Budget & Costs",
+        "title": "Budget vs actual",
+        "text": "Track expenditure, variations and remaining budget."
+      },
+      {
+        "icon": "FileSpreadsheet",
+        "number": "02",
+        "moduleLabel": "Contracts",
+        "title": "Contract records",
+        "text": "Commercial agreements, terms and subcontractor milestones."
+      }
+    ],
+    "steps": [
+      "Set the budget",
+      "Record costs and contracts",
+      "Compare actual with plan",
+      "Report to management"
+    ],
+    "whyItHelps": "Cost overruns are seen early.",
+    "speakerNotes": "Contractual commitments and actual site costs are benchmarked continuously against original project estimates."
+  },
+  {
+    "slideNumber": 18,
+    "type": "module",
+    "ecosystem": "PROJECT TOOLS",
+    "eyebrow": "18 / PROJECT TOOLS",
+    "sectionName": "Quality & Site Inspection",
+    "titleNavy": "Quality &",
+    "titleBrand": "Site Inspection",
+    "titleNavyAfter": "",
+    "intro": "Find, fix and close site issues.",
     "moduleIcon": "ShieldCheck",
     "cards": [
       {
-        "icon": "ShieldCheck",
+        "icon": "AlertCircle",
         "number": "01",
-        "title": "Asset counts",
-        "text": "Total, available and in-use assets."
+        "moduleLabel": "Observations",
+        "title": "Site observations",
+        "text": "Safety, quality and non-conformance records with photos."
       },
       {
-        "icon": "Boxes",
+        "icon": "CheckCircle2",
         "number": "02",
-        "title": "Asset list",
-        "text": "Code, name, category and quantities."
+        "moduleLabel": "Punch List",
+        "title": "Items to fix",
+        "text": "Snag list items verified before project handover."
+      }
+    ],
+    "steps": [
+      "Issue is observed",
+      "Assigned for action",
+      "Fixed",
+      "Verified and closed"
+    ],
+    "whyItHelps": "Quality problems are tracked until they are closed.",
+    "speakerNotes": "Site snagging and QA/QC punch lists ensure zero defect handovers to project owners."
+  },
+  {
+    "slideNumber": 19,
+    "type": "module",
+    "ecosystem": "PROJECT TOOLS",
+    "eyebrow": "19 / PROJECT TOOLS",
+    "sectionName": "Project Team & Collaboration",
+    "titleNavy": "Project Team &",
+    "titleBrand": "Collaboration",
+    "titleNavyAfter": "",
+    "intro": "The right people, with clear responsibilities.",
+    "moduleIcon": "Users",
+    "cards": [
+      {
+        "icon": "Users",
+        "number": "01",
+        "moduleLabel": "Project Team",
+        "title": "Team members",
+        "text": "Directory of engineers, contractors and specialists."
+      },
+      {
+        "icon": "Briefcase",
+        "number": "02",
+        "moduleLabel": "Team directory",
+        "title": "Contacts and roles",
+        "text": "Direct contact details and authorization levels."
       },
       {
         "icon": "UserCheck",
         "number": "03",
-        "title": "Add stock",
-        "text": "Add a new stock entry in a few clicks."
+        "moduleLabel": "Collaboration",
+        "title": "Responsibilities",
+        "text": "Track who owns each package, task and approval."
       }
     ],
     "steps": [
-      "Stock entry is added",
-      "Available",
-      "Issued (in use)",
-      "Returned to stock"
+      "Add team members",
+      "Assign roles",
+      "Collaborate on tasks and documents",
+      "Track responsibilities"
     ],
-    "whyItHelps": "Always know which assets are free and which are in use.",
-    "speakerNotes": "Site managers see which equipment is currently deployed on sites and which items are free in storage ready for use."
+    "whyItHelps": "Everyone knows who to contact and who owns what.",
+    "speakerNotes": "Structured stakeholder roles and transparent responsibility matrices eliminate miscommunication on site."
   },
   {
-    "slideNumber": 34,
-    "type": "closing",
-    "eyebrow": "34 / SUMMARY",
-    "titleNavy": "Thank",
-    "titleBrand": "you",
+    "slideNumber": 20,
+    "type": "thankyou",
+    "ecosystem": "ENTERPRISE PLATFORM",
+    "eyebrow": "BUILTRAA - ENTERPRISE MANAGEMENT SYSTEM",
+    "titleNavy": "THANK",
+    "titleBrand": "YOU.",
     "titleNavyAfter": "",
-    "intro": "Questions?",
-    "speakerNotes": "Thank you for your time. I am happy to answer any questions about any of the sections we walked through."
+    "description": "Building smarter workflows. Connecting people, materials and projects.",
+    "tagline": "Simplify. Manage. Deliver.",
+    "speakerNotes": "Thank you for exploring Builtraa's three enterprise ecosystems. We are ready to answer your questions."
   }
 ]

@@ -154,3 +154,50 @@ html, body, #root {
 /* Scrollbars hidden */
 ::-webkit-scrollbar { display: none; }
 * { scrollbar-width: none; }
+
+/* ─── Slide 03: Screenshot Cards (.shot-card) ───────────────────────────────── */
+.shot-cards-container {
+  width: 55%;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  justify-content: space-between;
+  height: 100%;
+}
+
+.shot-card {
+  position: relative;
+  flex: 1;
+  width: 100%;
+  min-height: 0;
+  border-radius: 20px;
+  padding: 12px;
+  border: 1px solid rgba(15, 23, 42, 0.08);
+  background: #FFFFFF;
+  box-shadow: 0 6px 24px rgba(11, 31, 75, 0.04);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+.shot-card__img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: center;
+  display: block;
+  border-radius: 10px;
+  image-rendering: auto;
+}
+
+@media (max-width: 1024px) {
+  .shot-cards-container {
+    width: 100%;
+  }
+  .shot-card {
+    min-height: 240px;
+  }
+}
+

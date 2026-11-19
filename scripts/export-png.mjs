@@ -14,7 +14,7 @@ fs.readdirSync(PNG_DIR).forEach(f => {
   if (f.endsWith('.png')) fs.unlinkSync(path.join(PNG_DIR, f));
 });
 
-const TOTAL_SLIDES = 34;
+const TOTAL_SLIDES = 20;
 
 const browser = await chromium.launch({
   channel: 'chrome',

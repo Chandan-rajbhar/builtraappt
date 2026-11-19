@@ -20,71 +20,44 @@ import Slide17 from './slides/Slide17';
 import Slide18 from './slides/Slide18';
 import Slide19 from './slides/Slide19';
 import Slide20 from './slides/Slide20';
-import Slide21 from './slides/Slide21';
-import Slide22 from './slides/Slide22';
-import Slide23 from './slides/Slide23';
-import Slide24 from './slides/Slide24';
-import Slide25 from './slides/Slide25';
-import Slide26 from './slides/Slide26';
-import Slide27 from './slides/Slide27';
-import Slide28 from './slides/Slide28';
-import Slide29 from './slides/Slide29';
-import Slide30 from './slides/Slide30';
-import Slide31 from './slides/Slide31';
-import Slide32 from './slides/Slide32';
-import Slide33 from './slides/Slide33';
-import Slide34 from './slides/Slide34';
 import { SLIDES_DATA } from './slidesData';
 import './index.css';
 
 export const SLIDES = [
-  Slide1,  // 01: Title Slide (One place for people, time and pay.)
-  Slide2,  // 02: Overview (What this system covers - 4 HR Categories)
-  Slide3,  // 03: HR Dashboard (HR 1)
-  Slide4,  // 04: Employees (HR 2)
-  Slide5,  // 05: Leave (HR 3)
-  Slide6,  // 06: Payroll (HR 4)
-  Slide7,  // 07: Attendance (HR 5)
-  Slide8,  // 08: Loan (HR 6)
-  Slide9,  // 09: Salary Increment (HR 7)
-  Slide10, // 10: Salary Discrepancy (HR 8)
-  Slide11, // 11: Disciplinary Action (HR 9)
-  Slide12, // 12: Ticket Management (HR 10)
-  Slide13, // 13: Digital Forms (HR 11)
-  Slide14, // 14: Clearance Form (HR 12)
-  Slide15, // 15: Employee Rejoining (HR 13)
-  Slide16, // 16: Report (HR 14)
-  Slide17, // 17: Meeting Arrangements (HR 15)
-  Slide18, // 18: Audit Logs (HR 16)
-  Slide19, // 19: Payroll Settings (HR 17)
-  Slide20, // 20: Material Management Overview (What Material Management covers - 4 Categories)
-  Slide21, // 21: Material Request Dashboard (MM 1)
-  Slide22, // 22: Procurement Queue (MM 2)
-  Slide23, // 23: Request for Quotation (MM 3)
-  Slide24, // 24: Purchase Orders (MM 4)
-  Slide25, // 25: Deliveries & Shipments (MM 5)
-  Slide26, // 26: Material Master (MM 6)
-  Slide27, // 27: Goods Receipt / Receipts GRN (MM 7)
-  Slide28, // 28: Inventory & Stock (MM 8)
-  Slide29, // 29: Accounts & Payments (MM 9)
-  Slide30, // 30: Vendor / Supplier Management (MM 10)
-  Slide31, // 31: Asset List (MM 11)
-  Slide32, // 32: Operational Assets Request (MM 12)
-  Slide33, // 33: Operational Assets Inventory (MM 13)
-  Slide34, // 34: Closing (Thank you / Questions?)
+  Slide1,  // 01: Welcome (Platform Hero & 3 Ecosystem Cards)
+  Slide2,  // 02: HR Management Overview
+  Slide3,  // 03: Employee Management
+  Slide4,  // 04: Leave & Attendance Management
+  Slide5,  // 05: Payroll Management & Settings
+  Slide6,  // 06: Salary & Employee Benefits
+  Slide7,  // 07: HR Operations & Compliance
+  Slide8,  // 08: Material Management Overview
+  Slide9,  // 09: Procurement Management
+  Slide10, // 10: Purchase Orders & Vendor Mgmt
+  Slide11, // 11: Material Receiving & Delivery
+  Slide12, // 12: Inventory & Asset Management
+  Slide13, // 13: Project Management Overview
+  Slide14, // 14: Project Planning & Task Mgmt
+  Slide15, // 15: Project Documentation
+  Slide16, // 16: Submittals & Material Requests
+  Slide17, // 17: Project Financial Management
+  Slide18, // 18: Quality & Site Inspection
+  Slide19, // 19: Project Team & Collaboration
+  Slide20, // 20: Thank You
 ];
 
 export const MODULE_NAMES = SLIDES_DATA
-  .filter((s) => s.type === 'module' || s.type === 'material')
+  .filter((s) => s.type === 'module')
   .map((s) => s.sectionName);
 
 /* ─── Compact Liquid Glass Button (36px high, 13px text) ───────────────────── */
-function GlassButton({ children, onClick, disabled, style = {} }) {
+function GlassButton({ children, onClick, disabled, style = {}, title }) {
   const [hovered, setHovered] = useState(false);
   return (
     <motion.button
       onClick={onClick}
       disabled={disabled}
+      title={title}
       onHoverStart={() => setHovered(true)}
       onHoverEnd={() => setHovered(false)}
       whileHover={{ scale: disabled ? 1 : 1.04 }}
@@ -109,7 +82,7 @@ function GlassButton({ children, onClick, disabled, style = {} }) {
           ? '0 6px 20px rgba(11, 31, 75, 0.08), inset 0 1px 0 #FFFFFF'
           : '0 3px 12px rgba(11, 31, 75, 0.04), inset 0 1px 0 #FFFFFF',
         cursor: disabled ? 'not-allowed' : 'pointer',
-        opacity: disabled ? 0.35 : 1,
+        opacity: disabled ? 0.45 : 1,
         fontSize: 13,
         fontWeight: 600,
         color: '#0B1F4B',
@@ -172,12 +145,48 @@ function LogoBar() {
 function HomeButton({ onClick }) {
   return (
     <div style={{ position: 'fixed', top: 36, left: 48, zIndex: 200 }}>
-      <GlassButton onClick={onClick}>
+      <GlassButton onClick={onClick} title="Go to Welcome slide">
         <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
           <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" />
           <polyline points="9 22 9 12 15 12 15 22" />
         </svg>
         HOME
+      </GlassButton>
+    </div>
+  );
+}
+
+/* ─── Top Nav Project Tools Deck Button (Disabled with Tooltip) ────────────── */
+function ProjectToolsDeckButton() {
+  return (
+    <div style={{ position: 'fixed', top: 36, left: 160, zIndex: 200 }}>
+      <GlassButton
+        disabled={true}
+        title="Coming soon"
+        style={{
+          padding: '0 13px',
+          fontSize: 12,
+          gap: 7,
+          background: 'rgba(255, 255, 255, 0.65)',
+        }}
+      >
+        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
+          <polygon points="12 2 2 7 12 12 22 7 12 2" />
+          <polyline points="2 17 12 22 22 17" />
+          <polyline points="2 12 12 17 22 12" />
+        </svg>
+        <span>PROJECT TOOLS DECK</span>
+        <span style={{
+          fontSize: 10,
+          fontWeight: 700,
+          background: 'rgba(100, 116, 139, 0.12)',
+          color: '#64748B',
+          padding: '1px 7px',
+          borderRadius: 999,
+          letterSpacing: '0.04em',
+        }}>
+          Coming soon
+        </span>
       </GlassButton>
     </div>
   );
@@ -230,7 +239,7 @@ function BottomNav({ current, total, onPrev, onNext }) {
         </svg>
       </motion.button>
 
-      {/* Progress & Counter */}
+      {/* Progress & Counter (01 — 20) */}
       <div style={{ display: 'flex', alignItems: 'center', gap: 10, minWidth: 150 }}>
         <span style={{
           fontSize: 13, fontWeight: 700, color: '#0B1F4B',
@@ -485,8 +494,9 @@ export default function App() {
       position: 'relative',
       background: '#FFFFFF',
     }}>
-      {/* Top Bar Safe Zone: HOME (left) & Logos (right) */}
+      {/* Top Bar Safe Zone: HOME (left), PROJECT TOOLS DECK (disabled), Logos (right) */}
       <HomeButton onClick={() => goTo(0, -1)} />
+      <ProjectToolsDeckButton />
       <LogoBar />
 
       {/* Fixed 1920×1080 Stage Centred with CSS transform: scale() */}

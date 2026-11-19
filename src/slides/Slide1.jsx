@@ -1,22 +1,39 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { BRAND, NAVY, ROYAL, GREY, easeCurve } from '../components/shared';
-import { SLIDES_DATA } from '../slidesData';
-import { Users, CalendarDays, Clock, Wallet, FileText } from 'lucide-react';
+import { Users, ShoppingCart, Briefcase, ChevronRight, Sparkles } from 'lucide-react';
 
 export default function Slide1({ onNavigate }) {
-  const [hoveredTile, setHoveredTile] = useState(null);
+  const [hoveredCard, setHoveredCard] = useState(null);
 
-  // 24 section names from SLIDES_DATA (both HR and Material modules)
-  const moduleSections = SLIDES_DATA.filter((s) => s.type === 'module' || s.type === 'material');
-
-  // 5 floating icon tiles with distinct positions and floating animation offsets
-  const iconTiles = [
-    { id: 1, icon: Users, label: 'People', size: 96, x: 60, y: 50, duration: 8, delay: 0 },
-    { id: 2, icon: CalendarDays, label: 'Leave', size: 88, x: 280, y: 20, duration: 9.5, delay: 0.8 },
-    { id: 3, icon: Clock, label: 'Time', size: 104, x: 170, y: 200, duration: 7.2, delay: 0.4 },
-    { id: 4, icon: Wallet, label: 'Money', size: 92, x: 40, y: 350, duration: 8.8, delay: 1.2 },
-    { id: 5, icon: FileText, label: 'Records', size: 86, x: 260, y: 340, duration: 10.2, delay: 0.6 },
+  const ecosystems = [
+    {
+      id: 'hr',
+      name: 'HR Management',
+      slideRange: 'Slides 02–07',
+      targetIndex: 1, // Slide 02
+      icon: Users,
+      color: BRAND,
+      desc: 'People, attendance, payroll and operations'
+    },
+    {
+      id: 'mm',
+      name: 'Material Management',
+      slideRange: 'Slides 08–12',
+      targetIndex: 7, // Slide 08
+      icon: ShoppingCart,
+      color: ROYAL,
+      desc: 'Requisitions, procurement, inventory and site assets'
+    },
+    {
+      id: 'pt',
+      name: 'Project Tools',
+      slideRange: 'Slides 13–19',
+      targetIndex: 12, // Slide 13
+      icon: Briefcase,
+      color: BRAND,
+      desc: 'Planning, documentation, finance and site execution'
+    }
   ];
 
   return (
@@ -52,10 +69,10 @@ export default function Slide1({ onNavigate }) {
       {/* Soft Ambient Background Glows */}
       <div style={{
         position: 'absolute',
-        top: '12%',
-        right: '10%',
-        width: 560,
-        height: 560,
+        top: '10%',
+        right: '8%',
+        width: 580,
+        height: 580,
         borderRadius: '50%',
         background: 'rgba(29, 78, 216, 0.07)',
         filter: 'blur(130px)',
@@ -64,7 +81,7 @@ export default function Slide1({ onNavigate }) {
       }} />
       <div style={{
         position: 'absolute',
-        bottom: '12%',
+        bottom: '10%',
         left: '8%',
         width: 520,
         height: 520,
@@ -76,8 +93,8 @@ export default function Slide1({ onNavigate }) {
       }} />
       <div style={{
         position: 'absolute',
-        top: '38%',
-        left: '46%',
+        top: '36%',
+        left: '44%',
         width: 440,
         height: 440,
         borderRadius: '50%',
@@ -93,28 +110,28 @@ export default function Slide1({ onNavigate }) {
         top: 130,
         left: 96,
         right: 96,
-        bottom: 120,
+        bottom: 110,
         display: 'flex',
         flexDirection: 'column',
         justifyContent: 'space-between',
         zIndex: 10,
       }}>
-        {/* Top Split: Left Content + Right Floating Icon Cluster */}
+        {/* Top Split: Left Content + Right 3 Ecosystem Cards */}
         <div style={{
           display: 'flex',
           alignItems: 'center',
           justifyContent: 'space-between',
           flex: 1,
-          gap: 60,
+          gap: 70,
         }}>
-          {/* Left Column (54% width) */}
+          {/* Left Column (48% width) */}
           <div style={{
-            width: '54%',
+            width: '48%',
             display: 'flex',
             flexDirection: 'column',
             alignItems: 'flex-start',
           }}>
-            {/* Eyebrow: HR MANAGEMENT SYSTEM */}
+            {/* Eyebrow: ENTERPRISE MANAGEMENT SYSTEM */}
             <div style={{ marginBottom: 20 }}>
               <motion.div
                 initial={{ opacity: 0, y: -6 }}
@@ -130,79 +147,82 @@ export default function Slide1({ onNavigate }) {
                   marginBottom: 8,
                 }}
               >
-                HR MANAGEMENT SYSTEM
+                ENTERPRISE MANAGEMENT SYSTEM
               </motion.div>
               <motion.div
                 initial={{ width: 0 }}
-                animate={{ width: 56 }}
+                animate={{ width: 64 }}
                 transition={{ duration: 0.5, delay: 0.3, ease: easeCurve }}
-                style={{ height: 2, background: BRAND, borderRadius: 1 }}
+                style={{ height: 2.5, background: BRAND, borderRadius: 1 }}
               />
             </div>
 
-            {/* Title: "One place for people, time and pay." */}
+            {/* Title: BUILTRAA (huge, two-tone) */}
             <div style={{
-              fontSize: 78,
+              fontSize: 88,
               fontWeight: 800,
-              letterSpacing: '-0.035em',
-              lineHeight: 1.08,
-              color: NAVY,
+              letterSpacing: '-0.04em',
+              lineHeight: 1.02,
               fontFamily: "'Inter', sans-serif",
-              marginBottom: 24,
+              marginBottom: 16,
             }}>
-              <motion.div
+              <motion.span
                 className="shine"
                 initial={{ opacity: 0, y: 14 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.45, delay: 0.4, ease: easeCurve }}
+                style={{ color: NAVY }}
               >
-                One place for
-              </motion.div>
-
-              <motion.div
+                BUILT
+              </motion.span>
+              <motion.span
                 initial={{ opacity: 0, y: 14 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.45, delay: 0.5, ease: easeCurve }}
-                style={{
-                  color: BRAND,
-                  display: 'inline-block',
-                }}
+                style={{ color: BRAND }}
                 className="shine-brand"
               >
-                people, time
-              </motion.div>
-
-              <motion.div
-                className="shine"
-                initial={{ opacity: 0, y: 14 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.45, delay: 0.6, ease: easeCurve }}
-              >
-                and pay.
-              </motion.div>
+                RAA
+              </motion.span>
             </div>
 
-            {/* Intro Line: 22px grey */}
+            {/* Subtitle: Enterprise Management System */}
+            <motion.div
+              initial={{ opacity: 0, y: 10 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.45, delay: 0.6, ease: easeCurve }}
+              style={{
+                fontSize: 26,
+                fontWeight: 600,
+                color: NAVY,
+                marginBottom: 10,
+                fontFamily: "'Inter', sans-serif",
+              }}
+            >
+              Enterprise Management System
+            </motion.div>
+
+            {/* Tagline: One Platform. Three Powerful Management Ecosystems. */}
             <motion.div
               initial={{ opacity: 0, y: 10 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.45, delay: 0.7, ease: easeCurve }}
               style={{
-                fontSize: 22,
+                fontSize: 18,
                 fontWeight: 400,
                 color: GREY,
-                marginBottom: 36,
+                marginBottom: 38,
                 fontFamily: "'Inter', sans-serif",
-                maxWidth: 580,
+                maxWidth: 540,
                 lineHeight: 1.4,
               }}
             >
-              Everything about your workforce, managed in one system.
+              One Platform. Three Powerful Management Ecosystems.
             </motion.div>
 
-            {/* Glass Pill Button "Start →" */}
+            {/* Glass Pill Button "Start →" (Jumps to slide 02) */}
             <motion.button
-              onClick={() => onNavigate(1, 1)}
+              onClick={() => onNavigate && onNavigate(1, 1)}
               initial={{ opacity: 0, scale: 0.95 }}
               animate={{ opacity: 1, scale: 1 }}
               whileHover={{ scale: 1.05 }}
@@ -213,7 +233,7 @@ export default function Slide1({ onNavigate }) {
                 display: 'inline-flex',
                 alignItems: 'center',
                 gap: 12,
-                padding: '14px 34px',
+                padding: '14px 36px',
                 borderRadius: 999,
                 fontSize: 18,
                 fontWeight: 700,
@@ -231,154 +251,152 @@ export default function Slide1({ onNavigate }) {
             </motion.button>
           </div>
 
-          {/* Right Column (46% width): Floating Cluster of 5 Glass Tiles with Lucide Icons */}
+          {/* Right Column (52% width): 3 Clickable Ecosystem Cards */}
           <div style={{
-            width: '44%',
-            height: 480,
-            position: 'relative',
+            width: '52%',
             display: 'flex',
-            alignItems: 'center',
-            justifyContent: 'center',
+            flexDirection: 'column',
+            gap: 18,
           }}>
-            {/* Center soft glow behind tiles */}
-            <div style={{
-              position: 'absolute',
-              width: 380,
-              height: 380,
-              borderRadius: '50%',
-              background: 'radial-gradient(circle, rgba(239, 20, 78, 0.12) 0%, rgba(29, 78, 216, 0.08) 50%, transparent 75%)',
-              filter: 'blur(40px)',
-              pointerEvents: 'none',
-            }} />
+            {ecosystems.map((eco, idx) => {
+              const IconComp = eco.icon;
+              const isHovered = hoveredCard === eco.id;
 
-            {/* The 5 Floating Icon Tiles */}
-            {iconTiles.map((tile) => {
-              const IconComp = tile.icon;
-              const isHovered = hoveredTile === tile.id;
               return (
                 <motion.div
-                  key={tile.id}
-                  initial={{ opacity: 0, scale: 0.8 }}
-                  animate={{
-                    opacity: 1,
-                    scale: 1,
-                    y: [0, -14, 0, 14, 0],
-                    x: [0, 8, 0, -8, 0],
-                  }}
-                  transition={{
-                    opacity: { duration: 0.6, delay: 0.3 + tile.delay },
-                    scale: { duration: 0.6, delay: 0.3 + tile.delay },
-                    y: {
-                      duration: tile.duration,
-                      repeat: Infinity,
-                      ease: 'easeInOut',
-                    },
-                    x: {
-                      duration: tile.duration * 1.2,
-                      repeat: Infinity,
-                      ease: 'easeInOut',
-                    },
-                  }}
-                  onMouseEnter={() => setHoveredTile(tile.id)}
-                  onMouseLeave={() => setHoveredTile(null)}
-                  whileHover={{ scale: 1.12, zIndex: 30 }}
-                  className="glass"
+                  key={eco.id}
+                  initial={{ opacity: 0, x: 24 }}
+                  animate={{ opacity: 1, x: 0 }}
+                  transition={{ duration: 0.45, delay: 0.35 + idx * 0.12, ease: easeCurve }}
+                  whileHover={{ scale: 1.02, x: 4 }}
+                  whileTap={{ scale: 0.98 }}
+                  onClick={() => onNavigate && onNavigate(eco.targetIndex, 1)}
+                  onMouseEnter={() => setHoveredCard(eco.id)}
+                  onMouseLeave={() => setHoveredCard(null)}
+                  className="glass card-interactive"
                   style={{
-                    position: 'absolute',
-                    left: tile.x,
-                    top: tile.y,
-                    width: tile.size,
-                    height: tile.size,
-                    borderRadius: 24,
-                    background: isHovered
-                      ? 'rgba(255, 255, 255, 0.98)'
-                      : 'rgba(255, 255, 255, 0.85)',
-                    border: isHovered
-                      ? `2px solid ${BRAND}`
-                      : '1.5px solid rgba(226, 232, 240, 0.9)',
-                    boxShadow: isHovered
-                      ? '0 16px 36px rgba(239, 20, 78, 0.18), inset 0 1px 0 #FFFFFF'
-                      : '0 10px 28px rgba(11, 31, 75, 0.08), inset 0 1px 0 #FFFFFF',
                     display: 'flex',
-                    flexDirection: 'column',
                     alignItems: 'center',
-                    justifyContent: 'center',
-                    cursor: 'default',
-                    zIndex: 10,
+                    justifyContent: 'space-between',
+                    padding: '24px 28px',
+                    borderRadius: 22,
+                    border: isHovered ? `1.5px solid ${BRAND}` : '1.5px solid rgba(226, 232, 240, 0.9)',
+                    background: isHovered ? 'rgba(255, 255, 255, 0.96)' : 'rgba(255, 255, 255, 0.85)',
+                    boxShadow: isHovered
+                      ? '0 14px 32px rgba(239, 20, 78, 0.10), inset 0 1px 0 #FFFFFF'
+                      : '0 8px 24px rgba(11, 31, 75, 0.04), inset 0 1px 0 #FFFFFF',
+                    cursor: 'pointer',
+                    transition: 'border 0.2s ease, box-shadow 0.2s ease, background 0.2s ease',
                   }}
                 >
-                  <IconComp
-                    size={tile.size * 0.42}
-                    color={tile.id === 1 || tile.id === 4 ? BRAND : ROYAL}
-                    strokeWidth={1.8}
-                  />
+                  <div style={{ display: 'flex', alignItems: 'center', gap: 20 }}>
+                    {/* Lavender Icon Tile */}
+                    <div style={{
+                      width: 56,
+                      height: 56,
+                      borderRadius: 16,
+                      background: 'linear-gradient(135deg, rgba(239, 20, 78, 0.1) 0%, rgba(29, 78, 216, 0.08) 100%)',
+                      border: '1px solid rgba(226, 232, 240, 0.9)',
+                      display: 'flex',
+                      alignItems: 'center',
+                      justifyContent: 'center',
+                      flexShrink: 0,
+                    }}>
+                      <IconComp size={28} color={eco.color} strokeWidth={1.9} />
+                    </div>
+
+                    {/* Titles */}
+                    <div>
+                      <div style={{
+                        fontSize: 22,
+                        fontWeight: 700,
+                        color: NAVY,
+                        fontFamily: "'Inter', sans-serif",
+                        marginBottom: 4,
+                      }}>
+                        {eco.name}
+                      </div>
+                      <div style={{
+                        fontSize: 15,
+                        fontWeight: 400,
+                        color: GREY,
+                        fontFamily: "'Inter', sans-serif",
+                      }}>
+                        {eco.desc}
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* Right Side: Slide Range Pill + Chevron */}
+                  <div style={{ display: 'flex', alignItems: 'center', gap: 14 }}>
+                    <span style={{
+                      fontSize: 13,
+                      fontWeight: 700,
+                      color: BRAND,
+                      fontFamily: "'Inter', sans-serif",
+                      padding: '4px 14px',
+                      borderRadius: 999,
+                      background: 'rgba(239, 20, 78, 0.08)',
+                      border: '1px solid rgba(239, 20, 78, 0.18)',
+                    }}>
+                      {eco.slideRange}
+                    </span>
+                    <ChevronRight size={20} color={isHovered ? BRAND : '#94A3B8'} />
+                  </div>
                 </motion.div>
               );
             })}
           </div>
         </div>
 
-        {/* Bottom Strip: Slow moving row of 17 section names as chips */}
+        {/* Bottom Strip: 3 Ecosystem Chips */}
         <div style={{
-          marginTop: 24,
+          marginTop: 20,
           paddingTop: 16,
           borderTop: '1px solid rgba(226, 232, 240, 0.8)',
-          overflow: 'hidden',
-          position: 'relative',
+          display: 'flex',
+          alignItems: 'center',
+          justifyContent: 'space-between',
         }}>
-          {/* Edge fade gradients */}
           <div style={{
-            position: 'absolute', top: 0, left: 0, bottom: 0, width: 48,
-            background: 'linear-gradient(to right, #FFFFFF, transparent)', zIndex: 5, pointerEvents: 'none',
-          }} />
-          <div style={{
-            position: 'absolute', top: 0, right: 0, bottom: 0, width: 48,
-            background: 'linear-gradient(to left, #FFFFFF, transparent)', zIndex: 5, pointerEvents: 'none',
-          }} />
+            fontSize: 14,
+            fontWeight: 500,
+            color: GREY,
+            fontFamily: "'Inter', sans-serif",
+          }}>
+            Click any ecosystem above or jump directly to its section:
+          </div>
 
-          {/* Marquee ticker */}
-          <div style={{ display: 'flex', gap: 14, overflow: 'hidden' }}>
-            <motion.div
-              animate={{ x: [0, -1600] }}
-              transition={{
-                x: {
-                  repeat: Infinity,
-                  repeatType: 'loop',
-                  duration: 40,
-                  ease: 'linear',
-                },
-              }}
-              style={{ display: 'flex', gap: 12, flexShrink: 0 }}
-            >
-              {[...moduleSections, ...moduleSections].map((sec, idx) => (
-                <motion.div
-                  key={idx}
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}
-                  onClick={() => onNavigate && onNavigate(sec.slideNumber - 1, 1)}
-                  style={{
-                    display: 'inline-flex',
-                    alignItems: 'center',
-                    gap: 8,
-                    padding: '8px 16px',
-                    borderRadius: 999,
-                    background: 'rgba(255, 255, 255, 0.85)',
-                    border: '1px solid #E2E8F0',
-                    fontSize: 13,
-                    fontWeight: 600,
-                    color: NAVY,
-                    whiteSpace: 'nowrap',
-                    boxShadow: '0 2px 6px rgba(11, 31, 75, 0.03)',
-                    cursor: 'pointer',
-                  }}
-                >
-                  <span style={{ color: BRAND, fontWeight: 700 }}>
-                    {String(sec.slideNumber).padStart(2, '0')}
-                  </span>
-                  <span>{sec.sectionName}</span>
-                </motion.div>
-              ))}
-            </motion.div>
+          <div style={{ display: 'flex', gap: 12 }}>
+            {ecosystems.map((eco) => (
+              <motion.div
+                key={eco.id}
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                onClick={() => onNavigate && onNavigate(eco.targetIndex, 1)}
+                style={{
+                  display: 'inline-flex',
+                  alignItems: 'center',
+                  gap: 8,
+                  padding: '8px 18px',
+                  borderRadius: 999,
+                  background: 'rgba(255, 255, 255, 0.90)',
+                  border: '1px solid #E2E8F0',
+                  fontSize: 13,
+                  fontWeight: 600,
+                  color: NAVY,
+                  boxShadow: '0 2px 6px rgba(11, 31, 75, 0.03)',
+                  cursor: 'pointer',
+                  fontFamily: "'Inter', sans-serif",
+                }}
+              >
+                <span style={{ color: BRAND, fontWeight: 700 }}>
+                  {eco.slideRange.replace('Slides ', '')}
+                </span>
+                <span>{eco.name}</span>
+                <span style={{ color: BRAND }}>→</span>
+              </motion.div>
+            ))}
           </div>
         </div>
       </div>
