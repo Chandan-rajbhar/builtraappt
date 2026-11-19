@@ -523,31 +523,6 @@ export function WhyItHelpsStrip({ text, nextSlide, onNavigate }) {
           {text}
         </span>
       </div>
-
-      {nextSlide && (
-        <motion.span
-          whileHover={{ scale: 1.04, x: 2 }}
-          whileTap={{ scale: 0.96 }}
-          onClick={() => onNavigate && onNavigate(nextSlide.index !== undefined ? nextSlide.index : (nextSlide.number - 1), 1)}
-          style={{
-            fontSize: 14,
-            fontWeight: 700,
-            color: BRAND,
-            cursor: 'pointer',
-            fontFamily: "'Inter', sans-serif",
-            display: 'inline-flex',
-            alignItems: 'center',
-            gap: 6,
-            background: 'rgba(239, 20, 78, 0.08)',
-            padding: '4px 14px',
-            borderRadius: 999,
-            border: '1px solid rgba(239, 20, 78, 0.15)',
-            whiteSpace: 'nowrap',
-          }}
-        >
-          Next: {nextSlide.title} (Slide {String(nextSlide.number).padStart(2, '0')}) →
-        </motion.span>
-      )}
     </motion.div>
   );
 }
