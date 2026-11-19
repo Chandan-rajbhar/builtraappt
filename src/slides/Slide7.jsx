@@ -137,10 +137,10 @@ export default function Slide7({ slideNumber = 7, totalSlides = 20, onNavigate }
         slideIndex={slideNumber}
       />
 
-      {/* Main 2-Column Grid: Left Feature Cards (40%), Right 4 Screenshots 2x2 Grid (60%) */}
+      {/* Main 2-Column Grid: Left Feature Cards (45%), Right Screenshot Cards (55%) */}
       <div style={{
         display: 'flex',
-        gap: 24,
+        gap: 28,
         flex: 1,
         alignItems: 'stretch',
         minHeight: 0,
@@ -148,7 +148,7 @@ export default function Slide7({ slideNumber = 7, totalSlides = 20, onNavigate }
       }}>
         {/* Left Column: 5 Clean Feature Cards */}
         <div style={{
-          width: '40%',
+          width: '45%',
           display: 'flex',
           flexDirection: 'column',
           gap: 8,
@@ -166,17 +166,10 @@ export default function Slide7({ slideNumber = 7, totalSlides = 20, onNavigate }
           ))}
         </div>
 
-        {/* Right Column: 2x2 Grid of 4 High-Resolution Screenshot Cards */}
-        <div style={{
-          width: '60%',
-          display: 'grid',
-          gridTemplateColumns: 'repeat(2, 1fr)',
-          gridTemplateRows: 'repeat(2, 1fr)',
-          gap: 12,
-          height: '100%',
-        }}>
+        {/* Right Column: Two High-Resolution Screenshot Cards (Exactly like Slide 3) */}
+        <div className="shot-cards-container">
           {/* Card 1: Disciplinary Actions */}
-          <div className="shot-card" style={{ borderRadius: 16, padding: 8 }}>
+          <div className="shot-card">
             <img
               src="/assets/slide7/disciplinary-actions.png"
               alt="Builtraa Disciplinary Actions Dashboard"
@@ -186,30 +179,10 @@ export default function Slide7({ slideNumber = 7, totalSlides = 20, onNavigate }
           </div>
 
           {/* Card 2: Reports Dashboard */}
-          <div className="shot-card" style={{ borderRadius: 16, padding: 8 }}>
+          <div className="shot-card">
             <img
               src="/assets/slide7/reports-dashboard.png"
               alt="Builtraa Reports Dashboard"
-              className="shot-card__img"
-              loading="eager"
-            />
-          </div>
-
-          {/* Card 3: Meeting Arrangements */}
-          <div className="shot-card" style={{ borderRadius: 16, padding: 8 }}>
-            <img
-              src="/assets/slide7/meeting-arrangements.png"
-              alt="Builtraa Meeting Arrangements"
-              className="shot-card__img"
-              loading="eager"
-            />
-          </div>
-
-          {/* Card 4: Payroll Audit Logs */}
-          <div className="shot-card" style={{ borderRadius: 16, padding: 8 }}>
-            <img
-              src="/assets/slide7/payroll-audit-logs.png"
-              alt="Builtraa Payroll Audit Logs"
               className="shot-card__img"
               loading="eager"
             />
