@@ -4,8 +4,8 @@ import { SlideLayout, BRAND, NAVY, GREY, easeCurve } from '../components/shared'
 import { SLIDES_DATA } from '../slidesData';
 import { Sparkles } from 'lucide-react';
 
-export default function Slide20({ slideIndex = 20, totalSlides = 20, onNavigate }) {
-  const slideData = SLIDES_DATA.find((s) => s.slideNumber === 20) || {
+export default function Slide20({ slideIndex = 19, totalSlides = 19, onNavigate }) {
+  const slideData = SLIDES_DATA.find((s) => s.type === 'thankyou' || s.slideNumber === (slideIndex || 19)) || {
     eyebrow: 'BUILTRAA - ENTERPRISE MANAGEMENT SYSTEM',
     titleNavy: 'THANK',
     titleBrand: 'YOU.',

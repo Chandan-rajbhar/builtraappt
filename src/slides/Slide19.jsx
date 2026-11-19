@@ -101,12 +101,12 @@ function Slide19FeatureCard({ icon: Icon, number, moduleLabel, title, text }) {
   );
 }
 
-export default function Slide19({ slideNumber = 19, slideIndex, totalSlides = 20, onNavigate }) {
-  const effectiveSlideNum = slideNumber || slideIndex || 19;
-  const slideData = SLIDES_DATA.find((s) => s.slideNumber === effectiveSlideNum) || SLIDES_DATA[18];
+export default function Slide19({ slideNumber = 18, slideIndex, totalSlides = 19, onNavigate }) {
+  const effectiveSlideNum = slideIndex || slideNumber || 18;
+  const slideData = SLIDES_DATA.find((s) => s.slideNumber === effectiveSlideNum) || SLIDES_DATA[17];
 
   if (!slideData) {
-    return <div>Slide 19 not found</div>;
+    return <div>Slide 18 not found</div>;
   }
 
   // Next slide calculation

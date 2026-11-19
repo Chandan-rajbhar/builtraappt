@@ -18,7 +18,6 @@ import Slide14 from './slides/Slide14';
 import Slide15 from './slides/Slide15';
 import Slide16 from './slides/Slide16';
 import Slide17 from './slides/Slide17';
-import Slide18 from './slides/Slide18';
 import Slide19 from './slides/Slide19';
 import Slide20 from './slides/Slide20';
 import { SLIDES_DATA } from './slidesData';
@@ -42,9 +41,8 @@ export const SLIDES = [
   Slide15, // 15: Project Documentation
   Slide16, // 16: Submittals & Material Requests
   Slide17, // 17: Project Financial Management
-  Slide18, // 18: Quality & Site Inspection
-  Slide19, // 19: Project Team & Collaboration
-  Slide20, // 20: Thank You
+  Slide19, // 18: Project Team & Collaboration
+  Slide20, // 19: Thank You
 ];
 
 export const MODULE_NAMES = SLIDES_DATA

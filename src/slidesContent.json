@@ -765,42 +765,6 @@
     "type": "module",
     "ecosystem": "PROJECT TOOLS",
     "eyebrow": "18 / PROJECT TOOLS",
-    "sectionName": "Quality & Site Inspection",
-    "titleNavy": "Quality &",
-    "titleBrand": "Site Inspection",
-    "titleNavyAfter": "",
-    "intro": "Find, fix and close site issues.",
-    "moduleIcon": "ShieldCheck",
-    "cards": [
-      {
-        "icon": "AlertCircle",
-        "number": "01",
-        "moduleLabel": "Observations",
-        "title": "Site observations",
-        "text": "Safety, quality and non-conformance records with photos."
-      },
-      {
-        "icon": "CheckCircle2",
-        "number": "02",
-        "moduleLabel": "Punch List",
-        "title": "Items to fix",
-        "text": "Snag list items verified before project handover."
-      }
-    ],
-    "steps": [
-      "Issue is observed",
-      "Assigned for action",
-      "Fixed",
-      "Verified and closed"
-    ],
-    "whyItHelps": "Quality problems are tracked until they are closed.",
-    "speakerNotes": "Site snagging and QA/QC punch lists ensure zero defect handovers to project owners."
-  },
-  {
-    "slideNumber": 19,
-    "type": "module",
-    "ecosystem": "PROJECT TOOLS",
-    "eyebrow": "19 / PROJECT TOOLS",
     "sectionName": "Project Team & Collaboration",
     "titleNavy": "Project Team &",
     "titleBrand": "Collaboration",
@@ -840,7 +804,7 @@
     "speakerNotes": "Structured stakeholder roles and transparent responsibility matrices eliminate miscommunication on site."
   },
   {
-    "slideNumber": 20,
+    "slideNumber": 19,
     "type": "thankyou",
     "ecosystem": "ENTERPRISE PLATFORM",
     "eyebrow": "BUILTRAA - ENTERPRISE MANAGEMENT SYSTEM",
