@@ -742,6 +742,13 @@
         "moduleLabel": "Contracts",
         "title": "Contract records",
         "text": "Commercial agreements, terms and subcontractor milestones."
+      },
+      {
+        "icon": "CheckCircle2",
+        "number": "03",
+        "moduleLabel": "Punch List",
+        "title": "Items to fix",
+        "text": "Snag list items verified before project handover."
       }
     ],
     "steps": [
