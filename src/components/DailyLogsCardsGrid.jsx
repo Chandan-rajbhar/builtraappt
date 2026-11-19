@@ -240,7 +240,7 @@ export default function DailyLogsCardsGrid() {
         /* Authentic Screenshot Viewer */
         <div className="rounded-2xl overflow-hidden border border-[#E2E8F0] shadow-md bg-white">
           <img 
-            src="/daily-logs-dashboard.jpg" 
+            src="/images/daily-logs-dashboard.jpg" 
             alt="Daily Logs 13 Modules Dashboard" 
             className="w-full h-auto object-cover max-h-[520px]"
           />

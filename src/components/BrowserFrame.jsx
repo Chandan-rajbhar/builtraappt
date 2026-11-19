@@ -222,7 +222,7 @@ export default function BrowserFrame({ activeToolName, onSelectTool }) {
               </div>
             </div>
           ) : (
-            renderScreenshot("/daily-logs-dashboard.jpg", "Daily Logs Dashboard")
+            renderScreenshot("/images/daily-logs-dashboard.jpg", "Daily Logs Dashboard")
           )}
 
           <div className="pt-2 border-t border-[var(--line)] flex items-center justify-between text-xs">
@@ -312,7 +312,7 @@ export default function BrowserFrame({ activeToolName, onSelectTool }) {
               ))}
             </div>
           ) : (
-            renderScreenshot("/schedule-gantt-dashboard.png", "Schedule WBS Gantt Dashboard")
+            renderScreenshot("/images/schedule-gantt-dashboard.png", "Schedule WBS Gantt Dashboard")
           )}
 
           <div className="pt-2 border-t border-[var(--line)] flex items-center justify-between text-xs">
@@ -412,7 +412,7 @@ export default function BrowserFrame({ activeToolName, onSelectTool }) {
               </div>
             </div>
           ) : (
-            renderScreenshot("/tasks-dashboard.png", "Tasks Platform Dashboard")
+            renderScreenshot("/images/tasks-dashboard.png", "Tasks Platform Dashboard")
           )}
 
           <div className="pt-2 border-t border-[var(--line)] flex items-center justify-between text-xs">
@@ -479,7 +479,7 @@ export default function BrowserFrame({ activeToolName, onSelectTool }) {
               ))}
             </div>
           ) : (
-            renderScreenshot("/documents-dashboard.png", "Documents Dashboard")
+            renderScreenshot("/images/documents-dashboard.png", "Documents Dashboard")
           )}
 
           <div className="pt-2 border-t border-[var(--line)] flex items-center justify-between text-xs">
@@ -576,7 +576,7 @@ export default function BrowserFrame({ activeToolName, onSelectTool }) {
               ))}
             </div>
           ) : (
-            renderScreenshot("/rfis-dashboard.png", "RFIs Dashboard")
+            renderScreenshot("/images/rfis-dashboard.png", "RFIs Dashboard")
           )}
 
           <div className="pt-2 border-t border-[var(--line)] flex items-center justify-between text-xs">
@@ -654,7 +654,7 @@ export default function BrowserFrame({ activeToolName, onSelectTool }) {
               ))}
             </div>
           ) : (
-            renderScreenshot("/submittals-dashboard.png", "Submittals Dashboard")
+            renderScreenshot("/images/submittals-dashboard.png", "Submittals Dashboard")
           )}
 
           <div className="pt-2 border-t border-[var(--line)] flex items-center justify-between text-xs">
@@ -738,7 +738,7 @@ export default function BrowserFrame({ activeToolName, onSelectTool }) {
               ))}
             </div>
           ) : (
-            renderScreenshot("/transmittals-dashboard.png", "Transmittals Dashboard")
+            renderScreenshot("/images/transmittals-dashboard.png", "Transmittals Dashboard")
           )}
 
           <div className="pt-2 border-t border-[var(--line)] flex items-center justify-between text-xs">
@@ -819,7 +819,7 @@ export default function BrowserFrame({ activeToolName, onSelectTool }) {
               ))}
             </div>
           ) : (
-            renderScreenshot("/material-requests-dashboard.png", "Material Requests Dashboard")
+            renderScreenshot("/images/material-requests-dashboard.png", "Material Requests Dashboard")
           )}
 
           <div className="pt-2 border-t border-[var(--line)] flex items-center justify-between text-xs">
@@ -886,7 +886,7 @@ export default function BrowserFrame({ activeToolName, onSelectTool }) {
               </button>
             </div>
           ) : (
-            renderScreenshot("/operational-assets-dashboard.png", "Operational Assets Dashboard")
+            renderScreenshot("/images/operational-assets-dashboard.png", "Operational Assets Dashboard")
           )}
 
           <div className="pt-2 border-t border-[var(--line)] flex items-center justify-between text-xs">
@@ -972,7 +972,7 @@ export default function BrowserFrame({ activeToolName, onSelectTool }) {
               ))}
             </div>
           ) : (
-            renderScreenshot("/budget-dashboard.jpg", "Budget Dashboard")
+            renderScreenshot("/images/budget-dashboard.jpg", "Budget Dashboard")
           )}
 
           <div className="pt-2 border-t border-[var(--line)] flex items-center justify-between text-xs">
@@ -1056,7 +1056,7 @@ export default function BrowserFrame({ activeToolName, onSelectTool }) {
               ))}
             </div>
           ) : (
-            renderScreenshot("/contracts-dashboard.png", "Contracts Dashboard")
+            renderScreenshot("/images/contracts-dashboard.png", "Contracts Dashboard")
           )}
 
           <div className="pt-2 border-t border-[var(--line)] flex items-center justify-between text-xs">
@@ -1147,7 +1147,7 @@ export default function BrowserFrame({ activeToolName, onSelectTool }) {
               ))}
             </div>
           ) : (
-            renderScreenshot("/observations-dashboard.png", "Observations Dashboard")
+            renderScreenshot("/images/observations-dashboard.png", "Observations Dashboard")
           )}
 
           <div className="pt-2 border-t border-[var(--line)] flex items-center justify-between text-xs">
@@ -1235,7 +1235,7 @@ export default function BrowserFrame({ activeToolName, onSelectTool }) {
               ))}
             </div>
           ) : (
-            renderScreenshot("/punch-list-dashboard.png", "Punch List Dashboard")
+            renderScreenshot("/images/punch-list-dashboard.png", "Punch List Dashboard")
           )}
 
           <div className="pt-2 border-t border-[var(--line)] flex items-center justify-between text-xs">
@@ -1357,7 +1357,7 @@ export default function BrowserFrame({ activeToolName, onSelectTool }) {
           )}
 
           {currentMode === 'screenshot' && (
-            renderScreenshot("/team-directory-dashboard.png", "Team Directory Dashboard")
+            renderScreenshot("/images/team-directory-dashboard.png", "Team Directory Dashboard")
           )}
 
           <div className="pt-2 border-t border-[var(--line)] flex items-center justify-between text-xs">
@@ -1440,7 +1440,7 @@ export default function BrowserFrame({ activeToolName, onSelectTool }) {
               </div>
             </div>
           ) : (
-            renderScreenshot("/tools-menu.png", "Builtraa Tools Menu Screenshot")
+            renderScreenshot("/images/tools-menu.png", "Builtraa Tools Menu Screenshot")
           )}
 
           {/* Telemetry Bar */}

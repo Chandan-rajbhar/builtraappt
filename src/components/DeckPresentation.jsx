@@ -148,7 +148,7 @@ export default function DeckPresentation() {
           title="Back to Start"
         >
           <img 
-            src="/builtraa-logo-colored.svg" 
+            src="/images/builtraa-logo-colored.svg" 
             alt="Builtraa Logo" 
             className="h-7 md:h-8 w-auto object-contain" 
           />
@@ -163,7 +163,7 @@ export default function DeckPresentation() {
           <div data-anim-left className="flex flex-col">
             <div data-anim-child className="mb-6 flex items-center">
               <img 
-                src="/builtraa-logo-colored.svg" 
+                src="/images/builtraa-logo-colored.svg" 
                 alt="Builtraa" 
                 className="h-10 md:h-12 w-auto object-contain" 
               />

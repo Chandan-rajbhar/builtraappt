@@ -3,7 +3,7 @@ export const toolsList = [
     name: "Daily Log",
     tagline: "Record what happened on site, every day across 13 specialized logs",
     category: "Management",
-    screenshotImg: "/daily-logs-dashboard.jpg",
+    screenshotImg: "/images/daily-logs-dashboard.jpg",
     points: [
       { title: "Manpower & Work Performed", desc: "Track crew headcount, hours, site location, and drawings reference" },
       { title: "Equipment, Materials & Weather", desc: "Capture machine runtime, material deliveries, and climate impact" },
@@ -41,7 +41,7 @@ export const toolsList = [
     name: "Schedule",
     tagline: "Manage your project timelines, 7 WBS phases and Gantt events",
     category: "Management",
-    screenshotImg: "/schedule-gantt-dashboard.png",
+    screenshotImg: "/images/schedule-gantt-dashboard.png",
     points: [
       { title: "WBS 7-Phase Structure", desc: "Track from Pre-Construction & Substructure to Superstructure & Handover" },
       { title: "Primavera P6 & MS Project Sync", desc: "Upload .xer / .xml files with automated task duration & dependency calculations" },
@@ -64,7 +64,7 @@ export const toolsList = [
     name: "Tasks",
     tagline: "Assign work and track field execution to 100% completion",
     category: "Management",
-    screenshotImg: "/tasks-dashboard.png",
+    screenshotImg: "/images/tasks-dashboard.png",
     points: [
       { title: "Clear Ownership & SLA", desc: "Every task has an assignee, priority level, and hard due date" },
       { title: "Status Flow Pipeline", desc: "To Do, In Progress, Review and Completed status stages" },
@@ -91,7 +91,7 @@ export const toolsList = [
     name: "Documents",
     tagline: "One controlled home for architectural, structural & MEP drawings",
     category: "Management",
-    screenshotImg: "/documents-dashboard.png",
+    screenshotImg: "/images/documents-dashboard.png",
     points: [
       { title: "Standardized Folder Architecture", desc: "Organized by discipline: Architectural, Structural, MEP, BOQ & As-Builts" },
       { title: "Drawings View & CAD Integration", desc: "Direct sheet inspection, drawing revisions, and transmittal generation" },
@@ -112,7 +112,7 @@ export const toolsList = [
     name: "RFIs",
     tagline: "Resolve technical queries between site, consultant & design team",
     category: "Management",
-    screenshotImg: "/rfis-dashboard.png",
+    screenshotImg: "/images/rfis-dashboard.png",
     points: [
       { title: "Formal RFI Registry", desc: "Track every technical query from submission through formal consultant sign-off" },
       { title: "Overdue & SLA Tracking", desc: "Real-time overdue alerts and average cycle age (42 days tracking)" },
@@ -140,7 +140,7 @@ export const toolsList = [
     name: "Submittals",
     tagline: "Manage contractor submittals, samples, and consultant approvals",
     category: "Management",
-    screenshotImg: "/submittals-dashboard.png",
+    screenshotImg: "/images/submittals-dashboard.png",
     points: [
       { title: "Status Pipeline Transparency", desc: "Instant visibility into Draft, Pending Review, Client Review, and Approved" },
       { title: "11 Submittal Packages", desc: "Fire doors, drainage, sprinkler calculations, porcelain tiles, gypsum, and switchboards" },
@@ -173,7 +173,7 @@ export const toolsList = [
     name: "Transmittals",
     tagline: "Formally issue drawing packages, test reports & IFC documents",
     category: "Management",
-    screenshotImg: "/transmittals-dashboard.png",
+    screenshotImg: "/images/transmittals-dashboard.png",
     points: [
       { title: "Formal Chain of Custody", desc: "Every transmittal has a unique number (TR-0001 to TR-0005) and logged recipient" },
       { title: "100% Delivery Verification", desc: "5 sent transmittals with verified receipt by Client, Consultant, and Municipal Authority" },
@@ -200,7 +200,7 @@ export const toolsList = [
     name: "Material Request",
     tagline: "Requisition site materials with quantity tracking and PM sign-off",
     category: "Management",
-    screenshotImg: "/material-requests-dashboard.png",
+    screenshotImg: "/images/material-requests-dashboard.png",
     points: [
       { title: "Direct Site Requisitions", desc: "Site engineers request materials with specifications, quantities, and schedule needs" },
       { title: "PM Approval Workflow", desc: "Automated routing for Project Manager approval with single-click verification" },
@@ -225,7 +225,7 @@ export const toolsList = [
     name: "Operational Assets Request",
     tagline: "Request, track and manage site machinery, heavy plant & equipment",
     category: "Management",
-    screenshotImg: "/operational-assets-dashboard.png",
+    screenshotImg: "/images/operational-assets-dashboard.png",
     points: [
       { title: "Fleet & Equipment Control", desc: "Request cranes, excavators, generators, and specialized power tools" },
       { title: "Lifecycle Status Pipeline", desc: "Track from Request to Approval, Site Issuance, and Handover Return" },
@@ -251,7 +251,7 @@ export const toolsList = [
     name: "Budget & Costs",
     tagline: "Track project budgets, cost codes, allocations, forecasting, and change orders",
     category: "Financials & Quality",
-    screenshotImg: "/budget-dashboard.jpg",
+    screenshotImg: "/images/budget-dashboard.jpg",
     points: [
       { title: "Standard Budget & Lock Status", desc: "Baseline locked budget preventing unauthorized scope or line-item creeps" },
       { title: "Division 01 - 03 Architecture", desc: "Breakdown across General Requirements, Earthworks, and Superstructure" },
@@ -277,7 +277,7 @@ export const toolsList = [
     name: "Contracts",
     tagline: "Manage and track project subcontracts, values, and formal change orders",
     category: "Financials & Quality",
-    screenshotImg: "/contracts-dashboard.png",
+    screenshotImg: "/images/contracts-dashboard.png",
     points: [
       { title: "BHD 3.47M Contract Portfolio", desc: "Full commercial governance covering FIDIC Main Contract, MEP, Finishes, and Facade" },
       { title: "Change Order Management", desc: "BHD 47,500 approved change orders tracked with revised baseline of BHD 3,517,500" },
@@ -303,7 +303,7 @@ export const toolsList = [
     name: "Observations",
     tagline: "Capture, assign and track HSE safety and QA/QC quality findings on site",
     category: "Financials & Quality",
-    screenshotImg: "/observations-dashboard.png",
+    screenshotImg: "/images/observations-dashboard.png",
     points: [
       { title: "Direct Field Hazard Logging", desc: "Track missing edge protections, scaffolding compliance, and rebar cover depths" },
       { title: "Target Date & Assignment SLA", desc: "Every observation is assigned to specific discipline engineers with hard target dates" },
@@ -331,7 +331,7 @@ export const toolsList = [
     name: "Punch List",
     tagline: "Close out snag items, defective works, and incomplete handover items",
     category: "Financials & Quality",
-    screenshotImg: "/punch-list-dashboard.png",
+    screenshotImg: "/images/punch-list-dashboard.png",
     points: [
       { title: "Categorized Snag Classification", desc: "Organized by Corrective Works, Defective Works, and Incomplete Snag Lists" },
       { title: "Room & Unit Specific Tagging", desc: "Tied directly to locations: Stairwell 2, Corridor Core A, Unit 502, Unit 304, Bedroom 601" },
@@ -359,8 +359,8 @@ export const toolsList = [
     name: "Project Team",
     tagline: "Manage and organize your project team members, roles & organizational hierarchy",
     category: "Financials & Quality",
-    screenshotImg: "/team-directory-dashboard.png",
-    orgChartImg: "/team-org-chart-dashboard.png",
+    screenshotImg: "/images/team-directory-dashboard.png",
+    orgChartImg: "/images/team-org-chart-dashboard.png",
     points: [
       { title: "7 Core Project Members", desc: "Elena Rostova, Robert Miller, James O'Connor, Nasser Al-Haddad, Alexander Hayes, David Chen, Tariq Al-Mansoor" },
       { title: "Interactive Organizational Chart", desc: "Auto-generated hierarchy from Managing Director to PM, Engineers, Safety, and Site Foremen" },
