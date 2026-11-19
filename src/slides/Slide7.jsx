@@ -174,6 +174,7 @@ export default function Slide7({ slideNumber = 7, totalSlides = 20, onNavigate }
               src="/assets/slide7/disciplinary-actions.png"
               alt="Builtraa Disciplinary Actions Dashboard"
               className="shot-card__img"
+              style={{ objectFit: 'cover', objectPosition: 'top center' }}
               loading="eager"
             />
           </div>

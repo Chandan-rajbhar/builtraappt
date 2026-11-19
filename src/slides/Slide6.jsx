@@ -168,21 +168,21 @@ export default function Slide6({ slideNumber = 6, totalSlides = 20, onNavigate }
 
         {/* Right Column: Two High-Resolution Screenshot Cards */}
         <div className="shot-cards-container">
-          {/* Card 1: Loan Management */}
+          {/* Card 1: Salary Increments */}
           <div className="shot-card">
             <img
-              src="/assets/slide6/loan-management.png"
-              alt="Builtraa Loan Management Dashboard"
+              src="/assets/slide6/salary-increments.png"
+              alt="Builtraa Salary Increments Dashboard"
               className="shot-card__img"
               loading="eager"
             />
           </div>
 
-          {/* Card 2: Salary Increments */}
+          {/* Card 2: Salary Discrepancies */}
           <div className="shot-card">
             <img
-              src="/assets/slide6/salary-increments.png"
-              alt="Builtraa Salary Increments Dashboard"
+              src="/assets/slide6/salary-discrepancies.png"
+              alt="Builtraa Salary Discrepancies Dashboard"
               className="shot-card__img"
               loading="eager"
             />
