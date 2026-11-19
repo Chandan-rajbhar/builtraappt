@@ -609,6 +609,13 @@
         "moduleLabel": "Tasks",
         "title": "Task tracking",
         "text": "Assign tasks and follow their status."
+      },
+      {
+        "icon": "AlertCircle",
+        "number": "03",
+        "moduleLabel": "Observations",
+        "title": "Site observations",
+        "text": "Safety, quality and non-conformance records with photos."
       }
     ],
     "steps": [

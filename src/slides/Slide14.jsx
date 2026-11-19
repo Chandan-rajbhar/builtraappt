@@ -147,12 +147,12 @@ export default function Slide14({ slideNumber = 14, slideIndex, totalSlides = 20
         minHeight: 0,
         margin: '6px 0',
       }}>
-        {/* Left Column: 2 Clean Feature Cards */}
+        {/* Left Column: 3 Clean Feature Cards */}
         <div style={{
           width: '45%',
           display: 'flex',
           flexDirection: 'column',
-          gap: 14,
+          gap: 12,
           justifyContent: 'space-between',
         }}>
           {slideData.cards && slideData.cards.map((card, idx) => (
